@@ -14,7 +14,9 @@ func main() {
 	// comma separated binaries
 	binaries := os.Args[2]
 	bins := strings.Split(binaries, ",")
-	doit(bins, in)
+	if err := doit(bins, in); err != nil {
+		fmt.Printf("err: %v", err)
+	}
 }
 
 type proc struct {
