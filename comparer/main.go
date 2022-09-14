@@ -87,7 +87,7 @@ func doit(bins []string, input string) error {
 			}
 			prev = cur
 		}
-		if !ok || true {
+		if !ok {
 			for j, outp := range outputs {
 				fmt.Printf("%d: proc %d: %v\n", count, j, outp)
 			}
