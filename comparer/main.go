@@ -61,8 +61,10 @@ func doit(bins []string, input string) error {
 		l := scanner.Text()
 		for _, proc := range procs {
 			proc.inp.Write([]byte(l))
+			proc.inp.Write([]byte("\n"))
 		}
 		prev := ""
+		var ok = true
 		for i, proc := range procs {
 			var cur = ""
 			if proc.outbuf.Scan() {
@@ -82,8 +84,12 @@ func doit(bins []string, input string) error {
 				fmt.Printf("%d: proc %d: %v\n", count, i-1, prev)
 				fmt.Printf("%d: proc %d: %v\n", count, i-1, cur)
 				fmt.Printf("%d input %v\n", count, l)
+				ok = false
 			}
 			prev = cur
+		}
+		if !ok {
+			fmt.Fprintln(os.Stderr, l)
 		}
 	}
 	return nil
