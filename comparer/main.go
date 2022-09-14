@@ -41,7 +41,7 @@ func doit(bins []string, input string) error {
 		if len(cmdArgs) > 1 {
 			args = cmdArgs[1:]
 		}
-		cmd := exec.Command(cmdArgs[0], args[1:]...)
+		cmd := exec.Command(cmdArgs[0], args...)
 		stdout, err := cmd.StdoutPipe()
 		if err != nil {
 			return err
