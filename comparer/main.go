@@ -36,7 +36,12 @@ func doit(bins []string, input string) error {
 	)
 
 	for _, bin := range bins {
-		cmd := exec.Command(bin)
+		cmdArgs := strings.Split(bin, " ")
+		var args []string
+		if len(cmdArgs) > 1 {
+			args = cmdArgs[1:]
+		}
+		cmd := exec.Command(cmdArgs[0], args[1:]...)
 		stdout, err := cmd.StdoutPipe()
 		if err != nil {
 			return err
