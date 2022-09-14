@@ -65,6 +65,7 @@ func doit(bins []string, input string) error {
 		}
 		prev := ""
 		var ok = true
+		var outputs []string
 		for i, proc := range procs {
 			var cur = ""
 			if proc.outbuf.Scan() {
@@ -72,6 +73,7 @@ func doit(bins []string, input string) error {
 			} else {
 				panic("foo")
 			}
+			outputs = append(outputs, cur)
 			if i == 0 {
 				prev = cur
 				continue
@@ -81,14 +83,15 @@ func doit(bins []string, input string) error {
 				continue
 			}
 			if prev != cur {
-				fmt.Printf("%d: proc %d: %v\n", count, i-1, prev)
-				fmt.Printf("%d: proc %d: %v\n", count, i-1, cur)
-				fmt.Printf("%d input %v\n", count, l)
 				ok = false
 			}
 			prev = cur
 		}
-		if !ok {
+		if !ok || true {
+			for j, outp := range outputs {
+				fmt.Printf("%d: proc %d: %v\n", count, j, outp)
+			}
+			fmt.Printf("%d input %v\n", count, l)
 			fmt.Fprintln(os.Stderr, l)
 		}
 	}
