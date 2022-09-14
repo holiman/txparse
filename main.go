@@ -11,12 +11,17 @@ import (
 )
 
 func main() {
+	work()
+}
+
+func work() {
 	// The input is assumed to be London-enabled mainnet (chainid=1) transaction.
 	var (
 		signer  = types.NewLondonSigner(new(big.Int).SetInt64(1))
 		scanner = bufio.NewScanner(os.Stdin)
 		tx      = new(types.Transaction)
 	)
+
 	for scanner.Scan() {
 		if err := tx.UnmarshalBinary(common.FromHex(scanner.Text())); err != nil {
 			fmt.Printf("err: %v\n", err)
