@@ -146,3 +146,4 @@ err: relative offset points to immediate argument
 err: undefined instruction: opcode 0xc not defined
 err: undefined instruction: opcode 0xc not defined
 err: undefined instruction: opcode 0xc not defined
+err: code section doesn't end with terminating instruction: ADDRESS
