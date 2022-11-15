@@ -3,13 +3,15 @@ package main
 import (
 	"bytes"
 	"fmt"
-	"github.com/ethereum/go-ethereum/common"
 	"go/ast"
 	"go/parser"
 	"go/token"
 	"io/ioutil"
 	"os"
+	"path/filepath"
 	"strconv"
+
+	"github.com/ethereum/go-ethereum/common"
 )
 
 func main() {
@@ -33,14 +35,11 @@ func doit() error {
 		dir = fmt.Sprintf("%v/.cache/go-build/fuzz/github.com/holiman/txparse/Fuzz/", home)
 	}
 	fmt.Fprintf(os.Stderr, "Using %v to search for corpus\n", dir)
-	entries, err := os.ReadDir(dir)
-
-	if err != nil {
-		return err
-	}
 	var vals []any
-	for _, entry := range entries {
-		data, err := ioutil.ReadFile(fmt.Sprintf("%v/%v", dir, entry.Name()))
+
+	handleFile := func(path string) error {
+		//fmt.Printf("handleFile(%v)\n", path)
+		data, err := ioutil.ReadFile(path)
 		if err != nil {
 			return err
 		}
@@ -59,8 +58,35 @@ func doit() error {
 			}
 			vals = append(vals, v)
 		}
+		return nil
 	}
-	if true {
+	var readDir func(string) error
+
+	readDir = func(dir string) error {
+		//fmt.Printf("readDir(%v)\n", dir)
+		entries, err := os.ReadDir(dir)
+		if err != nil {
+			return err
+		}
+
+		for _, entry := range entries {
+			if entry.IsDir() {
+				if err := readDir(filepath.Join(dir, entry.Name())); err != nil {
+					return err
+				}
+			} else {
+				if err := handleFile(filepath.Join(dir, entry.Name())); err != nil {
+					fmt.Printf("#Error on file %v\n", filepath.Join(dir, entry.Name()))
+				}
+			}
+		}
+		return nil
+	}
+	if err := readDir(dir); err != nil {
+		fmt.Printf("Error: %v\n", err)
+	}
+
+	if false {
 		for _, val := range basecorpus {
 			fmt.Printf("%#x\n", common.FromHex(val))
 		}
