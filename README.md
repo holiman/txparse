@@ -95,3 +95,7 @@ err: undefined instruction: opcode 0xc not defined
 err: undefined instruction: opcode 0xc not defined
 err: undefined instruction: opcode 0xc not defined
 ```
+
+A larger corpus is in `all.input`. That also has the corresponding output, generated via 
+` cat all.input | ./eofparse > all.output`. So you can use `all.output` to compare. But remember, 
+anything after `err:` is up to the implementation to phrase how they see fit. 
