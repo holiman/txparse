@@ -42,7 +42,7 @@ Example:
 
 
 ```
-[user@work eofparse]$ cat ./sample.input | ./eofparse
+$ cat ./sample.input | ./eofparse
 err: invalid version byte
 err: invalid version byte
 OK 00
@@ -94,6 +94,7 @@ err: relative offset points to immediate argument
 err: undefined instruction: opcode 0xc not defined
 err: undefined instruction: opcode 0xc not defined
 err: undefined instruction: opcode 0xc not defined
+err: code section doesn't end with terminating instruction: ADDRESS
 ```
 
 A larger corpus is in `all.input`. That also has the corresponding output, generated via 

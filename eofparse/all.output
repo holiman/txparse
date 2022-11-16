@@ -1,15 +1,25 @@
 err: code section doesn't end with terminating instruction: PUSH2
+err: code section doesn't end with terminating instruction: opcode 0x5d not defined
 err: code section doesn't end with terminating instruction: PUSH3
+err: code section doesn't end with terminating instruction: ADDRESS
+err: code section doesn't end with terminating instruction: ADDRESS
+err: code section doesn't end with terminating instruction: ADDRESS
+err: code section doesn't end with terminating instruction: ADDRESS
 err: code section doesn't end with terminating instruction: ADDRESS
 err: code section doesn't end with terminating instruction: opcode 0x5c not defined
 err: code section doesn't end with terminating instruction: PUSH6
+err: relative offset points to immediate argument
 err: code section doesn't end with terminating instruction: ADDRESS
 err: data section size is 0
 err: code section doesn't end with terminating instruction: PUSH3
+err: code section doesn't end with terminating instruction: PUSH31
 err: no type section
 err: code section doesn't end with terminating instruction: ADDRESS
 err: code section doesn't end with terminating instruction: PUSH25
 err: code section doesn't end with terminating instruction: PUSH3
+err: relative offset points to immediate argument
+err: code section doesn't end with terminating instruction: ADDRESS
+err: code section doesn't end with terminating instruction: PUSH7
 err: code section doesn't end with terminating instruction: ADDRESS
 err: code section doesn't end with terminating instruction: PUSH3
 err: code section doesn't end with terminating instruction: ADDRESS
@@ -21,38 +31,62 @@ err: invalid section in CALLF immediate
 err: no type section
 err: code section doesn't end with terminating instruction: PUSH25
 err: code section doesn't end with terminating instruction: PUSH2
+err: code section doesn't end with terminating instruction: ADDRESS
 err: too many code sections
 err: code section doesn't end with terminating instruction: opcode 0x5e not defined
 err: code section doesn't end with terminating instruction: ADDRESS
 err: code section doesn't end with terminating instruction: ADDRESS
+err: code section doesn't end with terminating instruction: PUSH2
+err: code section doesn't end with terminating instruction: PUSH32
+err: code section doesn't end with terminating instruction: PUSH28
 err: code section doesn't end with terminating instruction: ADDRESS
+err: code section doesn't end with terminating instruction: ADDRESS
+err: code section doesn't end with terminating instruction: PUSH4
 err: code section doesn't end with terminating instruction: ADDRESS
 err: code section doesn't end with terminating instruction: PUSH7
 err: code section doesn't end with terminating instruction: ADDRESS
 err: relative offset points to immediate argument
 err: code section doesn't end with terminating instruction: ADDRESS
+err: code section doesn't end with terminating instruction: PUSH4
 err: code section doesn't end with terminating instruction: ADDRESS
 err: code section doesn't end with terminating instruction: ADDRESS
 err: code section doesn't end with terminating instruction: ADDRESS
+err: code section doesn't end with terminating instruction: ADDRESS
+err: code section doesn't end with terminating instruction: ADDRESS
+err: code section doesn't end with terminating instruction: ADDRESS
+err: code section doesn't end with terminating instruction: PUSH4
 err: code section doesn't end with terminating instruction: PUSH25
+err: code section doesn't end with terminating instruction: ADDRESS
 err: code section doesn't end with terminating instruction: PUSH2
 err: code section doesn't end with terminating instruction: PUSH5
 err: code section doesn't end with terminating instruction: ADDRESS
 err: no type section
 err: code section doesn't end with terminating instruction: PUSH3
+err: code section doesn't end with terminating instruction: PUSH2
 err: invalid section in CALLF immediate
 err: invalid section in CALLF immediate: want section 8240, but only have 1 sections
 err: code section doesn't end with terminating instruction: ADDRESS
 err: code section doesn't end with terminating instruction: ADDRESS
+err: code section doesn't end with terminating instruction: PUSH3
 err: code section doesn't end with terminating instruction: ADDRESS
+err: code section doesn't end with terminating instruction: ADDRESS
+err: code section doesn't end with terminating instruction: PUSH5
 err: code section doesn't end with terminating instruction: PUSH25
 err: code section doesn't end with terminating instruction: PUSH31
+err: code section doesn't end with terminating instruction: PUSH3
 err: invalid section in CALLF immediate: want section 12336, but only have 1 sections
+err: code section doesn't end with terminating instruction: PUSH31
+err: code section doesn't end with terminating instruction: PUSH2
+err: code section doesn't end with terminating instruction: PUSH4
 err: code section doesn't end with terminating instruction: PUSH8
+err: code section doesn't end with terminating instruction: PUSH6
 err: type section header after other section header
+err: code section doesn't end with terminating instruction: PUSH13
+err: code section doesn't end with terminating instruction: PUSH13
 err: code section doesn't end with terminating instruction: ADDRESS
 err: code section doesn't end with terminating instruction: opcode 0x5c not defined
 err: code section doesn't end with terminating instruction: ADDRESS
+err: relative offset points to immediate argument
 err: code section doesn't end with terminating instruction: PUSH1
 err: relative offset points to immediate argument
 err: code section doesn't end with terminating instruction: PUSH2
@@ -63,37 +97,61 @@ err: no type section
 err: multiple type sections
 err: code section doesn't end with terminating instruction: PUSH14
 err: code section doesn't end with terminating instruction: PUSH6
+err: code section doesn't end with terminating instruction: PUSH6
 err: code section doesn't end with terminating instruction: PUSH3
 err: code section doesn't end with terminating instruction: PUSH32
+OK 3030303030303000
 err: code section doesn't end with terminating instruction: PUSH5
 err: code section doesn't end with terminating instruction: PUSH4
 err: code section doesn't end with terminating instruction: ADDRESS
+err: code section doesn't end with terminating instruction: PUSH4
+err: code section doesn't end with terminating instruction: PUSH15
+err: code section doesn't end with terminating instruction: PUSH25
 err: can't read type section size
 err: code section doesn't end with terminating instruction: PUSH4
+err: code section doesn't end with terminating instruction: PUSH6
+err: code section doesn't end with terminating instruction: PUSH5
 err: code section doesn't end with terminating instruction: ADDRESS
 err: code section doesn't end with terminating instruction: PUSH7
+err: code section doesn't end with terminating instruction: ADDRESS
 err: code section doesn't end with terminating instruction: ADDRESS
 err: code section doesn't end with terminating instruction: ADDRESS
 err: invalid section in CALLF immediate: want section 48, but only have 1 sections
+err: code section doesn't end with terminating instruction: PUSH14
 err: code section doesn't end with terminating instruction: ADDRESS
+err: code section doesn't end with terminating instruction: PUSH25
 err: no type section
 err: code section doesn't end with terminating instruction: ADDRESS
+err: code section doesn't end with terminating instruction: PUSH6
 err: code section doesn't end with terminating instruction: ADDRESS
 err: code section doesn't end with terminating instruction: PUSH7
+err: code section doesn't end with terminating instruction: ADDRESS
+err: code section doesn't end with terminating instruction: ADDRESS
+err: code section doesn't end with terminating instruction: PUSH4
+err: code section doesn't end with terminating instruction: PUSH32
+err: code section doesn't end with terminating instruction: ADDRESS
 err: code section doesn't end with terminating instruction: PUSH30
+err: code section doesn't end with terminating instruction: opcode 0x5c not defined
 err: no type section
 err: relative offset points to immediate argument
+err: code section doesn't end with terminating instruction: ADDRESS
 err: invalid section in CALLF immediate
+err: code section doesn't end with terminating instruction: PUSH2
 err: code section doesn't end with terminating instruction: PUSH32
+err: code section doesn't end with terminating instruction: PUSH15
+err: code section doesn't end with terminating instruction: ADDRESS
 err: code section doesn't end with terminating instruction: PUSH2
 err: code section doesn't end with terminating instruction: ADDRESS
 err: code section doesn't end with terminating instruction: opcode 0x5c not defined
 err: code section doesn't end with terminating instruction: ADDRESS
 err: code section doesn't end with terminating instruction: PUSH4
 err: relative offset points to immediate argument
+err: code section doesn't end with terminating instruction: ADDRESS
 err: relative offset points to immediate argument
 err: code section doesn't end with terminating instruction: ADDRESS
 err: code section doesn't end with terminating instruction: PUSH4
+err: relative offset points to immediate argument
+err: code section doesn't end with terminating instruction: ADDRESS
 err: code section doesn't end with terminating instruction: ADDRESS
 err: invalid version byte
 err: invalid version byte
