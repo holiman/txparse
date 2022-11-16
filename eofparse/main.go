@@ -20,11 +20,15 @@ func work() {
 	scanner := bufio.NewScanner(os.Stdin)
 	for scanner.Scan() {
 		blob := common.FromHex(scanner.Text())
-		container, err := vm.ParseAndValidateEOF1Container(blob, &jt)
+		c, err := vm.ParseEOF1Container(blob)
 		if err != nil {
 			fmt.Printf("err: %v\n", err)
 			continue
 		}
-		fmt.Printf("OK %d\n", container.HeaderSize())
+		if err := c.ValidateCode(&jt); err != nil {
+			fmt.Printf("err: %v\n", err)
+			continue
+		}
+		fmt.Printf("OK %x\n", c.CodeAt(0))
 	}
 }

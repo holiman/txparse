@@ -25,7 +25,9 @@ func Fuzz(f *testing.F) {
 		f.Add(common.FromHex(tc)) // Use f.Add to provide a seed corpus
 	}
 	f.Fuzz(func(t *testing.T, data []byte) {
-		_, _ = vm.ParseAndValidateEOF1Container(data, &jt)
+		if c, err := vm.ParseEOF1Container(data); err == nil {
+			c.ValidateCode(&jt)
+		}
 	})
 }
 

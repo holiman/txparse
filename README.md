@@ -34,7 +34,7 @@ This is a very simple utility, which reads line by line from standard input.
 For each line, it tries to interpret it as hexadecimal data, and the data as
 an EOF1 code blob (verified using the Shanghai jumptable).
 
-If all goes well, it outputs a line containing `OK ` followed by the length of the EOF header.
+If all goes well, it outputs a line containing `OK ` followed by the hex-encoded bytecode of the first code section. 
 Otherwise, it outputs `err: ` and a suitable error message.
 
 (First build with `cd eof && go build .`)
@@ -42,25 +42,25 @@ Example:
 
 
 ```
-]$ cat ./sample.input | ./eofparse 
+[user@work eofparse]$ cat ./sample.input | ./eofparse
 err: invalid version byte
 err: invalid version byte
-OK 7
-OK 7
+OK 00
+OK 00
 err: unknown section id
 err: invalid version byte
 err: invalid version byte
-OK 7
-OK 7
-OK 10
-OK 10
-OK 10
-OK 10
-err: code section doesn't end with terminating instruction: PUSH1
-OK 7
-OK 7
-OK 7
-OK 10
+OK 00
+OK 0000
+OK 0000
+OK 0000
+OK 6000600100
+OK 60006001600200
+OK 600160025e000100
+OK 6000ff
+OK 7f000000000000000000000000000000000000000000000000000000000000000000
+OK 7f0c0d0e0f1e1f2122232425262728292a2b2c2d2e2f494a4b4c4d4e4f5c5d5e5f00
+OK 00
 err: invalid version byte
 err: no code section
 err: no code section
@@ -97,5 +97,5 @@ err: undefined instruction: opcode 0xc not defined
 ```
 
 A larger corpus is in `all.input`. That also has the corresponding output, generated via 
-` cat all.input | ./eofparse > all.output`. So you can use `all.output` to compare. But remember, 
+`cat all.input | ./eofparse > all.output`. So you can use `all.output` to compare. But remember, 
 anything after `err:` is up to the implementation to phrase how they see fit. 
