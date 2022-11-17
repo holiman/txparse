@@ -2,14 +2,14 @@ err: code section doesn't end with terminating instruction: PUSH2
 err: code section doesn't end with terminating instruction: opcode 0x5d not defined
 err: code section doesn't end with terminating instruction: PUSH3
 err: code section doesn't end with terminating instruction: ADDRESS
-err: code section doesn't end with terminating instruction: ADDRESS
+err: first entry of type section must have 0 input and 0 output
 err: code section doesn't end with terminating instruction: ADDRESS
 err: code section doesn't end with terminating instruction: ADDRESS
 err: code section doesn't end with terminating instruction: ADDRESS
 err: code section doesn't end with terminating instruction: opcode 0x5c not defined
 err: code section doesn't end with terminating instruction: PUSH6
 err: relative offset points to immediate argument
-err: code section doesn't end with terminating instruction: ADDRESS
+err: undefined instruction: opcode 0x5e not defined
 err: data section size is 0
 err: code section doesn't end with terminating instruction: PUSH3
 err: code section doesn't end with terminating instruction: PUSH31
@@ -27,15 +27,15 @@ err: code section doesn't end with terminating instruction: PUSH3
 err: code section doesn't end with terminating instruction: PUSH3
 err: code section doesn't end with terminating instruction: PUSH15
 err: code section doesn't end with terminating instruction: PUSH5
-err: invalid section in CALLF immediate
+err: undefined instruction: opcode 0x5e not defined
 err: no type section
 err: code section doesn't end with terminating instruction: PUSH25
 err: code section doesn't end with terminating instruction: PUSH2
 err: code section doesn't end with terminating instruction: ADDRESS
 err: too many code sections
-err: code section doesn't end with terminating instruction: opcode 0x5e not defined
+err: undefined instruction: opcode 0x5e not defined
 err: code section doesn't end with terminating instruction: ADDRESS
-err: code section doesn't end with terminating instruction: ADDRESS
+err: first entry of type section must have 0 input and 0 output
 err: code section doesn't end with terminating instruction: PUSH2
 err: code section doesn't end with terminating instruction: PUSH32
 err: code section doesn't end with terminating instruction: PUSH28
@@ -52,29 +52,29 @@ err: code section doesn't end with terminating instruction: ADDRESS
 err: code section doesn't end with terminating instruction: ADDRESS
 err: code section doesn't end with terminating instruction: ADDRESS
 err: code section doesn't end with terminating instruction: ADDRESS
-err: code section doesn't end with terminating instruction: ADDRESS
+err: invalid type section size
 err: code section doesn't end with terminating instruction: ADDRESS
 err: code section doesn't end with terminating instruction: PUSH4
 err: code section doesn't end with terminating instruction: PUSH25
 err: code section doesn't end with terminating instruction: ADDRESS
 err: code section doesn't end with terminating instruction: PUSH2
-err: code section doesn't end with terminating instruction: PUSH5
+err: first entry of type section must have 0 input and 0 output
 err: code section doesn't end with terminating instruction: ADDRESS
 err: no type section
 err: code section doesn't end with terminating instruction: PUSH3
 err: code section doesn't end with terminating instruction: PUSH2
-err: invalid section in CALLF immediate
-err: invalid section in CALLF immediate: want section 8240, but only have 1 sections
+err: undefined instruction: opcode 0x5e not defined
+err: undefined instruction: opcode 0x5e not defined
 err: code section doesn't end with terminating instruction: ADDRESS
-err: code section doesn't end with terminating instruction: ADDRESS
+err: invalid type section size
 err: code section doesn't end with terminating instruction: PUSH3
-err: code section doesn't end with terminating instruction: ADDRESS
+err: invalid type section size
 err: code section doesn't end with terminating instruction: ADDRESS
 err: code section doesn't end with terminating instruction: PUSH5
 err: code section doesn't end with terminating instruction: PUSH25
 err: code section doesn't end with terminating instruction: PUSH31
 err: code section doesn't end with terminating instruction: PUSH3
-err: invalid section in CALLF immediate: want section 12336, but only have 1 sections
+err: undefined instruction: opcode 0x5e not defined
 err: code section doesn't end with terminating instruction: PUSH31
 err: code section doesn't end with terminating instruction: PUSH2
 err: code section doesn't end with terminating instruction: PUSH4
@@ -90,7 +90,7 @@ err: relative offset points to immediate argument
 err: code section doesn't end with terminating instruction: PUSH1
 err: relative offset points to immediate argument
 err: code section doesn't end with terminating instruction: PUSH2
-err: invalid section in CALLF immediate
+err: undefined instruction: opcode 0x5e not defined
 err: code section doesn't end with terminating instruction: PUSH5
 err: no type section
 err: no type section
@@ -100,10 +100,10 @@ err: code section doesn't end with terminating instruction: PUSH6
 err: code section doesn't end with terminating instruction: PUSH6
 err: code section doesn't end with terminating instruction: PUSH3
 err: code section doesn't end with terminating instruction: PUSH32
-OK 3030303030303000
+err: invalid type section size
 err: code section doesn't end with terminating instruction: PUSH5
 err: code section doesn't end with terminating instruction: PUSH4
-err: code section doesn't end with terminating instruction: ADDRESS
+err: invalid type section size
 err: code section doesn't end with terminating instruction: PUSH4
 err: code section doesn't end with terminating instruction: PUSH15
 err: code section doesn't end with terminating instruction: PUSH25
@@ -111,17 +111,17 @@ err: can't read type section size
 err: code section doesn't end with terminating instruction: PUSH4
 err: code section doesn't end with terminating instruction: PUSH6
 err: code section doesn't end with terminating instruction: PUSH5
-err: code section doesn't end with terminating instruction: ADDRESS
+err: invalid type section size
 err: code section doesn't end with terminating instruction: PUSH7
 err: code section doesn't end with terminating instruction: ADDRESS
 err: code section doesn't end with terminating instruction: ADDRESS
 err: code section doesn't end with terminating instruction: ADDRESS
-err: invalid section in CALLF immediate: want section 48, but only have 1 sections
+err: undefined instruction: opcode 0x5e not defined
 err: code section doesn't end with terminating instruction: PUSH14
 err: code section doesn't end with terminating instruction: ADDRESS
 err: code section doesn't end with terminating instruction: PUSH25
 err: no type section
-err: code section doesn't end with terminating instruction: ADDRESS
+err: undefined instruction: opcode 0x5e not defined
 err: code section doesn't end with terminating instruction: PUSH6
 err: code section doesn't end with terminating instruction: ADDRESS
 err: code section doesn't end with terminating instruction: PUSH7
@@ -129,13 +129,13 @@ err: code section doesn't end with terminating instruction: ADDRESS
 err: code section doesn't end with terminating instruction: ADDRESS
 err: code section doesn't end with terminating instruction: PUSH4
 err: code section doesn't end with terminating instruction: PUSH32
-err: code section doesn't end with terminating instruction: ADDRESS
+err: invalid type section size
 err: code section doesn't end with terminating instruction: PUSH30
 err: code section doesn't end with terminating instruction: opcode 0x5c not defined
 err: no type section
 err: relative offset points to immediate argument
 err: code section doesn't end with terminating instruction: ADDRESS
-err: invalid section in CALLF immediate
+err: undefined instruction: opcode 0x5e not defined
 err: code section doesn't end with terminating instruction: PUSH2
 err: code section doesn't end with terminating instruction: PUSH32
 err: code section doesn't end with terminating instruction: PUSH15
@@ -143,16 +143,16 @@ err: code section doesn't end with terminating instruction: ADDRESS
 err: code section doesn't end with terminating instruction: PUSH2
 err: code section doesn't end with terminating instruction: ADDRESS
 err: code section doesn't end with terminating instruction: opcode 0x5c not defined
+err: undefined instruction: opcode 0x5e not defined
+err: code section doesn't end with terminating instruction: PUSH4
+err: undefined instruction: opcode 0x5e not defined
+err: code section doesn't end with terminating instruction: ADDRESS
+err: relative offset points to immediate argument
 err: code section doesn't end with terminating instruction: ADDRESS
 err: code section doesn't end with terminating instruction: PUSH4
 err: relative offset points to immediate argument
 err: code section doesn't end with terminating instruction: ADDRESS
-err: relative offset points to immediate argument
-err: code section doesn't end with terminating instruction: ADDRESS
-err: code section doesn't end with terminating instruction: PUSH4
-err: relative offset points to immediate argument
-err: code section doesn't end with terminating instruction: ADDRESS
-err: code section doesn't end with terminating instruction: ADDRESS
+err: first entry of type section must have 0 input and 0 output
 err: invalid version byte
 err: invalid version byte
 OK 00
@@ -166,7 +166,7 @@ OK 0000
 OK 0000
 OK 6000600100
 OK 60006001600200
-OK 600160025e000100
+err: undefined instruction: opcode 0x5e not defined
 OK 6000ff
 OK 7f000000000000000000000000000000000000000000000000000000000000000000
 OK 7f0c0d0e0f1e1f2122232425262728292a2b2c2d2e2f494a4b4c4d4e4f5c5d5e5f00
@@ -204,4 +204,4 @@ err: relative offset points to immediate argument
 err: undefined instruction: opcode 0xc not defined
 err: undefined instruction: opcode 0xc not defined
 err: undefined instruction: opcode 0xc not defined
-err: code section doesn't end with terminating instruction: ADDRESS
+err: first entry of type section must have 0 input and 0 output

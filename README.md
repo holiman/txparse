@@ -56,7 +56,7 @@ OK 0000
 OK 0000
 OK 6000600100
 OK 60006001600200
-OK 600160025e000100
+err: undefined instruction: opcode 0x5e not defined
 OK 6000ff
 OK 7f000000000000000000000000000000000000000000000000000000000000000000
 OK 7f0c0d0e0f1e1f2122232425262728292a2b2c2d2e2f494a4b4c4d4e4f5c5d5e5f00
@@ -94,7 +94,7 @@ err: relative offset points to immediate argument
 err: undefined instruction: opcode 0xc not defined
 err: undefined instruction: opcode 0xc not defined
 err: undefined instruction: opcode 0xc not defined
-err: code section doesn't end with terminating instruction: ADDRESS
+err: first entry of type section must have 0 input and 0 output
 ```
 
 A larger corpus is in `all.input`. That also has the corresponding output, generated via 
