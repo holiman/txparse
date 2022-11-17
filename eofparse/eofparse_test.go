@@ -31,7 +31,7 @@ func Fuzz(f *testing.F) {
 	})
 }
 
-// taken from ethereum tests / transactiontests
+// taken from tests in the PR
 var tests = []string{
 	"EF00010100010000",
 	"0xEF00010100010000",

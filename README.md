@@ -42,7 +42,7 @@ Example:
 
 
 ```
-$ cat ./sample.input | ./eofparse
+$ cat ./sample.input | ./eofparse | head -n 10
 err: invalid version byte
 err: invalid version byte
 OK 00
@@ -53,48 +53,6 @@ err: invalid version byte
 OK 00
 OK 0000
 OK 0000
-OK 0000
-OK 6000600100
-OK 60006001600200
-err: undefined instruction: opcode 0x5e not defined
-OK 6000ff
-OK 7f000000000000000000000000000000000000000000000000000000000000000000
-OK 7f0c0d0e0f1e1f2122232425262728292a2b2c2d2e2f494a4b4c4d4e4f5c5d5e5f00
-OK 00
-err: invalid version byte
-err: no code section
-err: no code section
-err: can't read code section size
-err: can't read code section size
-err: invalid total size
-err: invalid total size
-err: invalid total size
-err: code section size is 0
-err: code section size is 0
-err: data section before code section
-err: data section before code section
-err: can't read data section size
-err: can't read data section size
-err: invalid total size
-err: invalid total size
-err: invalid total size
-err: invalid total size
-err: data section size is 0
-err: multiple data sections
-err: unknown section id
-err: undefined instruction: opcode 0xc not defined
-err: undefined instruction: opcode 0xef not defined
-err: code section doesn't end with terminating instruction: ADDRESS
-err: code section doesn't end with terminating instruction: PUSH1
-err: code section doesn't end with terminating instruction: PUSH32
-err: code section doesn't end with terminating instruction: PUSH32
-err: relative offset points to immediate argument
-err: relative offset points to immediate argument
-err: relative offset points to immediate argument
-err: undefined instruction: opcode 0xc not defined
-err: undefined instruction: opcode 0xc not defined
-err: undefined instruction: opcode 0xc not defined
-err: first entry of type section must have 0 input and 0 output
 ```
 
 A larger corpus is in `all.input`. That also has the corresponding output, generated via 
