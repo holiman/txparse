@@ -1,6 +1,8 @@
 package main
 
 import (
+	"bytes"
+	"fmt"
 	"testing"
 
 	"github.com/ethereum/go-ethereum/common"
@@ -20,13 +22,27 @@ It can also be overridden:
 	$ GOCACHE=`pwd`/gen_corpus  go test . -fuzz Fuzz
 */
 func Fuzz(f *testing.F) {
-	jt := vm.NewLatestInstructionSetForTesting()
+
 	for _, tc := range tests {
 		f.Add(common.FromHex(tc)) // Use f.Add to provide a seed corpus
 	}
+
+	jt := vm.NewShanghaiEOFInstructionSetForTesting()
+
 	f.Fuzz(func(t *testing.T, data []byte) {
-		if c, err := vm.ParseEOF1Container(data); err == nil {
-			c.ValidateCode(&jt)
+		var c vm.Container
+
+		err := c.UnmarshalBinary(data)
+		if err != nil {
+			return
+		}
+		err = c.ValidateCode(&jt)
+		if err != nil {
+			return
+		}
+		out := c.MarshalBinary()
+		if !bytes.Equal(out, data) {
+			panic(fmt.Sprintf("Marshal/Unmarshal mismatch. \nInput:  %#x\nOutput: %#x\n", data, out))
 		}
 	})
 }
@@ -82,4 +98,6 @@ var tests = []string{
 	"EF0001010002000C00",
 	"EF0001010001000C",
 	"EF0001010001000C",
+	"ef000101000402000100030300030000000001604200010203",
+	"0xef000101000c02000300030005000103000000000000010203000401010001604200604260420000",
 }

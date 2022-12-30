@@ -15,7 +15,6 @@ func main() {
 
 func work() {
 	// The input is assumed to be an EOF1 container verified against Shanghain instructionset.
-
 	jt := vm.NewShanghaiEOFInstructionSetForTesting()
 	var c vm.Container
 	scanner := bufio.NewScanner(os.Stdin)
