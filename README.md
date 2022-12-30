@@ -37,6 +37,26 @@ an EOF1 code blob (verified using the Shanghai jumptable).
 If all goes well, it outputs a line containing `OK ` followed by the hex-encoded bytecode of the first code section. 
 Otherwise, it outputs `err: ` and a suitable error message.
 
+It requires a change to go-ethereum, which also needs to run on `lightclient/eof` branch:
+```diff
+diff --git a/core/vm/jump_table.go b/core/vm/jump_table.go
+index a91406ef6e..7db9b1b95c 100644
+--- a/core/vm/jump_table.go
++++ b/core/vm/jump_table.go
+@@ -85,6 +85,10 @@ func validate(jt JumpTable) JumpTable {
+        return jt
+ }
+ 
++func NewShanghaiEOFInstructionSetForTesting() JumpTable {
++       return newShanghaiEOFInstructionSet()
++}
++
+ func newShanghaiEOFInstructionSet() JumpTable {
+        instructionSet := newMergeInstructionSet()
+        enable3855(&instructionSet)
+```
+
+
 (First build with `cd eof && go build .`)
 Example:
 
