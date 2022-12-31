@@ -1,0 +1,57 @@
+err: invalid magic
+err: invalid magic
+err: container size less than minimum valid size
+err: container size less than minimum valid size
+err: failed to parse section list: unexpected EOF
+err: invalid magic
+err: invalid magic
+err: container size less than minimum valid size
+err: container size less than minimum valid size
+err: container size less than minimum valid size
+err: failed to parse section list: unexpected EOF
+err: mismatch of code sections count and type signatures (types 1, code 2)
+err: mismatch of code sections count and type signatures (types 2, code 4)
+err: expected kind types
+err: container size less than minimum valid size
+err: failed to parse section list: unexpected EOF
+err: failed to parse section list: unexpected EOF
+err: failed to parse section list: unexpected EOF
+err: invalid eof version
+err: container size less than minimum valid size
+err: container size less than minimum valid size
+err: container size less than minimum valid size
+err: container size less than minimum valid size
+err: container size less than minimum valid size
+err: container size less than minimum valid size
+err: container size less than minimum valid size
+err: container size less than minimum valid size
+err: container size less than minimum valid size
+err: expected kind types
+err: container size less than minimum valid size
+err: container size less than minimum valid size
+err: container size less than minimum valid size
+err: container size less than minimum valid size
+err: container size less than minimum valid size
+err: failed to parse section list: unexpected EOF
+err: failed to parse section list: unexpected EOF
+err: container size less than minimum valid size
+err: mismatch of code sections count and type signatures (types 0, code 4)
+err: failed to parse section list: unexpected EOF
+err: container size less than minimum valid size
+err: container size less than minimum valid size
+err: container size less than minimum valid size
+err: container size less than minimum valid size
+err: failed to parse section list: unexpected EOF
+err: failed to parse section list: unexpected EOF
+err: container size less than minimum valid size
+err: container size less than minimum valid size
+err: container size less than minimum valid size
+err: container size less than minimum valid size
+err: container size less than minimum valid size
+err: container size less than minimum valid size
+err: expected kind types
+err: computed max stack height for code section 0 does not match expect (want: 0, got: 1)
+err: computed max stack height for code section 0 does not match expect (want: 0, got: 1)
+OK 604200
+OK 604200
+err: invalid relative jump
