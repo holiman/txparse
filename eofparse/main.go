@@ -4,7 +4,7 @@ import (
 	"bufio"
 	"fmt"
 	"os"
-	"strings"
+	"regexp"
 
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/core/vm"
@@ -18,9 +18,10 @@ func work() {
 	// The input is assumed to be an EOF1 container verified against Shanghain instructionset.
 	jt := vm.NewShanghaiEOFInstructionSetForTesting()
 	var c vm.Container
+	notAlphaNum := regexp.MustCompile(`[^0-9A-Za-z]`)
 	scanner := bufio.NewScanner(os.Stdin)
 	for scanner.Scan() {
-		code := strings.Replace(scanner.Text(), " ", "", -1)
+		code := notAlphaNum.ReplaceAllString(scanner.Text(), "")
 		blob := common.FromHex(code)
 		err := c.UnmarshalBinary(blob)
 		if err != nil {
