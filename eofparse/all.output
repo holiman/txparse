@@ -1,222 +1,227 @@
-err: code section doesn't end with terminating instruction: PUSH2
-err: code section doesn't end with terminating instruction: opcode 0x5d not defined
-err: code section doesn't end with terminating instruction: PUSH3
-err: code section doesn't end with terminating instruction: ADDRESS
-err: code section doesn't end with terminating instruction: ADDRESS
-err: first entry of type section must have 0 input and 0 output
-err: code section doesn't end with terminating instruction: ADDRESS
-err: code section doesn't end with terminating instruction: ADDRESS
-err: code section doesn't end with terminating instruction: ADDRESS
-err: code section doesn't end with terminating instruction: opcode 0x5c not defined
-err: code section doesn't end with terminating instruction: PUSH6
-err: relative offset points to immediate argument
-err: code section doesn't end with terminating instruction: ADDRESS
-err: undefined instruction: opcode 0x5e not defined
-err: invalid section in CALLF immediate: want section 48, but only have 1 sections
-err: data section size is 0
-err: code section doesn't end with terminating instruction: PUSH3
-err: code section doesn't end with terminating instruction: PUSH31
-err: no type section
-err: invalid section in CALLF immediate
-err: code section doesn't end with terminating instruction: ADDRESS
-err: code section doesn't end with terminating instruction: PUSH25
-err: code section doesn't end with terminating instruction: PUSH3
-err: relative offset points to immediate argument
-err: code section doesn't end with terminating instruction: ADDRESS
-OK 30303000
-err: code section doesn't end with terminating instruction: PUSH7
-err: code section doesn't end with terminating instruction: ADDRESS
-err: code section doesn't end with terminating instruction: PUSH3
-err: code section doesn't end with terminating instruction: ADDRESS
-err: code section doesn't end with terminating instruction: PUSH3
-err: code section doesn't end with terminating instruction: PUSH3
-err: code section doesn't end with terminating instruction: PUSH15
-err: code section doesn't end with terminating instruction: PUSH5
-err: undefined instruction: opcode 0x5e not defined
-err: no type section
-err: code section doesn't end with terminating instruction: PUSH25
-err: code section doesn't end with terminating instruction: PUSH2
-err: code section doesn't end with terminating instruction: ADDRESS
-err: first entry of type section must have 0 input and 0 output
-err: too many code sections
-err: undefined instruction: opcode 0x5e not defined
-err: code section doesn't end with terminating instruction: ADDRESS
-err: first entry of type section must have 0 input and 0 output
-err: code section doesn't end with terminating instruction: PUSH2
-err: code section doesn't end with terminating instruction: PUSH32
-err: code section doesn't end with terminating instruction: PUSH28
-err: code section doesn't end with terminating instruction: ADDRESS
-err: code section doesn't end with terminating instruction: ADDRESS
-err: code section doesn't end with terminating instruction: PUSH4
-err: code section doesn't end with terminating instruction: ADDRESS
-err: code section doesn't end with terminating instruction: PUSH7
-err: code section doesn't end with terminating instruction: ADDRESS
-err: relative offset points to immediate argument
-err: code section doesn't end with terminating instruction: ADDRESS
-err: code section doesn't end with terminating instruction: PUSH4
-err: code section doesn't end with terminating instruction: ADDRESS
-err: code section doesn't end with terminating instruction: ADDRESS
-err: code section doesn't end with terminating instruction: ADDRESS
-err: code section doesn't end with terminating instruction: ADDRESS
-err: invalid type section size
-err: code section doesn't end with terminating instruction: ADDRESS
-err: code section doesn't end with terminating instruction: PUSH4
-err: code section doesn't end with terminating instruction: PUSH25
-err: code section doesn't end with terminating instruction: ADDRESS
-err: code section doesn't end with terminating instruction: PUSH2
-err: first entry of type section must have 0 input and 0 output
-err: code section doesn't end with terminating instruction: ADDRESS
-err: no type section
-err: code section doesn't end with terminating instruction: PUSH3
-err: code section doesn't end with terminating instruction: PUSH2
-err: undefined instruction: opcode 0x5e not defined
-err: code section doesn't end with terminating instruction: ADDRESS
-err: code section doesn't end with terminating instruction: ADDRESS
-err: undefined instruction: opcode 0x5e not defined
-err: code section doesn't end with terminating instruction: ADDRESS
-err: invalid type section size
-err: code section doesn't end with terminating instruction: PUSH3
-err: invalid type section size
-err: code section doesn't end with terminating instruction: ADDRESS
-err: code section doesn't end with terminating instruction: ADDRESS
-err: code section doesn't end with terminating instruction: PUSH5
-err: code section doesn't end with terminating instruction: PUSH25
-err: code section doesn't end with terminating instruction: PUSH31
-err: code section doesn't end with terminating instruction: PUSH3
-err: undefined instruction: opcode 0x5e not defined
-err: code section doesn't end with terminating instruction: PUSH31
-err: code section doesn't end with terminating instruction: PUSH2
-err: code section doesn't end with terminating instruction: PUSH4
-err: code section doesn't end with terminating instruction: PUSH8
-err: code section doesn't end with terminating instruction: PUSH6
-err: type section header after other section header
-err: code section doesn't end with terminating instruction: PUSH13
-err: code section doesn't end with terminating instruction: PUSH13
-err: code section doesn't end with terminating instruction: ADDRESS
-err: code section doesn't end with terminating instruction: opcode 0x5c not defined
-err: code section doesn't end with terminating instruction: ADDRESS
-err: relative offset points to immediate argument
-err: code section doesn't end with terminating instruction: PUSH1
-err: relative offset points to immediate argument
-err: code section doesn't end with terminating instruction: PUSH2
-err: code section doesn't end with terminating instruction: PUSH6
-err: undefined instruction: opcode 0x5e not defined
-err: code section doesn't end with terminating instruction: PUSH5
-err: no type section
-err: no type section
-err: multiple type sections
-err: code section doesn't end with terminating instruction: PUSH14
-err: code section doesn't end with terminating instruction: PUSH6
-err: code section doesn't end with terminating instruction: ADDRESS
-err: code section doesn't end with terminating instruction: PUSH6
-err: code section doesn't end with terminating instruction: PUSH3
-err: code section doesn't end with terminating instruction: PUSH32
-err: invalid section in CALLF immediate: want section 8240, but only have 1 sections
-err: code section doesn't end with terminating instruction: ADDRESS
-err: invalid type section size
-err: code section doesn't end with terminating instruction: PUSH5
-err: code section doesn't end with terminating instruction: PUSH4
-err: invalid type section size
-err: code section doesn't end with terminating instruction: PUSH4
-err: code section doesn't end with terminating instruction: PUSH15
-err: code section doesn't end with terminating instruction: PUSH25
-err: can't read type section size
-err: code section doesn't end with terminating instruction: PUSH4
-err: code section doesn't end with terminating instruction: PUSH6
-err: code section doesn't end with terminating instruction: PUSH5
-err: invalid type section size
-err: code section doesn't end with terminating instruction: PUSH7
-err: code section doesn't end with terminating instruction: ADDRESS
-err: code section doesn't end with terminating instruction: ADDRESS
-err: code section doesn't end with terminating instruction: ADDRESS
-err: undefined instruction: opcode 0x5e not defined
-err: code section doesn't end with terminating instruction: PUSH14
-err: code section doesn't end with terminating instruction: ADDRESS
-err: code section doesn't end with terminating instruction: PUSH25
-err: no type section
-err: undefined instruction: opcode 0x5e not defined
-err: code section doesn't end with terminating instruction: PUSH6
-OK 3030303030303000
-err: code section doesn't end with terminating instruction: ADDRESS
-err: code section doesn't end with terminating instruction: PUSH7
-err: code section doesn't end with terminating instruction: ADDRESS
-err: code section doesn't end with terminating instruction: ADDRESS
-err: code section doesn't end with terminating instruction: PUSH4
-err: invalid section in CALLF immediate
-err: code section doesn't end with terminating instruction: PUSH32
-err: invalid type section size
-err: code section doesn't end with terminating instruction: PUSH30
-err: code section doesn't end with terminating instruction: opcode 0x5c not defined
-err: no type section
-err: relative offset points to immediate argument
-err: code section doesn't end with terminating instruction: ADDRESS
-err: undefined instruction: opcode 0x5e not defined
-err: code section doesn't end with terminating instruction: PUSH2
-err: code section doesn't end with terminating instruction: PUSH32
-err: code section doesn't end with terminating instruction: PUSH15
-err: code section doesn't end with terminating instruction: ADDRESS
-err: code section doesn't end with terminating instruction: PUSH2
-err: code section doesn't end with terminating instruction: ADDRESS
-err: code section doesn't end with terminating instruction: opcode 0x5c not defined
-err: undefined instruction: opcode 0x5e not defined
-err: code section doesn't end with terminating instruction: PUSH4
-err: undefined instruction: opcode 0x5e not defined
-err: code section doesn't end with terminating instruction: ADDRESS
-err: relative offset points to immediate argument
-err: code section doesn't end with terminating instruction: ADDRESS
-err: code section doesn't end with terminating instruction: PUSH4
-err: invalid section in CALLF immediate: want section 12336, but only have 1 sections
-err: relative offset points to immediate argument
-err: code section doesn't end with terminating instruction: ADDRESS
-err: invalid version byte
-err: invalid version byte
-OK 00
-OK 00
-err: unknown section id
-err: invalid version byte
-err: invalid version byte
-OK 00
-OK 0000
-OK 0000
-OK 0000
-OK 6000600100
-OK 60006001600200
-err: undefined instruction: opcode 0x5e not defined
-OK 6000ff
-OK 7f000000000000000000000000000000000000000000000000000000000000000000
-OK 7f0c0d0e0f1e1f2122232425262728292a2b2c2d2e2f494a4b4c4d4e4f5c5d5e5f00
-OK 00
-err: invalid version byte
-err: no code section
-err: no code section
-err: can't read code section size
-err: can't read code section size
-err: invalid total size
-err: invalid total size
-err: invalid total size
-err: code section size is 0
-err: code section size is 0
-err: data section before code section
-err: data section before code section
-err: can't read data section size
-err: can't read data section size
-err: invalid total size
-err: invalid total size
-err: invalid total size
-err: invalid total size
-err: data section size is 0
-err: multiple data sections
-err: unknown section id
-err: undefined instruction: opcode 0xc not defined
-err: undefined instruction: opcode 0xef not defined
-err: code section doesn't end with terminating instruction: ADDRESS
-err: code section doesn't end with terminating instruction: PUSH1
-err: code section doesn't end with terminating instruction: PUSH32
-err: code section doesn't end with terminating instruction: PUSH32
-err: relative offset points to immediate argument
-err: relative offset points to immediate argument
-err: relative offset points to immediate argument
-err: undefined instruction: opcode 0xc not defined
-err: undefined instruction: opcode 0xc not defined
-err: undefined instruction: opcode 0xc not defined
-err: first entry of type section must have 0 input and 0 output
+err: failed to parse section list: unexpected EOF
+err: container size less than minimum valid size
+err: failed to parse section list: unexpected EOF
+err: failed to parse section list: unexpected EOF
+err: expected kind types
+err: expected kind types
+err: failed to parse section list: unexpected EOF
+err: failed to parse section list: unexpected EOF
+err: failed to parse section list: unexpected EOF
+err: failed to parse section list: unexpected EOF
+err: failed to parse section list: unexpected EOF
+err: failed to parse section list: unexpected EOF
+err: expected kind types
+err: failed to parse section list: unexpected EOF
+err: failed to parse section list: unexpected EOF
+err: container size less than minimum valid size
+err: failed to parse section list: unexpected EOF
+err: failed to parse section list: unexpected EOF
+err: number of code sections must not exceed 1024 (got 12336)
+err: failed to parse section list: unexpected EOF
+err: failed to parse section list: unexpected EOF
+err: container size less than minimum valid size
+err: failed to parse section list: unexpected EOF
+err: container size less than minimum valid size
+err: failed to parse section list: unexpected EOF
+err: expected kind types
+err: failed to parse section list: unexpected EOF
+err: failed to parse section list: unexpected EOF
+err: failed to parse section list: unexpected EOF
+err: failed to parse section list: unexpected EOF
+err: failed to parse section list: unexpected EOF
+err: failed to parse section list: unexpected EOF
+err: container size less than minimum valid size
+err: failed to parse section list: unexpected EOF
+err: container size less than minimum valid size
+err: number of code sections must not exceed 1024 (got 12336)
+err: failed to parse section list: unexpected EOF
+err: container size less than minimum valid size
+err: failed to parse section list: unexpected EOF
+err: expected kind types
+err: expected kind code
+err: container size less than minimum valid size
+err: failed to parse section list: unexpected EOF
+err: expected kind types
+err: failed to parse section list: unexpected EOF
+err: failed to parse section list: unexpected EOF
+err: container size less than minimum valid size
+err: failed to parse section list: unexpected EOF
+err: failed to parse section list: unexpected EOF
+err: failed to parse section list: unexpected EOF
+err: failed to parse section list: unexpected EOF
+err: failed to parse section list: unexpected EOF
+err: failed to parse section list: unexpected EOF
+err: container size less than minimum valid size
+err: failed to parse section list: unexpected EOF
+err: failed to parse section list: unexpected EOF
+err: failed to parse section list: unexpected EOF
+err: failed to parse section list: unexpected EOF
+err: failed to parse section list: unexpected EOF
+err: failed to parse section list: unexpected EOF
+err: expected kind types
+err: failed to parse section list: unexpected EOF
+err: failed to parse section list: unexpected EOF
+err: failed to parse section list: unexpected EOF
+err: failed to parse section list: unexpected EOF
+err: failed to parse section list: unexpected EOF
+err: expected kind types
+err: failed to parse section list: unexpected EOF
+err: number of code sections must not exceed 1024 (got 12336)
+err: failed to parse section list: unexpected EOF
+err: failed to parse section list: unexpected EOF
+err: failed to parse section list: unexpected EOF
+err: failed to parse section list: unexpected EOF
+err: failed to parse section list: unexpected EOF
+err: container size less than minimum valid size
+err: failed to parse section list: unexpected EOF
+err: expected kind types
+err: container size less than minimum valid size
+err: expected kind types
+err: expected kind types
+err: failed to parse section list: unexpected EOF
+err: failed to parse section list: unexpected EOF
+err: mismatch of code sections count and type signatures (types 2, code 4)
+err: mismatch of code sections count and type signatures (types 2, code 4)
+err: failed to parse section list: unexpected EOF
+err: container size less than minimum valid size
+err: container size less than minimum valid size
+err: failed to parse section list: unexpected EOF
+err: failed to parse section list: unexpected EOF
+err: failed to parse section list: unexpected EOF
+err: failed to parse section list: unexpected EOF
+err: container size less than minimum valid size
+err: failed to parse section list: unexpected EOF
+err: failed to parse section list: unexpected EOF
+err: failed to parse section list: unexpected EOF
+err: container size less than minimum valid size
+err: container size less than minimum valid size
+err: container size less than minimum valid size
+err: failed to parse section list: unexpected EOF
+err: container size less than minimum valid size
+err: mismatch of code sections count and type signatures (types 2, code 4)
+err: failed to parse section list: unexpected EOF
+err: failed to parse section list: unexpected EOF
+err: failed to parse section list: unexpected EOF
+err: number of code sections must not exceed 1024 (got 12336)
+err: number of code sections must not exceed 1024 (got 12336)
+err: container size less than minimum valid size
+err: failed to parse section list: unexpected EOF
+err: failed to parse section list: unexpected EOF
+err: failed to parse section list: unexpected EOF
+err: failed to parse section list: unexpected EOF
+err: mismatch of code sections count and type signatures (types 2, code 4)
+err: failed to parse section list: unexpected EOF
+err: failed to parse section list: unexpected EOF
+err: failed to parse section list: unexpected EOF
+err: expected kind types
+err: failed to parse section list: unexpected EOF
+err: failed to parse section list: unexpected EOF
+err: expected kind types
+err: failed to parse section list: unexpected EOF
+err: failed to parse section list: unexpected EOF
+err: failed to parse section list: unexpected EOF
+err: container size less than minimum valid size
+err: failed to parse section list: unexpected EOF
+err: failed to parse section list: unexpected EOF
+err: failed to parse section list: unexpected EOF
+err: expected kind types
+err: failed to parse section list: unexpected EOF
+err: failed to parse section list: unexpected EOF
+err: failed to parse section list: unexpected EOF
+err: failed to parse section list: unexpected EOF
+err: container size less than minimum valid size
+err: container size less than minimum valid size
+err: failed to parse section list: unexpected EOF
+err: failed to parse section list: unexpected EOF
+err: number of code sections must not exceed 1024 (got 12336)
+err: failed to parse section list: unexpected EOF
+err: failed to parse section list: unexpected EOF
+err: expected kind types
+err: failed to parse section list: unexpected EOF
+err: failed to parse section list: unexpected EOF
+err: failed to parse section list: unexpected EOF
+err: failed to parse section list: unexpected EOF
+err: failed to parse section list: unexpected EOF
+err: container size less than minimum valid size
+err: failed to parse section list: unexpected EOF
+err: expected kind types
+err: failed to parse section list: unexpected EOF
+err: failed to parse section list: unexpected EOF
+err: container size less than minimum valid size
+err: container size less than minimum valid size
+err: failed to parse section list: unexpected EOF
+err: failed to parse section list: unexpected EOF
+err: container size less than minimum valid size
+err: failed to parse section list: unexpected EOF
+err: failed to parse section list: unexpected EOF
+err: failed to parse section list: unexpected EOF
+err: failed to parse section list: unexpected EOF
+err: failed to parse section list: unexpected EOF
+err: failed to parse section list: unexpected EOF
+err: failed to parse section list: unexpected EOF
+err: failed to parse section list: unexpected EOF
+err: failed to parse section list: unexpected EOF
+err: failed to parse section list: unexpected EOF
+err: container size less than minimum valid size
+err: failed to parse section list: unexpected EOF
+err: container size less than minimum valid size
+err: failed to parse section list: unexpected EOF
+err: container size less than minimum valid size
+err: failed to parse section list: unexpected EOF
+err: invalid magic
+err: invalid magic
+err: container size less than minimum valid size
+err: container size less than minimum valid size
+err: failed to parse section list: unexpected EOF
+err: invalid magic
+err: invalid magic
+err: container size less than minimum valid size
+err: container size less than minimum valid size
+err: container size less than minimum valid size
+err: failed to parse section list: unexpected EOF
+err: mismatch of code sections count and type signatures (types 1, code 2)
+err: mismatch of code sections count and type signatures (types 2, code 4)
+err: expected kind types
+err: container size less than minimum valid size
+err: failed to parse section list: unexpected EOF
+err: failed to parse section list: unexpected EOF
+err: failed to parse section list: unexpected EOF
+err: invalid eof version
+err: container size less than minimum valid size
+err: container size less than minimum valid size
+err: container size less than minimum valid size
+err: container size less than minimum valid size
+err: container size less than minimum valid size
+err: container size less than minimum valid size
+err: container size less than minimum valid size
+err: container size less than minimum valid size
+err: container size less than minimum valid size
+err: expected kind types
+err: container size less than minimum valid size
+err: container size less than minimum valid size
+err: container size less than minimum valid size
+err: container size less than minimum valid size
+err: container size less than minimum valid size
+err: failed to parse section list: unexpected EOF
+err: failed to parse section list: unexpected EOF
+err: container size less than minimum valid size
+err: mismatch of code sections count and type signatures (types 0, code 4)
+err: failed to parse section list: unexpected EOF
+err: container size less than minimum valid size
+err: container size less than minimum valid size
+err: container size less than minimum valid size
+err: container size less than minimum valid size
+err: failed to parse section list: unexpected EOF
+err: failed to parse section list: unexpected EOF
+err: container size less than minimum valid size
+err: container size less than minimum valid size
+err: container size less than minimum valid size
+err: container size less than minimum valid size
+err: container size less than minimum valid size
+err: container size less than minimum valid size
+err: expected kind types
+err: computed max stack height for code section 0 does not match expect (want: 0, got: 1)
+err: computed max stack height for code section 0 does not match expect (want: 0, got: 1)
+OK 604200
+OK 604200
+err: invalid relative jump
