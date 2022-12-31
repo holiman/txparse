@@ -4,6 +4,7 @@ import (
 	"bufio"
 	"fmt"
 	"os"
+	"strings"
 
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/core/vm"
@@ -19,7 +20,8 @@ func work() {
 	var c vm.Container
 	scanner := bufio.NewScanner(os.Stdin)
 	for scanner.Scan() {
-		blob := common.FromHex(scanner.Text())
+		code := strings.Replace(scanner.Text(), " ", "", -1)
+		blob := common.FromHex(code)
 		err := c.UnmarshalBinary(blob)
 		if err != nil {
 			fmt.Printf("err: %v\n", err)
