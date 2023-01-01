@@ -145,6 +145,7 @@ err: relative offset out-of-bounds: 25148
 err: computed max stack height for code section 1 does not match expect (want: 48, got: 54)
 err: code section ends with non-terminal instruction
 err: computed max stack height for code section 1 does not match expect (want: 48, got: 58)
+err: computed max stack height for code section 1 does not match expect (want: 48, got: 49)
 err: relative offset out-of-bounds: 12345
 err: relative offset out-of-bounds: 12348
 err: code section ends with non-terminal instruction
@@ -153,6 +154,7 @@ err: relative offset out-of-bounds: 12339
 err: relative offset out-of-bounds: 12339
 err: relative offset out-of-bounds: 12339
 err: relative offset out-of-bounds: 12339
+err: computed max stack height for code section 1 does not match expect (want: 48, got: 49)
 err: relative offset out-of-bounds: 12342
 err: computed max stack height for code section 1 does not match expect (want: 48, got: 49)
 err: truncated jump table operand
@@ -169,11 +171,13 @@ err: relative offset out-of-bounds: 12344
 err: relative offset out-of-bounds: 12344
 err: relative offset out-of-bounds: 12344
 err: relative offset out-of-bounds: 12344
+err: computed max stack height for code section 1 does not match expect (want: 48, got: 47)
 err: relative offset out-of-bounds: 12358
 err: relative offset out-of-bounds: 12358
 err: relative offset out-of-bounds: 12409
 err: relative offset out-of-bounds: 24180
 err: truncated operand
+err: code section ends with non-terminal instruction
 err: relative offset out-of-bounds: 12358
 err: computed max stack height for code section 1 does not match expect (want: 48, got: 63)
 err: computed max stack height for code section 1 does not match expect (want: 48, got: 49)
@@ -220,8 +224,20 @@ err: relative offset out-of-bounds: 12402
 err: relative offset out-of-bounds: 12402
 err: relative offset out-of-bounds: 12402
 err: relative offset out-of-bounds: 12402
+err: relative offset out-of-bounds: 12402
+err: relative offset out-of-bounds: 12402
 err: relative offset out-of-bounds: 12457
 err: relative offset out-of-bounds: 12457
+err: relative offset out-of-bounds: 25458
+err: relative offset out-of-bounds: 25490
+err: computed max stack height for code section 1 does not match expect (want: 48, got: 119)
+err: code section ends with non-terminal instruction
+err: relative offset out-of-bounds: 12369
+err: relative offset out-of-bounds: 12352
+err: computed max stack height for code section 1 does not match expect (want: 48, got: 57)
+err: computed max stack height for code section 1 does not match expect (want: 48, got: 56)
+err: code section ends with non-terminal instruction
+err: code section ends with non-terminal instruction
 err: expected terminator
 err: failed to parse section list: unexpected EOF
 err: failed to parse section list: unexpected EOF
