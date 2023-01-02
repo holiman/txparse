@@ -81,7 +81,7 @@ err: type annotation 0 max stack height must not exceed 1024
 err: code section 2 size must not be 0
 err: computed max stack height for code section 1 does not match expect (want: 48, got: 0)
 err: computed max stack height for code section 0 does not match expect (want: 0, got: 1)
-OK 604200
+OK 604200,6042604200,00
 err: truncated operand
 err: computed max stack height for code section 1 does not match expect (want: 48, got: 52)
 err: computed max stack height for code section 1 does not match expect (want: 48, got: 52)
@@ -101,7 +101,7 @@ err: relative offset out-of-bounds: 12339
 err: relative offset out-of-bounds: 12339
 err: relative offset out-of-bounds: -8909
 err: relative offset into immediate operand: 2
-OK 603000
+OK 603000,5d00003000,00
 err: code section ends with non-terminal instruction
 err: stack height mismatch for different paths
 err: rjumpv branch count must not be 0

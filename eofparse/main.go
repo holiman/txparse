@@ -4,6 +4,7 @@ import (
 	"bufio"
 	"fmt"
 	"os"
+	"strings"
 
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/core/vm"
@@ -31,7 +32,11 @@ func work() {
 			continue
 		}
 		if len(c.Code) > 0 {
-			fmt.Printf("OK %x\n", c.Code[0])
+			var codes []string
+			for _, code := range c.Code {
+				codes = append(codes, fmt.Sprintf("%x", code))
+			}
+			fmt.Printf("OK %v\n", strings.Join(codes, ","))
 		} else {
 			fmt.Printf("OK 0x\n")
 		}
