@@ -110,6 +110,7 @@ func doit(bins []string) error {
 			}
 			fmt.Printf("%d input %v\n", count, l)
 			fmt.Fprintln(os.Stderr, l)
+			fmt.Printf("\n")
 		}
 	}
 	fmt.Fprintf(os.Stdout, "# %d cases OK", count)
