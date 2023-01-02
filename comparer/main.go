@@ -95,6 +95,10 @@ func doit(bins []string) error {
 				prev = cur
 				continue
 			}
+			if strings.HasPrefix(cur, "Exception") {
+				// work-around nethermind thing
+				cur = fmt.Sprintf("err: %v", cur)
+			}
 			if strings.HasPrefix(prev, "err") && strings.HasPrefix(cur, "err") {
 				prev = cur
 				continue
