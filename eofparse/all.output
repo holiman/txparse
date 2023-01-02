@@ -407,3 +407,4 @@ err: stack underflow
 err: use of undefined opcode opcode 0xe2 not defined
 err: use of undefined opcode opcode 0xbe not defined
 err: use of undefined opcode opcode 0xbc not defined
+OK 0000fe
