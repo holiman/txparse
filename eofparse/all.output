@@ -81,7 +81,7 @@ err: type annotation 0 max stack height must not exceed 1023
 err: code section 2 size must not be 0
 err: unreachable code
 err: computed max stack height for code section 0 does not match expected (want: 0, got: 1)
-err: computed max stack height for code section 2 does not match expected (want: 1, got: 0)
+OK 604200,6042604200,00
 err: truncated operand
 err: unreachable code
 err: computed max stack height for code section 1 does not match expected (want: 48, got: 52)
@@ -101,11 +101,11 @@ err: relative offset out-of-bounds: 12339
 err: relative offset out-of-bounds: 12339
 err: relative offset out-of-bounds: -8909
 err: relative offset into immediate operand: 2
-err: computed max stack height for code section 2 does not match expected (want: 48, got: 0)
+OK 603000,5d00003000,00
 err: code section ends with non-terminal instruction
 err: stack height mismatch for different paths
 err: rjumpv branch count must not be 0
-err: computed max stack height for code section 1 does not match expected (want: 48, got: 47)
+err: code section ends with non-terminal instruction
 err: relative offset out-of-bounds: 12340
 err: relative offset out-of-bounds: 12344
 err: relative offset out-of-bounds: 24120
@@ -159,7 +159,7 @@ err: relative offset out-of-bounds: 12342
 err: computed max stack height for code section 1 does not match expected (want: 48, got: 49)
 err: truncated jump table operand
 err: relative offset out-of-bounds: 12347
-err: computed max stack height for code section 1 does not match expected (want: 48, got: 47)
+err: code section ends with non-terminal instruction
 err: relative offset into immediate operand: 10
 err: truncated operand
 err: truncated jump table operand
@@ -171,7 +171,7 @@ err: relative offset out-of-bounds: 12344
 err: relative offset out-of-bounds: 12344
 err: relative offset out-of-bounds: 12344
 err: relative offset out-of-bounds: 12344
-err: computed max stack height for code section 1 does not match expected (want: 48, got: 47)
+err: code section ends with non-terminal instruction
 err: relative offset out-of-bounds: 12358
 err: relative offset out-of-bounds: 12358
 err: relative offset out-of-bounds: 12409
