@@ -21,30 +21,31 @@ It can also be overridden:
 
 	$ GOCACHE=`pwd`/gen_corpus  go test . -fuzz Fuzz
 */
+var jt = vm.NewShanghaiEOFInstructionSetForTesting()
+
+func testUnmarshal(t *testing.T, data []byte) {
+	var c vm.Container
+
+	err := c.UnmarshalBinary(data)
+	if err != nil {
+		return
+	}
+	err = c.ValidateCode(&jt)
+	if err != nil {
+		return
+	}
+	out := c.MarshalBinary()
+	if !bytes.Equal(out, data) {
+		panic(fmt.Sprintf("Marshal/Unmarshal mismatch. \nInput:  %#x\nOutput: %#x\n", data, out))
+	}
+}
+
 func Fuzz(f *testing.F) {
 
 	for _, tc := range tests {
 		f.Add(common.FromHex(tc)) // Use f.Add to provide a seed corpus
 	}
-
-	jt := vm.NewShanghaiEOFInstructionSetForTesting()
-
-	f.Fuzz(func(t *testing.T, data []byte) {
-		var c vm.Container
-
-		err := c.UnmarshalBinary(data)
-		if err != nil {
-			return
-		}
-		err = c.ValidateCode(&jt)
-		if err != nil {
-			return
-		}
-		out := c.MarshalBinary()
-		if !bytes.Equal(out, data) {
-			panic(fmt.Sprintf("Marshal/Unmarshal mismatch. \nInput:  %#x\nOutput: %#x\n", data, out))
-		}
-	})
+	f.Fuzz(testUnmarshal)
 }
 
 // taken from tests in the PR
