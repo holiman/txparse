@@ -8,6 +8,7 @@ import (
 
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/core/vm"
+	"regexp"
 )
 
 func main() {
@@ -19,8 +20,10 @@ func work() {
 	jt := vm.NewShanghaiEOFInstructionSetForTesting()
 	var c vm.Container
 	scanner := bufio.NewScanner(os.Stdin)
+	toRemove := regexp.MustCompile(`[ -]`)
 	for scanner.Scan() {
-		blob := common.FromHex(scanner.Text())
+		sanitized := toRemove.ReplaceAllString(scanner.Text(), "")
+		blob := common.FromHex(sanitized)
 		err := c.UnmarshalBinary(blob)
 		if err != nil {
 			fmt.Printf("err: %v\n", err)
