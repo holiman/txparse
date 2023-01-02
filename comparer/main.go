@@ -10,11 +10,16 @@ import (
 )
 
 func main() {
-	in := os.Args[1]
+	//	in := os.Args[1]
 	// comma separated binaries
-	binaries := os.Args[2]
+	binaries := os.Args[1]
 	bins := strings.Split(binaries, ",")
-	if err := doit(bins, in); err != nil {
+	if len(binaries) < 2 {
+		fmt.Printf("Usage: comparer parser1,parser2,... \n")
+		fmt.Printf("Pipe input to process")
+		return
+	}
+	if err := doit(bins); err != nil {
 		fmt.Printf("err: %v", err)
 	}
 }
@@ -25,15 +30,9 @@ type proc struct {
 	outbuf *bufio.Scanner
 }
 
-func doit(bins []string, input string) error {
+func doit(bins []string) error {
+	scanner := bufio.NewScanner(os.Stdin)
 	var procs []proc
-	indata, err := os.Open(input)
-	if err != nil {
-		panic(err)
-	}
-	var (
-		scanner = bufio.NewScanner(indata)
-	)
 
 	for _, bin := range bins {
 		cmdArgs := strings.Split(bin, " ")
@@ -100,5 +99,6 @@ func doit(bins []string, input string) error {
 			fmt.Fprintln(os.Stderr, l)
 		}
 	}
+	fmt.Fprintf(os.Stdout, "# %d cases OK", count)
 	return nil
 }
