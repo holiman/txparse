@@ -27,6 +27,7 @@ func main() {
 }
 
 type proc struct {
+	cmd    string
 	outp   io.ReadCloser
 	inp    io.WriteCloser
 	outbuf *bufio.Scanner
@@ -56,6 +57,7 @@ func doit(bins []string) error {
 			return err
 		}
 		procs = append(procs, proc{
+			cmd:    cmd.String(),
 			outp:   stdout,
 			inp:    stdin,
 			outbuf: bufio.NewScanner(stdout),
@@ -88,7 +90,9 @@ func doit(bins []string) error {
 			if proc.outbuf.Scan() {
 				cur = proc.outbuf.Text()
 			} else {
-				panic("foo")
+				fmt.Printf("process read failure: %v\n", proc.cmd)
+				fmt.Printf("input: %v\n", l)
+				return fmt.Errorf("process read fail: %v", proc.cmd)
 			}
 			outputs = append(outputs, cur)
 			if i == 0 {
