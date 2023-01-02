@@ -2,6 +2,7 @@ package main
 
 import (
 	"bufio"
+	"errors"
 	"fmt"
 	"io"
 	"os"
@@ -60,6 +61,11 @@ func doit(bins []string) error {
 			outbuf: bufio.NewScanner(stdout),
 		})
 	}
+	fmt.Printf("Using %d processes\n", len(procs))
+	if len(procs) < 2 {
+		return errors.New("At least 2 processes are needed")
+	}
+
 	var count = 0
 	var lastLog = time.Now()
 
