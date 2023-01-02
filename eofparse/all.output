@@ -396,3 +396,14 @@ err: expected kind types
 err: invalid eof version
 err: invalid magic
 err: invalid magic
+err: stack underflow
+err: use of undefined opcode opcode 0x26 not defined
+err: stack underflow
+err: use of undefined opcode opcode 0xde not defined
+err: code section out-of-bounds (want: 3582, have: 1)
+err: use of undefined opcode opcode 0x22 not defined
+err: use of undefined opcode opcode 0x4e not defined
+err: stack underflow
+err: use of undefined opcode opcode 0xe2 not defined
+err: use of undefined opcode opcode 0xbe not defined
+err: use of undefined opcode opcode 0xbc not defined
