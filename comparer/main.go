@@ -7,6 +7,7 @@ import (
 	"os"
 	"os/exec"
 	"strings"
+	"time"
 )
 
 func main() {
@@ -60,7 +61,13 @@ func doit(bins []string) error {
 		})
 	}
 	var count = 0
+	var lastLog = time.Now()
+
 	for scanner.Scan() {
+		if time.Since(lastLog) > 8*time.Second {
+			fmt.Fprintf(os.Stdout, "# %d cases OK\n", count)
+			lastLog = time.Now()
+		}
 		count++
 		l := scanner.Text()
 		for _, proc := range procs {
