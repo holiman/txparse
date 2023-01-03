@@ -67,7 +67,9 @@ func doit(bins []string) error {
 	if len(procs) < 2 {
 		return errors.New("At least 2 processes are needed")
 	}
-
+	for i, proc := range procs {
+		fmt.Printf("  %d: %v\n", i, proc.cmd)
+	}
 	var count = 0
 	var lastLog = time.Now()
 
