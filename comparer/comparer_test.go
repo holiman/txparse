@@ -18,7 +18,7 @@ func Fuzz(f *testing.F) {
 	if err != nil {
 		f.Fatal(err)
 	}
-	bins := strings.Split(string(binaries), ",")
+	bins := strings.Split(strings.TrimSpace(string(binaries)), ",")
 	if len(binaries) < 2 {
 		fmt.Printf("Usage: comparer parser1,parser2,... \n")
 		fmt.Printf("Pipe input to process")
@@ -26,7 +26,11 @@ func Fuzz(f *testing.F) {
 	}
 	var inputs = make(chan string)
 	go func() {
-		doit(bins, inputs)
+		err := doit(bins, inputs)
+		f.Log("Done")
+		if err != nil {
+			f.Fatalf("exec error: %v", err)
+		}
 	}()
 	fil, err := os.Open("../eofparse/all.input")
 	if err != nil {
