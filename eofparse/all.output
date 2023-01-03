@@ -757,3 +757,4 @@ err: use of undefined opcode opcode 0xfc not defined
 OK 5959b00001b1,fd
 OK b00001b1,fe
 err: use of undefined opcode SELFDESTRUCT
+OK 603000,5e030000000000005cfffd,00
