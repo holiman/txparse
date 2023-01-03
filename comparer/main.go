@@ -135,10 +135,10 @@ func doit(bins []string, inputs chan string, results chan string) error {
 		if !ok {
 			var errMsg = new(strings.Builder)
 
+			fmt.Fprintf(errMsg, "%d input %v\n", count, l)
 			for j, outp := range outputs {
 				fmt.Fprintf(errMsg, "%d: proc %d: %v\n", count, j, outp)
 			}
-			fmt.Fprintf(errMsg, "%d input %v\n\n", count, l)
 			fmt.Fprintf(errMsg, "\n")
 			fmt.Printf(errMsg.String())
 			fmt.Fprintln(os.Stderr, l)
