@@ -99,9 +99,9 @@ func doit(bins []string) error {
 			if proc.outbuf.Scan() {
 				cur = proc.outbuf.Text()
 			} else {
-				fmt.Printf("process read failure: %v\n", proc.cmd)
+				fmt.Printf("%d: process read failure: %v\n", count, proc.cmd)
 				fmt.Printf("input: %v\n", l)
-				return fmt.Errorf("process read fail: %v", proc.cmd)
+				return fmt.Errorf("process read fail line %d: %v", count, proc.cmd)
 			}
 			outputs = append(outputs, cur)
 			if i == 0 {
