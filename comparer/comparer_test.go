@@ -49,9 +49,13 @@ func Fuzz(f *testing.F) {
 	defer fil.Close()
 	corpi := 0
 	scanner := bufio.NewScanner(fil)
-	toRemove := regexp.MustCompile(`[ -]`)
+	toRemove := regexp.MustCompile(`[^0-9A-Za-z]`)
 	for scanner.Scan() {
-		sanitized := toRemove.ReplaceAllString(scanner.Text(), "")
+		l := scanner.Text()
+		if strings.HasPrefix(l, "#") {
+			continue
+		}
+		sanitized := toRemove.ReplaceAllString(l, "")
 		input := common.FromHex(sanitized)
 		if len(input) > 0 {
 			f.Add(input)

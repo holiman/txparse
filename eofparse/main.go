@@ -20,9 +20,13 @@ func work() {
 	jt := vm.NewShanghaiEOFInstructionSetForTesting()
 	var c vm.Container
 	scanner := bufio.NewScanner(os.Stdin)
-	toRemove := regexp.MustCompile(`[ -]`)
+	toRemove := regexp.MustCompile(`[^0-9A-Za-z]`)
 	for scanner.Scan() {
-		sanitized := toRemove.ReplaceAllString(scanner.Text(), "")
+		l := scanner.Text()
+		if strings.HasPrefix(l, "#") {
+			continue
+		}
+		sanitized := toRemove.ReplaceAllString(l, "")
 		blob := common.FromHex(sanitized)
 		err := c.UnmarshalBinary(blob)
 		if err != nil {

@@ -58,8 +58,5 @@ func Fuzz(f *testing.F) {
 		}
 	}
 	f.Logf("Added seed corpus, %d items\n", corpi)
-	for _, tc := range tests {
-		f.Add(common.FromHex(tc)) // Use f.Add to provide a seed corpus
-	}
 	f.Fuzz(testUnmarshal)
 }
