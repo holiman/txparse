@@ -34,7 +34,7 @@ func Fuzz(f *testing.F) {
 			f.Fatalf("exec error: %v", err)
 		}
 	}()
-	time.Sleep(1 * time.Second)
+	time.Sleep(10 * time.Second)
 	fil, err := os.Open("../eofparse/all.input")
 	if err != nil {
 		f.Fatal(err)
