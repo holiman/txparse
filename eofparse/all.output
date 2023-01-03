@@ -1,84 +1,84 @@
-err: invalid magic
-err: invalid magic
-err: container size less than minimum valid size
-err: container size less than minimum valid size
-err: container size less than minimum valid size
-err: container size less than minimum valid size
-err: container size less than minimum valid size
-err: container size less than minimum valid size
-err: container size less than minimum valid size
-err: container size less than minimum valid size
-err: container size less than minimum valid size
-err: container size less than minimum valid size
-err: container size less than minimum valid size
-err: container size less than minimum valid size
-err: container size less than minimum valid size
-err: container size less than minimum valid size
-err: container size less than minimum valid size
-err: type section size invalid
-err: type section size invalid
-err: container size less than minimum valid size
-err: container size less than minimum valid size
-err: container size less than minimum valid size
-err: container size less than minimum valid size
-err: container size less than minimum valid size
-err: container size less than minimum valid size
-err: container size less than minimum valid size
-err: container size less than minimum valid size
-err: type section size invalid
-err: type section size invalid
-err: container size less than minimum valid size
-err: container size less than minimum valid size
-err: type section size invalid
-err: container size less than minimum valid size
-err: type section size invalid
-err: type section size invalid
-err: type section size invalid
-err: type section size invalid
-err: type section size invalid
-err: type section size invalid
-err: type section size invalid
-err: container size less than minimum valid size
-err: container size less than minimum valid size
-err: container size less than minimum valid size
-err: container size less than minimum valid size
-err: container size less than minimum valid size
-err: container size less than minimum valid size
-err: container size less than minimum valid size
-err: container size less than minimum valid size
-err: container size less than minimum valid size
-err: container size less than minimum valid size
+err: invalid magic: have 01, want ef00
+err: invalid magic: have ef, want ef00
+err: unexpected EOF
+err: unexpected EOF
+err: unexpected EOF
+err: unexpected EOF
+err: type section size must be divisible by 4: have 0
+err: type section size must be divisible by 4: have 0
+err: type section size must be divisible by 4: have 1
+err: type section size must be divisible by 4: have 1
+err: type section size must be divisible by 4: have 1
+err: type section size must be divisible by 4: have 1
+err: type section size must be divisible by 4: have 1
+err: type section size must be divisible by 4: have 1
+err: type section size must be divisible by 4: have 1
+err: type section size must be divisible by 4: have 1
+err: type section size must be divisible by 4: have 1
+err: type section size must be divisible by 4: have 1
+err: type section size must be divisible by 4: have 1
+err: unexpected EOF
+err: type section size must be divisible by 4: have 2
+err: type section size must be divisible by 4: have 2
+err: type section size must be divisible by 4: have 2
+err: type section size must be divisible by 4: have 2
+err: type section size must be divisible by 4: have 2
+err: type section size must be divisible by 4: have 2
+err: type section size must be divisible by 4: have 2
+err: type section size must be divisible by 4: have 2
+err: type section size must be divisible by 4: have 2
+err: type section size must be divisible by 4: have 2
+err: type section size must be divisible by 4: have 2
+err: type section size must be divisible by 4: have 2
+err: type section size must be divisible by 4: have 2
+err: type section size must be divisible by 4: have 2
+err: type section size must be divisible by 4: have 2
+err: type section size must be divisible by 4: have 2
+err: type section size must be divisible by 4: have 2
+err: type section size must be divisible by 4: have 2
+err: type section size must be divisible by 4: have 2
+err: type section size must be divisible by 4: have 2
+err: type section size must be divisible by 4: have 3
+err: type section size must be divisible by 4: have 3
+err: type section size must be divisible by 4: have 3
+err: type section size must be divisible by 4: have 3
+err: type section size must be divisible by 4: have 3
+err: type section size must be divisible by 4: have 3
+err: type section size must be divisible by 4: have 3
+err: failed to parse section list: unexpected EOF
+err: failed to parse section list: unexpected EOF
+err: failed to parse section list: unexpected EOF
 err: computed max stack height for code section 0 does not match expected (want: 0, got: 1)
 OK 604200
 err: computed max stack height for code section 0 does not match expected (want: 48, got: 2)
 err: stack underflow
-err: input and output of first code section must be 0
-err: invalid container size (want 24691, got 15)
-err: expected kind data
-err: container size less than minimum valid size
-err: type section size invalid
-err: container size less than minimum valid size
-err: container size less than minimum valid size
-err: container size less than minimum valid size
-err: container size less than minimum valid size
-err: container size less than minimum valid size
-err: container size less than minimum valid size
-err: container size less than minimum valid size
-err: container size less than minimum valid size
-err: container size less than minimum valid size
-err: container size less than minimum valid size
-err: container size less than minimum valid size
-err: container size less than minimum valid size
-err: container size less than minimum valid size
-err: container size less than minimum valid size
-err: type section size invalid
-err: type section size invalid
-err: type section size invalid
-err: type section size invalid
-err: type section size invalid
-err: invalid container size (want 118311, got 2869)
-err: type annotation 0 max stack height must not exceed 1023
-err: code section 2 size must not be 0
+err: invalid type annotation at index 0: input and output must be 0: have (48, 48)
+err: invalid container size: have 15, want 24691
+err: expected kind data 0x03: have 30
+err: type section size must be divisible by 4: have 5
+err: type section size must be divisible by 4: have 5
+err: type section size must be divisible by 4: have 6
+err: type section size must be divisible by 4: have 6
+err: type section size must be divisible by 4: have 6
+err: type section size must be divisible by 4: have 6
+err: type section size must be divisible by 4: have 6
+err: type section size must be divisible by 4: have 6
+err: type section size must be divisible by 4: have 6
+err: type section size must be divisible by 4: have 6
+err: type section size must be divisible by 4: have 6
+err: type section size must be divisible by 4: have 6
+err: type section size must be divisible by 4: have 6
+err: type section size must be divisible by 4: have 6
+err: type section size must be divisible by 4: have 6
+err: type section size must be divisible by 4: have 6
+err: type section size must be divisible by 4: have 7
+err: type section size must be divisible by 4: have 7
+err: type section size must be divisible by 4: have 7
+err: type section size must be divisible by 4: have 7
+err: type section size must be divisible by 4: have 7
+err: invalid container size: have 2869, want 118311
+err: invalid type annotation at index 0: max stack height must not exceed 1023: have 12336
+err: invalid code section 2: size must not be 0
 err: unreachable code
 err: computed max stack height for code section 0 does not match expected (want: 0, got: 1)
 OK 604200,6042604200,00
@@ -116,7 +116,7 @@ err: truncated jump table operand
 err: relative offset out-of-bounds: 12341
 err: computed max stack height for code section 1 does not match expected (want: 48, got: 49)
 err: truncated operand
-err: computed max stack height for code section 1 does not match expected (want: 48, got: 49)
+err: computed max stack height for code section 1 does not match expected (want: 48, got: 97)
 err: computed max stack height for code section 1 does not match expected (want: 48, got: 50)
 err: truncated operand
 err: use of undefined opcode opcode 0x21 not defined
@@ -251,7 +251,7 @@ err: failed to parse section list: unexpected EOF
 err: failed to parse section list: unexpected EOF
 err: failed to parse section list: unexpected EOF
 err: failed to parse section list: unexpected EOF
-err: container size invalid
+err: unexpected EOF
 err: unexpected EOF
 err: failed to parse section list: unexpected EOF
 err: failed to parse section list: unexpected EOF
@@ -286,116 +286,116 @@ err: failed to parse section list: unexpected EOF
 err: failed to parse section list: unexpected EOF
 err: failed to parse section list: unexpected EOF
 err: failed to parse section list: unexpected EOF
-err: type section size invalid
-err: type section size invalid
-err: type section size invalid
-err: type section size invalid
-err: type section size invalid
-err: type section size invalid
-err: type section size invalid
-err: type section size invalid
-err: type section size invalid
-err: type section size invalid
-err: type section size invalid
-err: type section size invalid
-err: type section size invalid
-err: type section size invalid
-err: type section size invalid
-err: type section size invalid
-err: type section size invalid
-err: type section size invalid
-err: type section size invalid
-err: type section size invalid
-err: type section size invalid
-err: type section size invalid
-err: type section size invalid
-err: type section size invalid
-err: type section size invalid
-err: type section size invalid
-err: type section size invalid
-err: type section size invalid
-err: type section size invalid
-err: type section size invalid
-err: type section size invalid
-err: type section size invalid
-err: type section size invalid
-err: type section size invalid
-err: type section size invalid
-err: type section size invalid
-err: type section size invalid
-err: type section size invalid
-err: type section size invalid
-err: type section size invalid
-err: type section size invalid
-err: type section size invalid
-err: type section size invalid
-err: type section size invalid
-err: type section size invalid
-err: type section size invalid
-err: type section size invalid
-err: type section size invalid
-err: type section size invalid
-err: type section size invalid
-err: type section size invalid
-err: type section size invalid
-err: type section size invalid
-err: type section size invalid
-err: type section size invalid
-err: type section size invalid
-err: type section size invalid
-err: type section size invalid
+err: type section size must be divisible by 4: have 33
+err: type section size must be divisible by 4: have 33
+err: type section size must be divisible by 4: have 33
+err: type section size must be divisible by 4: have 33
+err: type section size must be divisible by 4: have 33
+err: type section size must be divisible by 4: have 33
+err: type section size must be divisible by 4: have 33
+err: type section size must be divisible by 4: have 33
+err: type section size must be divisible by 4: have 33
+err: type section size must be divisible by 4: have 33
+err: type section size must be divisible by 4: have 33
+err: type section size must be divisible by 4: have 33
+err: type section size must be divisible by 4: have 33
+err: type section size must be divisible by 4: have 33
+err: type section size must be divisible by 4: have 33
+err: type section size must be divisible by 4: have 33
+err: type section size must be divisible by 4: have 33
+err: type section size must be divisible by 4: have 33
+err: type section size must be divisible by 4: have 33
+err: type section size must be divisible by 4: have 33
+err: type section size must be divisible by 4: have 33
+err: type section size must be divisible by 4: have 33
+err: type section size must be divisible by 4: have 33
+err: type section size must be divisible by 4: have 33
+err: type section size must be divisible by 4: have 33
+err: type section size must be divisible by 4: have 33
+err: type section size must be divisible by 4: have 33
+err: type section size must be divisible by 4: have 33
+err: type section size must be divisible by 4: have 33
+err: type section size must be divisible by 4: have 33
+err: type section size must be divisible by 4: have 33
+err: type section size must be divisible by 4: have 33
+err: type section size must be divisible by 4: have 33
+err: type section size must be divisible by 4: have 33
+err: type section size must be divisible by 4: have 33
+err: type section size must be divisible by 4: have 33
+err: type section size must be divisible by 4: have 33
+err: type section size must be divisible by 4: have 33
+err: type section size must be divisible by 4: have 33
+err: type section size must be divisible by 4: have 33
+err: type section size must be divisible by 4: have 33
+err: type section size must be divisible by 4: have 33
+err: type section size must be divisible by 4: have 33
+err: type section size must be divisible by 4: have 33
+err: type section size must be divisible by 4: have 33
+err: type section size must be divisible by 4: have 34
+err: type section size must be divisible by 4: have 34
+err: type section size must be divisible by 4: have 34
+err: type section size must be divisible by 4: have 34
+err: type section size must be divisible by 4: have 34
+err: type section size must be divisible by 4: have 34
+err: type section size must be divisible by 4: have 34
+err: type section size must be divisible by 4: have 34
+err: type section size must be divisible by 4: have 34
+err: type section size must be divisible by 4: have 34
+err: type section size must be divisible by 4: have 34
+err: type section size must be divisible by 4: have 34
+err: type section size must be divisible by 4: have 38
 err: failed to parse section list: unexpected EOF
 err: failed to parse section list: unexpected EOF
-err: mismatch of code sections count and type signatures (types 16, code 2)
-err: expected kind code
-err: expected kind code
-err: expected kind code
-err: expected kind code
-err: expected kind code
-err: failed to parse section list: unexpected EOF
-err: failed to parse section list: unexpected EOF
-err: failed to parse section list: unexpected EOF
+err: mismatch of code sections count and type signatures: types 12, code 2)
+err: expected kind code 0x02: have 30
+err: expected kind code 0x02: have 30
+err: expected kind code 0x02: have 30
+err: expected kind code 0x02: have 30
+err: expected kind code 0x02: have 30
 err: failed to parse section list: unexpected EOF
 err: failed to parse section list: unexpected EOF
 err: failed to parse section list: unexpected EOF
 err: failed to parse section list: unexpected EOF
 err: failed to parse section list: unexpected EOF
 err: failed to parse section list: unexpected EOF
-err: number of code sections must not exceed 1024 (got 8240)
-err: container size less than minimum valid size
-err: number of code sections must not exceed 1024 (got 12336)
-err: number of code sections must not exceed 1024 (got 12336)
-err: number of code sections must not exceed 1024 (got 12336)
-err: number of code sections must not exceed 1024 (got 12336)
-err: number of code sections must not exceed 1024 (got 12336)
-err: number of code sections must not exceed 1024 (got 12336)
-err: container size less than minimum valid size
-err: expected kind types
-err: container size less than minimum valid size
-err: container size less than minimum valid size
-err: container size less than minimum valid size
-err: container size less than minimum valid size
-err: expected kind types
-err: expected kind types
-err: expected kind types
-err: expected kind types
-err: expected kind types
-err: expected kind types
-err: expected kind types
-err: expected kind types
-err: expected kind types
-err: expected kind types
-err: expected kind types
-err: expected kind types
-err: expected kind types
-err: expected kind types
-err: expected kind types
-err: expected kind types
-err: expected kind types
-err: expected kind types
-err: invalid eof version
-err: invalid magic
-err: invalid magic
+err: failed to parse section list: unexpected EOF
+err: failed to parse section list: unexpected EOF
+err: failed to parse section list: unexpected EOF
+err: number of code sections must not exceed 1024: got 2060
+err: number of code sections must not exceed 1024: got 3084
+err: number of code sections must not exceed 1024: got 3084
+err: number of code sections must not exceed 1024: got 3084
+err: number of code sections must not exceed 1024: got 3084
+err: number of code sections must not exceed 1024: got 3084
+err: number of code sections must not exceed 1024: got 3084
+err: number of code sections must not exceed 1024: got 3084
+err: number of code sections must not exceed 1024: got 3084
+err: expected kind types 0x01: have 2
+err: expected kind types 0x01: have 2
+err: unexpected EOF
+err: unexpected EOF
+err: expected kind types 0x01: have 3
+err: expected kind types 0x01: have 3
+err: expected kind types 0x01: have 3
+err: expected kind types 0x01: have 3
+err: expected kind types 0x01: have 3
+err: expected kind types 0x01: have 3
+err: expected kind types 0x01: have 3
+err: expected kind types 0x01: have 3
+err: expected kind types 0x01: have 3
+err: expected kind types 0x01: have 3
+err: expected kind types 0x01: have 3
+err: expected kind types 0x01: have 3
+err: expected kind types 0x01: have 3
+err: expected kind types 0x01: have 3
+err: expected kind types 0x01: have 3
+err: expected kind types 0x01: have 3
+err: expected kind types 0x01: have 3
+err: expected kind types 0x01: have 3
+err: expected kind types 0x01: have 3
+err: invalid eof version: have <nil>, want 1
+err: invalid magic: have ef01, want ef00
+err: invalid magic: have , want ef00
 err: stack underflow
 err: use of undefined opcode opcode 0x26 not defined
 err: stack underflow
@@ -417,5 +417,6 @@ err: unreachable code
 err: wrong number of outputs (want: 0, got: 1)
 OK 00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00
 OK 00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00
-err: number of code sections must not exceed 1024 (got 4100)
+err: number of code sections must not exceed 1024: got 1025
 OK 00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00
+OK b000015000,60ffb1
