@@ -15,12 +15,18 @@ import (
 func Fuzz(f *testing.F) {
 
 	//	binaries := "/home/user/go/src/github.com/holiman/txparse/eofparse/eofparse,/home/user/go/src/github.com/holiman/txparse/eofparse/eofparse"
-	binaries, err := os.ReadFile("binaries.txt")
-	if err != nil {
+	var bins []string
+	if binaries, err := os.ReadFile("binaries.txt"); err != nil {
 		f.Fatal(err)
+	} else {
+		for _, x := range strings.Split(strings.TrimSpace(string(binaries)), "\n") {
+			x = strings.TrimSpace(x)
+			if len(x) > 0 && !strings.HasPrefix(x, "#") {
+				bins = append(bins, x)
+			}
+		}
 	}
-	bins := strings.Split(strings.TrimSpace(string(binaries)), ",")
-	if len(binaries) < 2 {
+	if len(bins) < 2 {
 		fmt.Printf("Usage: comparer parser1,parser2,... \n")
 		fmt.Printf("Pipe input to process")
 		f.Fatal("error")
