@@ -9,6 +9,7 @@ import (
 
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/core/vm"
+	"regexp"
 	"time"
 )
 
@@ -48,8 +49,10 @@ func Fuzz(f *testing.F) {
 	defer fil.Close()
 	corpi := 0
 	scanner := bufio.NewScanner(fil)
+	toRemove := regexp.MustCompile(`[ -]`)
 	for scanner.Scan() {
-		input := common.FromHex(scanner.Text())
+		sanitized := toRemove.ReplaceAllString(scanner.Text(), "")
+		input := common.FromHex(sanitized)
 		if len(input) > 0 {
 			f.Add(input)
 			corpi++
