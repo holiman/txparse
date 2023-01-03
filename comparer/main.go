@@ -29,7 +29,7 @@ func main() {
 			input <- scanner.Text()
 		}
 	}()
-	if err := doit(bins, input); err != nil {
+	if err := doit(bins, input, nil); err != nil {
 		fmt.Printf("err: %v", err)
 	}
 }
@@ -41,7 +41,7 @@ type proc struct {
 	outbuf *bufio.Scanner
 }
 
-func doit(bins []string, inputs chan string) error {
+func doit(bins []string, inputs chan string, results chan string) error {
 	var procs []proc
 
 	for _, bin := range bins {
@@ -86,7 +86,7 @@ func doit(bins []string, inputs chan string) error {
 	fmt.Println("")
 	var count = 0
 	var lastLog = time.Now()
-
+	fmt.Printf("chan: %v\n", len(inputs))
 	for l := range inputs {
 		if time.Since(lastLog) > 8*time.Second {
 			fmt.Fprintf(os.Stdout, "# %d cases OK\n", count)
@@ -105,9 +105,14 @@ func doit(bins []string, inputs chan string) error {
 			if proc.outbuf.Scan() {
 				cur = proc.outbuf.Text()
 			} else {
-				fmt.Printf("%d: process read failure: %v\n", count, proc.cmd)
-				fmt.Printf("input: %v\n", l)
+				err := proc.outbuf.Err()
+				a := fmt.Sprintf("%d: process read failure: %v %v\ninput: %v\n", count, proc.cmd, err, l)
+				fmt.Printf(a)
+				if results != nil {
+					results <- a
+				}
 				return fmt.Errorf("process read fail line %d: %v", count, proc.cmd)
+
 			}
 			outputs = append(outputs, cur)
 			if i == 0 {
@@ -128,12 +133,22 @@ func doit(bins []string, inputs chan string) error {
 			prev = cur
 		}
 		if !ok {
+			var errMsg = new(strings.Builder)
+
 			for j, outp := range outputs {
-				fmt.Printf("%d: proc %d: %v\n", count, j, outp)
+				fmt.Fprintf(errMsg, "%d: proc %d: %v\n", count, j, outp)
 			}
-			fmt.Printf("%d input %v\n", count, l)
+			fmt.Fprintf(errMsg, "%d input %v\n\n", count, l)
+			fmt.Fprintf(errMsg, "\n")
+			fmt.Printf(errMsg.String())
 			fmt.Fprintln(os.Stderr, l)
-			fmt.Printf("\n")
+			if results != nil {
+				results <- errMsg.String()
+			}
+		} else {
+			if results != nil {
+				results <- ""
+			}
 		}
 	}
 	fmt.Fprintf(os.Stdout, "# %d cases OK", count)

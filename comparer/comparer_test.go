@@ -9,6 +9,7 @@ import (
 
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/core/vm"
+	"time"
 )
 
 func Fuzz(f *testing.F) {
@@ -25,13 +26,15 @@ func Fuzz(f *testing.F) {
 		f.Fatal("error")
 	}
 	var inputs = make(chan string)
+	var outputs = make(chan string)
 	go func() {
-		err := doit(bins, inputs)
+		err := doit(bins, inputs, outputs)
 		f.Log("Done")
 		if err != nil {
 			f.Fatalf("exec error: %v", err)
 		}
 	}()
+	time.Sleep(1 * time.Second)
 	fil, err := os.Open("../eofparse/all.input")
 	if err != nil {
 		f.Fatal(err)
@@ -49,8 +52,13 @@ func Fuzz(f *testing.F) {
 	f.Logf("Added seed corpus, %d items\n", corpi)
 
 	f.Fuzz(func(t *testing.T, data []byte) {
+		t.Logf("Doing test")
 		_ = testUnmarshal(data) // This is for coverage guidance
 		inputs <- fmt.Sprintf("%#x", data)
+		errStr := <-outputs
+		if len(errStr) != 0 {
+			t.Fatal(errStr)
+		}
 	})
 
 }
