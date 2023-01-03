@@ -501,3 +501,259 @@ err: invalid type annotation at index 0: input and output must be 0: have (0, 48
 err: invalid type annotation at index 190: inputs and outputs must not exceed 127: have 175
 OK 603000,5e030000000000005cfffd,00
 OK b20000
+OK b00001b1,00
+err: wrong number of outputs (want: 0, got: 2)
+err: wrong number of outputs (want: 0, got: 2)
+err: wrong number of outputs (want: 0, got: 2)
+err: wrong number of outputs (want: 0, got: 2)
+err: wrong number of outputs (want: 0, got: 2)
+err: wrong number of outputs (want: 0, got: 2)
+err: wrong number of outputs (want: 0, got: 2)
+err: wrong number of outputs (want: 0, got: 3)
+err: wrong number of outputs (want: 0, got: 3)
+err: wrong number of outputs (want: 0, got: 2)
+err: wrong number of outputs (want: 0, got: 2)
+err: use of undefined opcode opcode 0xc not defined
+err: use of undefined opcode opcode 0xd not defined
+err: use of undefined opcode opcode 0xe not defined
+err: use of undefined opcode opcode 0xf not defined
+err: wrong number of outputs (want: 0, got: 2)
+err: wrong number of outputs (want: 0, got: 2)
+err: wrong number of outputs (want: 0, got: 2)
+err: wrong number of outputs (want: 0, got: 2)
+err: wrong number of outputs (want: 0, got: 2)
+err: wrong number of outputs (want: 0, got: 1)
+err: wrong number of outputs (want: 0, got: 2)
+err: wrong number of outputs (want: 0, got: 2)
+err: wrong number of outputs (want: 0, got: 2)
+err: wrong number of outputs (want: 0, got: 1)
+err: wrong number of outputs (want: 0, got: 2)
+err: wrong number of outputs (want: 0, got: 2)
+err: wrong number of outputs (want: 0, got: 2)
+err: wrong number of outputs (want: 0, got: 2)
+err: use of undefined opcode opcode 0x1e not defined
+err: use of undefined opcode opcode 0x1f not defined
+err: wrong number of outputs (want: 0, got: 2)
+err: use of undefined opcode opcode 0x21 not defined
+err: use of undefined opcode opcode 0x22 not defined
+err: use of undefined opcode opcode 0x23 not defined
+err: use of undefined opcode opcode 0x24 not defined
+err: use of undefined opcode opcode 0x25 not defined
+err: use of undefined opcode opcode 0x26 not defined
+err: use of undefined opcode opcode 0x27 not defined
+err: use of undefined opcode opcode 0x28 not defined
+err: use of undefined opcode opcode 0x29 not defined
+err: use of undefined opcode opcode 0x2a not defined
+err: use of undefined opcode opcode 0x2b not defined
+err: use of undefined opcode opcode 0x2c not defined
+err: use of undefined opcode opcode 0x2d not defined
+err: use of undefined opcode opcode 0x2e not defined
+err: use of undefined opcode opcode 0x2f not defined
+OK b0000150b1,30b1
+err: wrong number of outputs (want: 0, got: 1)
+OK b0000150b1,32b1
+OK b0000150b1,33b1
+OK b0000150b1,34b1
+err: wrong number of outputs (want: 0, got: 1)
+OK b0000150b1,36b1
+err: wrong number of outputs (want: 0, got: 3)
+OK b0000150b1,38b1
+err: wrong number of outputs (want: 0, got: 3)
+OK b0000150b1,3ab1
+err: wrong number of outputs (want: 0, got: 1)
+err: wrong number of outputs (want: 0, got: 4)
+OK b0000150b1,3db1
+err: wrong number of outputs (want: 0, got: 3)
+err: wrong number of outputs (want: 0, got: 1)
+err: wrong number of outputs (want: 0, got: 1)
+OK b0000150b1,41b1
+OK b0000150b1,42b1
+OK b0000150b1,43b1
+OK b0000150b1,44b1
+OK b0000150b1,45b1
+OK b0000150b1,46b1
+OK b0000150b1,47b1
+OK b0000150b1,48b1
+err: use of undefined opcode opcode 0x49 not defined
+err: use of undefined opcode opcode 0x4a not defined
+err: use of undefined opcode opcode 0x4b not defined
+err: use of undefined opcode opcode 0x4c not defined
+err: use of undefined opcode opcode 0x4d not defined
+err: use of undefined opcode opcode 0x4e not defined
+err: use of undefined opcode opcode 0x4f not defined
+err: wrong number of outputs (want: 0, got: 1)
+err: wrong number of outputs (want: 0, got: 1)
+err: wrong number of outputs (want: 0, got: 2)
+err: wrong number of outputs (want: 0, got: 2)
+err: wrong number of outputs (want: 0, got: 1)
+err: wrong number of outputs (want: 0, got: 2)
+err: use of undefined opcode JUMP
+err: use of undefined opcode JUMPI
+err: use of undefined opcode PC
+OK b0000150b1,59b1
+OK b0000150b1,5ab1
+OK b00001b1,5bb1
+OK b00001b1,5c0000b1
+err: wrong number of outputs (want: 0, got: 1)
+err: wrong number of outputs (want: 0, got: 1)
+OK b0000150b1,5fb1
+OK b0000150b1,6000b1
+OK b0000150b1,610000b1
+OK b0000150b1,62000000b1
+OK b0000150b1,6300000000b1
+OK b0000150b1,640000000000b1
+OK b0000150b1,65000000000000b1
+OK b0000150b1,6600000000000000b1
+OK b0000150b1,670000000000000000b1
+OK b0000150b1,68000000000000000000b1
+OK b0000150b1,6900000000000000000000b1
+OK b0000150b1,6a0000000000000000000000b1
+OK b0000150b1,6b000000000000000000000000b1
+OK b0000150b1,6c00000000000000000000000000b1
+OK b0000150b1,6d0000000000000000000000000000b1
+OK b0000150b1,6e000000000000000000000000000000b1
+OK b0000150b1,6f00000000000000000000000000000000b1
+OK b0000150b1,700000000000000000000000000000000000b1
+OK b0000150b1,71000000000000000000000000000000000000b1
+OK b0000150b1,7200000000000000000000000000000000000000b1
+OK b0000150b1,730000000000000000000000000000000000000000b1
+OK b0000150b1,74000000000000000000000000000000000000000000b1
+OK b0000150b1,7500000000000000000000000000000000000000000000b1
+OK b0000150b1,760000000000000000000000000000000000000000000000b1
+OK b0000150b1,77000000000000000000000000000000000000000000000000b1
+OK b0000150b1,7800000000000000000000000000000000000000000000000000b1
+OK b0000150b1,790000000000000000000000000000000000000000000000000000b1
+OK b0000150b1,7a000000000000000000000000000000000000000000000000000000b1
+OK b0000150b1,7b00000000000000000000000000000000000000000000000000000000b1
+OK b0000150b1,7c0000000000000000000000000000000000000000000000000000000000b1
+OK b0000150b1,7d000000000000000000000000000000000000000000000000000000000000b1
+OK b0000150b1,7e00000000000000000000000000000000000000000000000000000000000000b1
+OK b0000150b1,7f0000000000000000000000000000000000000000000000000000000000000000b1
+err: wrong number of outputs (want: 0, got: 1)
+err: wrong number of outputs (want: 0, got: 2)
+err: wrong number of outputs (want: 0, got: 3)
+err: wrong number of outputs (want: 0, got: 4)
+err: wrong number of outputs (want: 0, got: 5)
+err: wrong number of outputs (want: 0, got: 6)
+err: wrong number of outputs (want: 0, got: 7)
+err: wrong number of outputs (want: 0, got: 8)
+err: wrong number of outputs (want: 0, got: 9)
+err: wrong number of outputs (want: 0, got: 10)
+err: wrong number of outputs (want: 0, got: 11)
+err: wrong number of outputs (want: 0, got: 12)
+err: wrong number of outputs (want: 0, got: 13)
+err: wrong number of outputs (want: 0, got: 14)
+err: wrong number of outputs (want: 0, got: 15)
+err: wrong number of outputs (want: 0, got: 16)
+err: wrong number of outputs (want: 0, got: 2)
+err: wrong number of outputs (want: 0, got: 3)
+err: wrong number of outputs (want: 0, got: 4)
+err: wrong number of outputs (want: 0, got: 5)
+err: wrong number of outputs (want: 0, got: 6)
+err: wrong number of outputs (want: 0, got: 7)
+err: wrong number of outputs (want: 0, got: 8)
+err: wrong number of outputs (want: 0, got: 9)
+err: wrong number of outputs (want: 0, got: 10)
+err: wrong number of outputs (want: 0, got: 11)
+err: wrong number of outputs (want: 0, got: 12)
+err: wrong number of outputs (want: 0, got: 13)
+err: wrong number of outputs (want: 0, got: 14)
+err: wrong number of outputs (want: 0, got: 15)
+err: wrong number of outputs (want: 0, got: 16)
+err: wrong number of outputs (want: 0, got: 17)
+err: wrong number of outputs (want: 0, got: 2)
+err: wrong number of outputs (want: 0, got: 3)
+err: wrong number of outputs (want: 0, got: 4)
+err: wrong number of outputs (want: 0, got: 5)
+err: wrong number of outputs (want: 0, got: 6)
+err: use of undefined opcode opcode 0xa5 not defined
+err: use of undefined opcode opcode 0xa6 not defined
+err: use of undefined opcode opcode 0xa7 not defined
+err: use of undefined opcode opcode 0xa8 not defined
+err: use of undefined opcode opcode 0xa9 not defined
+err: use of undefined opcode opcode 0xaa not defined
+err: use of undefined opcode opcode 0xab not defined
+err: use of undefined opcode opcode 0xac not defined
+err: use of undefined opcode opcode 0xad not defined
+err: use of undefined opcode opcode 0xae not defined
+err: use of undefined opcode opcode 0xaf not defined
+OK b00001b1,b00000b1
+OK b00001b1,b1
+err: truncated operand
+err: use of undefined opcode TLOAD
+err: use of undefined opcode TSTORE
+err: use of undefined opcode opcode 0xb5 not defined
+err: use of undefined opcode opcode 0xb6 not defined
+err: use of undefined opcode opcode 0xb7 not defined
+err: use of undefined opcode opcode 0xb8 not defined
+err: use of undefined opcode opcode 0xb9 not defined
+err: use of undefined opcode opcode 0xba not defined
+err: use of undefined opcode opcode 0xbb not defined
+err: use of undefined opcode opcode 0xbc not defined
+err: use of undefined opcode opcode 0xbd not defined
+err: use of undefined opcode opcode 0xbe not defined
+err: use of undefined opcode opcode 0xbf not defined
+err: use of undefined opcode opcode 0xc0 not defined
+err: use of undefined opcode opcode 0xc1 not defined
+err: use of undefined opcode opcode 0xc2 not defined
+err: use of undefined opcode opcode 0xc3 not defined
+err: use of undefined opcode opcode 0xc4 not defined
+err: use of undefined opcode opcode 0xc5 not defined
+err: use of undefined opcode opcode 0xc6 not defined
+err: use of undefined opcode opcode 0xc7 not defined
+err: use of undefined opcode opcode 0xc8 not defined
+err: use of undefined opcode opcode 0xc9 not defined
+err: use of undefined opcode opcode 0xca not defined
+err: use of undefined opcode opcode 0xcb not defined
+err: use of undefined opcode opcode 0xcc not defined
+err: use of undefined opcode opcode 0xcd not defined
+err: use of undefined opcode opcode 0xce not defined
+err: use of undefined opcode opcode 0xcf not defined
+err: use of undefined opcode opcode 0xd0 not defined
+err: use of undefined opcode opcode 0xd1 not defined
+err: use of undefined opcode opcode 0xd2 not defined
+err: use of undefined opcode opcode 0xd3 not defined
+err: use of undefined opcode opcode 0xd4 not defined
+err: use of undefined opcode opcode 0xd5 not defined
+err: use of undefined opcode opcode 0xd6 not defined
+err: use of undefined opcode opcode 0xd7 not defined
+err: use of undefined opcode opcode 0xd8 not defined
+err: use of undefined opcode opcode 0xd9 not defined
+err: use of undefined opcode opcode 0xda not defined
+err: use of undefined opcode opcode 0xdb not defined
+err: use of undefined opcode opcode 0xdc not defined
+err: use of undefined opcode opcode 0xdd not defined
+err: use of undefined opcode opcode 0xde not defined
+err: use of undefined opcode opcode 0xdf not defined
+err: use of undefined opcode opcode 0xe0 not defined
+err: use of undefined opcode opcode 0xe1 not defined
+err: use of undefined opcode opcode 0xe2 not defined
+err: use of undefined opcode opcode 0xe3 not defined
+err: use of undefined opcode opcode 0xe4 not defined
+err: use of undefined opcode opcode 0xe5 not defined
+err: use of undefined opcode opcode 0xe6 not defined
+err: use of undefined opcode opcode 0xe7 not defined
+err: use of undefined opcode opcode 0xe8 not defined
+err: use of undefined opcode opcode 0xe9 not defined
+err: use of undefined opcode opcode 0xea not defined
+err: use of undefined opcode opcode 0xeb not defined
+err: use of undefined opcode opcode 0xec not defined
+err: use of undefined opcode opcode 0xed not defined
+err: use of undefined opcode opcode 0xee not defined
+err: use of undefined opcode opcode 0xef not defined
+err: wrong number of outputs (want: 0, got: 3)
+err: wrong number of outputs (want: 0, got: 7)
+err: use of undefined opcode CALLCODE
+err: wrong number of outputs (want: 0, got: 2)
+err: wrong number of outputs (want: 0, got: 6)
+err: wrong number of outputs (want: 0, got: 4)
+err: use of undefined opcode opcode 0xf6 not defined
+err: use of undefined opcode opcode 0xf7 not defined
+err: use of undefined opcode opcode 0xf8 not defined
+err: use of undefined opcode opcode 0xf9 not defined
+err: wrong number of outputs (want: 0, got: 6)
+err: use of undefined opcode opcode 0xfb not defined
+err: use of undefined opcode opcode 0xfc not defined
+err: wrong number of outputs (want: 0, got: 2)
+OK b00001b1,fe
+err: use of undefined opcode SELFDESTRUCT
