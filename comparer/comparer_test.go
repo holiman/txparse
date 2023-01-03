@@ -52,7 +52,6 @@ func Fuzz(f *testing.F) {
 	f.Logf("Added seed corpus, %d items\n", corpi)
 
 	f.Fuzz(func(t *testing.T, data []byte) {
-		t.Logf("Doing test")
 		_ = testUnmarshal(data) // This is for coverage guidance
 		inputs <- fmt.Sprintf("%#x", data)
 		errStr := <-outputs

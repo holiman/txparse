@@ -497,3 +497,5 @@ err: invalid eof version: have <nil>, want 1
 err: invalid eof version: have 48, want 1
 err: invalid magic: have ef01, want ef00
 err: expected kind data 0x03: have 0
+err: invalid type annotation at index 0: input and output must be 0: have (0, 48)
+err: invalid type annotation at index 190: inputs and outputs must not exceed 127: have 175
