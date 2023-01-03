@@ -21,7 +21,15 @@ func main() {
 		fmt.Printf("Pipe input to process")
 		return
 	}
-	if err := doit(bins); err != nil {
+	var input = make(chan string)
+	go func() {
+		defer close(input)
+		scanner := bufio.NewScanner(os.Stdin)
+		for scanner.Scan() {
+			input <- scanner.Text()
+		}
+	}()
+	if err := doit(bins, input); err != nil {
 		fmt.Printf("err: %v", err)
 	}
 }
@@ -33,8 +41,7 @@ type proc struct {
 	outbuf *bufio.Scanner
 }
 
-func doit(bins []string) error {
-	scanner := bufio.NewScanner(os.Stdin)
+func doit(bins []string, inputs chan string) error {
 	var procs []proc
 
 	for _, bin := range bins {
@@ -80,13 +87,12 @@ func doit(bins []string) error {
 	var count = 0
 	var lastLog = time.Now()
 
-	for scanner.Scan() {
+	for l := range inputs {
 		if time.Since(lastLog) > 8*time.Second {
 			fmt.Fprintf(os.Stdout, "# %d cases OK\n", count)
 			lastLog = time.Now()
 		}
 		count++
-		l := scanner.Text()
 		for _, proc := range procs {
 			proc.inp.Write([]byte(l))
 			proc.inp.Write([]byte("\n"))
