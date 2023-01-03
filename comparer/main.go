@@ -43,6 +43,12 @@ func doit(bins []string) error {
 		if len(cmdArgs) > 1 {
 			args = cmdArgs[1:]
 		}
+		for _, arg := range args {
+			if len(arg) == 0 {
+				// probably a double-space
+				fmt.Printf("Warn: empty arg (double-space?) in '%v'\n", bin)
+			}
+		}
 		cmd := exec.Command(cmdArgs[0], args...)
 		stdout, err := cmd.StdoutPipe()
 		if err != nil {
