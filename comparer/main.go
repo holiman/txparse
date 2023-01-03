@@ -76,6 +76,7 @@ func doit(bins []string) error {
 	for i, proc := range procs {
 		fmt.Printf("  %d: %v\n", i, proc.cmd)
 	}
+	fmt.Println("")
 	var count = 0
 	var lastLog = time.Now()
 
