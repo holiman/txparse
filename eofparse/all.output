@@ -59,7 +59,7 @@ err: use of undefined opcode opcode 0xbc not defined
 err: use of undefined opcode opcode 0xde not defined
 err: use of undefined opcode opcode 0xe2 not defined
 err: unreachable code
-err: code section out-of-bounds (want: 3582, have: 1)
+err: use of undefined opcode opcode 0xb2 not defined
 err: use of undefined opcode opcode 0xbe not defined
 err: wrong number of outputs (want: 0, got: 1)
 err: computed max stack height for code section 0 does not match expected (want: 0, got: 1)
@@ -122,7 +122,7 @@ err: unreachable code
 err: computed max stack height for code section 0 does not match expected (want: 0, got: 1)
 OK 604200,6042604200,00
 err: truncated operand
-err: unreachable code
+err: computed max stack height for code section 0 does not match expected (want: 1, got: 0)
 err: computed max stack height for code section 1 does not match expected (want: 48, got: 52)
 err: computed max stack height for code section 1 does not match expected (want: 48, got: 50)
 err: relative offset out-of-bounds: 12340
@@ -156,7 +156,7 @@ err: truncated jump table operand
 err: relative offset out-of-bounds: 12341
 err: computed max stack height for code section 1 does not match expected (want: 48, got: 49)
 err: truncated operand
-err: computed max stack height for code section 1 does not match expected (want: 48, got: 97)
+err: computed max stack height for code section 1 does not match expected (want: 48, got: 49)
 err: computed max stack height for code section 1 does not match expected (want: 48, got: 50)
 err: truncated operand
 err: use of undefined opcode opcode 0x21 not defined
@@ -164,14 +164,14 @@ err: code section ends with non-terminal instruction
 err: truncated rjump* operand
 err: truncated jump table operand
 err: wrong number of outputs (want: 0, got: 2)
-err: truncated operand
+err: use of undefined opcode opcode 0xb2 not defined
 err: use of undefined opcode PC
 err: relative offset out-of-bounds: 12339
 err: truncated operand
 err: code section ends with non-terminal instruction
-err: computed max stack height for code section 0 does not match expected (want: 48, got: 0)
-err: jumpf to section with more outputs
-err: code section out-of-bounds (want: 12336, have: 3)
+err: use of undefined opcode opcode 0xb2 not defined
+err: use of undefined opcode opcode 0xb2 not defined
+err: use of undefined opcode opcode 0xb2 not defined
 err: stack underflow
 err: relative offset out-of-bounds: 12347
 err: computed max stack height for code section 1 does not match expected (want: 48, got: 53)
@@ -219,13 +219,13 @@ err: relative offset out-of-bounds: 12358
 err: relative offset out-of-bounds: 12409
 err: relative offset out-of-bounds: 24180
 err: truncated operand
-err: unreachable code
-err: computed max stack height for code section 1 does not match expected (want: 48, got: 102)
+err: computed max stack height for code section 0 does not match expected (want: 48, got: 0)
+err: computed max stack height for code section 1 does not match expected (want: 48, got: 54)
 err: code section ends with non-terminal instruction
 err: relative offset out-of-bounds: 12358
 err: computed max stack height for code section 1 does not match expected (want: 48, got: 63)
 err: computed max stack height for code section 1 does not match expected (want: 48, got: 49)
-err: computed max stack height for code section 1 does not match expected (want: 48, got: 163)
+err: computed max stack height for code section 1 does not match expected (want: 48, got: 67)
 err: code section ends with non-terminal instruction
 err: computed max stack height for code section 1 does not match expected (want: 48, got: 88)
 err: code section ends with non-terminal instruction
@@ -313,7 +313,7 @@ err: computed max stack height for code section 1 does not match expected (want:
 err: relative offset out-of-bounds: 12441
 err: code section ends with non-terminal instruction
 err: computed max stack height for code section 1 does not match expected (want: 48, got: 55)
-err: code section ends with non-terminal instruction
+err: use of undefined opcode opcode 0xb2 not defined
 err: expected terminator
 err: failed to parse section list: unexpected EOF
 err: failed to parse section list: unexpected EOF
@@ -500,40 +500,40 @@ err: expected kind data 0x03: have 0
 err: invalid type annotation at index 0: input and output must be 0: have (0, 48)
 err: invalid type annotation at index 190: inputs and outputs must not exceed 127: have 175
 OK 603000,5e030000000000005cfffd,00
-OK b20000
+err: use of undefined opcode opcode 0xb2 not defined
 OK b00001b1,00
-err: wrong number of outputs (want: 0, got: 2)
-err: wrong number of outputs (want: 0, got: 2)
-err: wrong number of outputs (want: 0, got: 2)
-err: wrong number of outputs (want: 0, got: 2)
-err: wrong number of outputs (want: 0, got: 2)
-err: wrong number of outputs (want: 0, got: 2)
-err: wrong number of outputs (want: 0, got: 2)
-err: wrong number of outputs (want: 0, got: 3)
-err: wrong number of outputs (want: 0, got: 3)
-err: wrong number of outputs (want: 0, got: 2)
-err: wrong number of outputs (want: 0, got: 2)
+OK 5959b0000150b1,01b1
+OK 5959b0000150b1,02b1
+OK 5959b0000150b1,03b1
+OK 5959b0000150b1,04b1
+OK 5959b0000150b1,05b1
+OK 5959b0000150b1,06b1
+OK 5959b0000150b1,07b1
+OK 595959b0000150b1,08b1
+OK 595959b0000150b1,09b1
+OK 5959b0000150b1,0ab1
+OK 5959b0000150b1,0bb1
 err: use of undefined opcode opcode 0xc not defined
 err: use of undefined opcode opcode 0xd not defined
 err: use of undefined opcode opcode 0xe not defined
 err: use of undefined opcode opcode 0xf not defined
-err: wrong number of outputs (want: 0, got: 2)
-err: wrong number of outputs (want: 0, got: 2)
-err: wrong number of outputs (want: 0, got: 2)
-err: wrong number of outputs (want: 0, got: 2)
-err: wrong number of outputs (want: 0, got: 2)
-err: wrong number of outputs (want: 0, got: 1)
-err: wrong number of outputs (want: 0, got: 2)
-err: wrong number of outputs (want: 0, got: 2)
-err: wrong number of outputs (want: 0, got: 2)
-err: wrong number of outputs (want: 0, got: 1)
-err: wrong number of outputs (want: 0, got: 2)
-err: wrong number of outputs (want: 0, got: 2)
-err: wrong number of outputs (want: 0, got: 2)
-err: wrong number of outputs (want: 0, got: 2)
+OK 5959b0000150b1,10b1
+OK 5959b0000150b1,11b1
+OK 5959b0000150b1,12b1
+OK 5959b0000150b1,13b1
+OK 5959b0000150b1,14b1
+OK 59b0000150b1,15b1
+OK 5959b0000150b1,16b1
+OK 5959b0000150b1,17b1
+OK 5959b0000150b1,18b1
+OK 59b0000150b1,19b1
+OK 5959b0000150b1,1ab1
+OK 5959b0000150b1,1bb1
+OK 5959b0000150b1,1cb1
+OK 5959b0000150b1,1db1
 err: use of undefined opcode opcode 0x1e not defined
 err: use of undefined opcode opcode 0x1f not defined
-err: wrong number of outputs (want: 0, got: 2)
+OK 5959b0000150b1,20b1
 err: use of undefined opcode opcode 0x21 not defined
 err: use of undefined opcode opcode 0x22 not defined
 err: use of undefined opcode opcode 0x23 not defined
@@ -550,22 +550,22 @@ err: use of undefined opcode opcode 0x2d not defined
 err: use of undefined opcode opcode 0x2e not defined
 err: use of undefined opcode opcode 0x2f not defined
 OK b0000150b1,30b1
-err: wrong number of outputs (want: 0, got: 1)
+OK 59b0000150b1,31b1
 OK b0000150b1,32b1
 OK b0000150b1,33b1
 OK b0000150b1,34b1
-err: wrong number of outputs (want: 0, got: 1)
+OK 59b0000150b1,35b1
 OK b0000150b1,36b1
-err: wrong number of outputs (want: 0, got: 3)
+OK 595959b00001b1,37b1
 OK b0000150b1,38b1
-err: wrong number of outputs (want: 0, got: 3)
+OK 595959b00001b1,39b1
 OK b0000150b1,3ab1
-err: wrong number of outputs (want: 0, got: 1)
-err: wrong number of outputs (want: 0, got: 4)
+OK 59b0000150b1,3bb1
+OK 59595959b00001b1,3cb1
 OK b0000150b1,3db1
-err: wrong number of outputs (want: 0, got: 3)
-err: wrong number of outputs (want: 0, got: 1)
-err: wrong number of outputs (want: 0, got: 1)
+OK 595959b00001b1,3eb1
+OK 59b0000150b1,3fb1
+OK 59b0000150b1,40b1
 OK b0000150b1,41b1
 OK b0000150b1,42b1
 OK b0000150b1,43b1
@@ -581,12 +581,12 @@ err: use of undefined opcode opcode 0x4c not defined
 err: use of undefined opcode opcode 0x4d not defined
 err: use of undefined opcode opcode 0x4e not defined
 err: use of undefined opcode opcode 0x4f not defined
-err: wrong number of outputs (want: 0, got: 1)
-err: wrong number of outputs (want: 0, got: 1)
-err: wrong number of outputs (want: 0, got: 2)
-err: wrong number of outputs (want: 0, got: 2)
-err: wrong number of outputs (want: 0, got: 1)
-err: wrong number of outputs (want: 0, got: 2)
+OK 59b00001b1,50b1
+OK 59b0000150b1,51b1
+OK 5959b00001b1,52b1
+OK 5959b00001b1,53b1
+OK 59b0000150b1,54b1
+OK 5959b00001b1,55b1
 err: use of undefined opcode JUMP
 err: use of undefined opcode JUMPI
 err: use of undefined opcode PC
@@ -594,8 +594,8 @@ OK b0000150b1,59b1
 OK b0000150b1,5ab1
 OK b00001b1,5bb1
 OK b00001b1,5c0000b1
-err: wrong number of outputs (want: 0, got: 1)
-err: wrong number of outputs (want: 0, got: 1)
+OK 59b00001b1,5d0000b1
+OK 59b00001b1,5e0200000000b1
 OK b0000150b1,5fb1
 OK b0000150b1,6000b1
 OK b0000150b1,610000b1
@@ -629,43 +629,43 @@ OK b0000150b1,7c0000000000000000000000000000000000000000000000000000000000b1
 OK b0000150b1,7d000000000000000000000000000000000000000000000000000000000000b1
 OK b0000150b1,7e00000000000000000000000000000000000000000000000000000000000000b1
 OK b0000150b1,7f0000000000000000000000000000000000000000000000000000000000000000b1
-err: wrong number of outputs (want: 0, got: 1)
-err: wrong number of outputs (want: 0, got: 2)
-err: wrong number of outputs (want: 0, got: 3)
-err: wrong number of outputs (want: 0, got: 4)
-err: wrong number of outputs (want: 0, got: 5)
-err: wrong number of outputs (want: 0, got: 6)
-err: wrong number of outputs (want: 0, got: 7)
-err: wrong number of outputs (want: 0, got: 8)
-err: wrong number of outputs (want: 0, got: 9)
-err: wrong number of outputs (want: 0, got: 10)
-err: wrong number of outputs (want: 0, got: 11)
-err: wrong number of outputs (want: 0, got: 12)
-err: wrong number of outputs (want: 0, got: 13)
-err: wrong number of outputs (want: 0, got: 14)
-err: wrong number of outputs (want: 0, got: 15)
-err: wrong number of outputs (want: 0, got: 16)
-err: wrong number of outputs (want: 0, got: 2)
-err: wrong number of outputs (want: 0, got: 3)
-err: wrong number of outputs (want: 0, got: 4)
-err: wrong number of outputs (want: 0, got: 5)
-err: wrong number of outputs (want: 0, got: 6)
-err: wrong number of outputs (want: 0, got: 7)
-err: wrong number of outputs (want: 0, got: 8)
-err: wrong number of outputs (want: 0, got: 9)
-err: wrong number of outputs (want: 0, got: 10)
-err: wrong number of outputs (want: 0, got: 11)
-err: wrong number of outputs (want: 0, got: 12)
-err: wrong number of outputs (want: 0, got: 13)
-err: wrong number of outputs (want: 0, got: 14)
-err: wrong number of outputs (want: 0, got: 15)
-err: wrong number of outputs (want: 0, got: 16)
-err: wrong number of outputs (want: 0, got: 17)
-err: wrong number of outputs (want: 0, got: 2)
-err: wrong number of outputs (want: 0, got: 3)
-err: wrong number of outputs (want: 0, got: 4)
-err: wrong number of outputs (want: 0, got: 5)
-err: wrong number of outputs (want: 0, got: 6)
+OK 59b000015050b1,80b1
+OK 5959b00001505050b1,81b1
+OK 595959b0000150505050b1,82b1
+OK 59595959b000015050505050b1,83b1
+OK 5959595959b00001505050505050b1,84b1
+OK 595959595959b0000150505050505050b1,85b1
+OK 59595959595959b000015050505050505050b1,86b1
+OK 5959595959595959b00001505050505050505050b1,87b1
+OK 595959595959595959b0000150505050505050505050b1,88b1
+OK 59595959595959595959b000015050505050505050505050b1,89b1
+OK 5959595959595959595959b00001505050505050505050505050b1,8ab1
+OK 595959595959595959595959b0000150505050505050505050505050b1,8bb1
+OK 59595959595959595959595959b000015050505050505050505050505050b1,8cb1
+OK 5959595959595959595959595959b00001505050505050505050505050505050b1,8db1
+OK 595959595959595959595959595959b0000150505050505050505050505050505050b1,8eb1
+OK 59595959595959595959595959595959b000015050505050505050505050505050505050b1,8fb1
+OK 5959b000015050b1,90b1
+OK 595959b00001505050b1,91b1
+OK 59595959b0000150505050b1,92b1
+OK 5959595959b000015050505050b1,93b1
+OK 595959595959b00001505050505050b1,94b1
+OK 59595959595959b0000150505050505050b1,95b1
+OK 5959595959595959b000015050505050505050b1,96b1
+OK 595959595959595959b00001505050505050505050b1,97b1
+OK 59595959595959595959b0000150505050505050505050b1,98b1
+OK 5959595959595959595959b000015050505050505050505050b1,99b1
+OK 595959595959595959595959b00001505050505050505050505050b1,9ab1
+OK 59595959595959595959595959b0000150505050505050505050505050b1,9bb1
+OK 5959595959595959595959595959b000015050505050505050505050505050b1,9cb1
+OK 595959595959595959595959595959b00001505050505050505050505050505050b1,9db1
+OK 59595959595959595959595959595959b0000150505050505050505050505050505050b1,9eb1
+OK 5959595959595959595959595959595959b000015050505050505050505050505050505050b1,9fb1
+OK 5959b00001b1,a0b1
+OK 595959b00001b1,a1b1
+OK 59595959b00001b1,a2b1
+OK 5959595959b00001b1,a3b1
+OK 595959595959b00001b1,a4b1
 err: use of undefined opcode opcode 0xa5 not defined
 err: use of undefined opcode opcode 0xa6 not defined
 err: use of undefined opcode opcode 0xa7 not defined
@@ -679,7 +679,7 @@ err: use of undefined opcode opcode 0xae not defined
 err: use of undefined opcode opcode 0xaf not defined
 OK b00001b1,b00000b1
 OK b00001b1,b1
-err: truncated operand
+err: use of undefined opcode opcode 0xb2 not defined
 err: use of undefined opcode TLOAD
 err: use of undefined opcode TSTORE
 err: use of undefined opcode opcode 0xb5 not defined
@@ -741,19 +741,19 @@ err: use of undefined opcode opcode 0xec not defined
 err: use of undefined opcode opcode 0xed not defined
 err: use of undefined opcode opcode 0xee not defined
 err: use of undefined opcode opcode 0xef not defined
-err: wrong number of outputs (want: 0, got: 3)
-err: wrong number of outputs (want: 0, got: 7)
+OK 595959b0000150b1,f0b1
+OK 59595959595959b0000150b1,f1b1
 err: use of undefined opcode CALLCODE
-err: wrong number of outputs (want: 0, got: 2)
-err: wrong number of outputs (want: 0, got: 6)
-err: wrong number of outputs (want: 0, got: 4)
+OK 5959b00001b1,f3
+OK 595959595959b0000150b1,f4b1
+OK 59595959b0000150b1,f5b1
 err: use of undefined opcode opcode 0xf6 not defined
 err: use of undefined opcode opcode 0xf7 not defined
 err: use of undefined opcode opcode 0xf8 not defined
 err: use of undefined opcode opcode 0xf9 not defined
-err: wrong number of outputs (want: 0, got: 6)
+OK 595959595959b0000150b1,fab1
 err: use of undefined opcode opcode 0xfb not defined
 err: use of undefined opcode opcode 0xfc not defined
-err: wrong number of outputs (want: 0, got: 2)
+OK 5959b00001b1,fd
 OK b00001b1,fe
 err: use of undefined opcode SELFDESTRUCT
