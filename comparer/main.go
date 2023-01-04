@@ -94,7 +94,7 @@ func doit(bins []string, inputs chan string, results chan string) error {
 		lastLog = time.Now()
 	)
 	for l := range inputs {
-		if len(l) == 0 {
+		if len(l) == 0 || strings.HasPrefix(l, "#") {
 			if results != nil {
 				results <- ""
 			}
