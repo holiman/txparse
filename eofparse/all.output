@@ -758,6 +758,7 @@ OK 5959b00001b1,fd
 OK b00001b1,fe
 err: use of undefined opcode SELFDESTRUCT
 OK 603000,5e030000000000005cfffd,00
+err: mismatch of code sections count and type signatures: types 2, code 1)
 err: mismatch of code sections count and type signatures: types 3, code 1)
 err: code section out-of-bounds (want: 66, have: 1)
 err: type section size must be divisible by 4: have 2093
