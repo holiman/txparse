@@ -94,6 +94,12 @@ func doit(bins []string, inputs chan string, results chan string) error {
 		lastLog = time.Now()
 	)
 	for l := range inputs {
+		if len(l) == 0 {
+			if results != nil {
+				results <- ""
+			}
+			continue
+		}
 		if time.Since(lastLog) > 8*time.Second {
 			fmt.Fprintf(os.Stdout, "# %d cases OK\n", count)
 			lastLog = time.Now()
