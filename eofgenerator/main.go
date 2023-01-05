@@ -22,10 +22,8 @@ func work() {
 			numCodes = 2
 		case 2:
 			numCodes = 16
-		case 3:
-			numCodes = 1023
 		default:
-			numCodes = 1024
+			numCodes = 32
 		}
 		for i := 0; i < numCodes; i++ {
 			code, maxStack := fuzzing.GenerateCallFProgram(numCodes)
