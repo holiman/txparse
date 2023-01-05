@@ -23,6 +23,7 @@ func main() {
 	go func() {
 		defer close(input)
 		scanner := bufio.NewScanner(os.Stdin)
+		scanner.Buffer(make([]byte, 200_000), 200_000)
 		for scanner.Scan() {
 			input <- scanner.Text()
 		}
@@ -63,11 +64,13 @@ func startProcess(cmdArgs []string) (*proc, error) {
 	if err = cmd.Start(); err != nil {
 		return nil, err
 	}
+	outbuf := bufio.NewScanner(stdout)
+	outbuf.Buffer(make([]byte, 200_000), 200_000)
 	return &proc{
 		cmd:    cmd.String(),
 		outp:   stdout,
 		inp:    stdin,
-		outbuf: bufio.NewScanner(stdout),
+		outbuf: outbuf,
 	}, nil
 
 }
