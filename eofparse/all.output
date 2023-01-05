@@ -1038,3 +1038,4 @@ err: relative offset into immediate operand: 295
 err: unreachable code
 err: code section out-of-bounds (want: 11443, have: 1)
 err: type section size must be divisible by 4: have 2093
+err: mismatch of code sections count and type signatures: types 2, code 1)
