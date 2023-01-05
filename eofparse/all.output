@@ -77,12 +77,12 @@ OK 6000600060006000600060006000600060006000600060006000600060008e05011960005f0b3
 err: wrong number of outputs (want: 0, got: 22)
 err: computed max stack height for code section 0 does not match expected (want: 25, got: 24)
 OK 6000600060006000a26000756000486000600060008256600069086000486000600060000854600060006000600060006000600060006000600060008a3c8160004160006e6000466000600060006000600060006000600060006000600060008b9cf0826000766000648e600045849e9c6000b2f26000b160005a60006a1160003060006560007d89579b3700
-err: relative offset out-of-bounds: 12407
+err: RJUMP: destination out-of-bounds: 12407
 OK 600060001b40600060001a6000301019600060000360003660006f206000600060006000600060006000956000721820856000456000596000600060006000600060006000600060006000989b6000776000fe6000773160007a60007a6000006000320a600047f1551ba28160006260006d60007b6000600060006000600060006000600060006000600060009a60005e8a00
 err: computed max stack height for code section 0 does not match expected (want: 48, got: 146)
-err: code section ends with non-terminal instruction
-err: relative offset out-of-bounds: 12421
-err: relative offset out-of-bounds: 12473
+err: code section ends with non-terminal instruction (ADDRESS)
+err: RJUMPI: destination out-of-bounds: 12421
+err: RJUMPV: destination out-of-bounds: 12473
 OK 6000600060006000600060006000600060006000600060008b983e6000600060006000600060006000600060006000600060006000600060008e88a2073960005a40fa60003695999060006e086000448b60007013f260003360007f3701600060006000f06000656000613e600054600060000760006000600060006000931560005b08921418600060006000600060006000600060009600
 err: invalid magic: have 0ef0, want ef00
 err: code section out-of-bounds (want: 21139, have: 1)
@@ -125,193 +125,193 @@ err: truncated operand
 err: computed max stack height for code section 0 does not match expected (want: 1, got: 0)
 err: computed max stack height for code section 1 does not match expected (want: 48, got: 52)
 err: computed max stack height for code section 1 does not match expected (want: 48, got: 50)
-err: relative offset out-of-bounds: 12340
+err: RJUMP: destination out-of-bounds: 12340
 err: computed max stack height for code section 1 does not match expected (want: 48, got: 49)
-err: code section ends with non-terminal instruction
+err: code section ends with non-terminal instruction (ADDRESS)
 err: truncated rjump* operand
-err: relative offset out-of-bounds: 12339
-err: relative offset out-of-bounds: 12339
-err: relative offset out-of-bounds: 12339
-err: relative offset out-of-bounds: 12339
-err: relative offset out-of-bounds: 12339
-err: relative offset out-of-bounds: 12339
-err: relative offset out-of-bounds: 12339
-err: relative offset out-of-bounds: 12339
-err: relative offset out-of-bounds: 12339
-err: relative offset out-of-bounds: -8909
-err: relative offset into immediate operand: 2
+err: RJUMP: destination out-of-bounds: 12339
+err: RJUMP: destination out-of-bounds: 12339
+err: RJUMP: destination out-of-bounds: 12339
+err: RJUMP: destination out-of-bounds: 12339
+err: RJUMP: destination out-of-bounds: 12339
+err: RJUMP: destination out-of-bounds: 12339
+err: RJUMP: destination out-of-bounds: 12339
+err: RJUMP: destination out-of-bounds: 12339
+err: RJUMP: destination out-of-bounds: 12339
+err: RJUMP: destination out-of-bounds: -8909
+err: RJUMP: destination into immediate operand: 2
 OK 603000,5d00003000,00
-err: code section ends with non-terminal instruction
+err: code section ends with non-terminal instruction (ADDRESS)
 OK 603000,5d00010000,00
 err: stack height mismatch for different paths
 err: rjumpv branch count must not be 0
-err: code section ends with non-terminal instruction
-err: relative offset out-of-bounds: 12340
-err: relative offset out-of-bounds: 12344
-err: relative offset out-of-bounds: 24120
-err: relative offset out-of-bounds: 25400
-err: relative offset out-of-bounds: 25656
+err: code section ends with non-terminal instruction (ADDRESS)
+err: RJUMPV: destination out-of-bounds: 12340
+err: RJUMPV: destination out-of-bounds: 12344
+err: RJUMPV: destination out-of-bounds: 24120
+err: RJUMPV: destination out-of-bounds: 25400
+err: RJUMPV: destination out-of-bounds: 25656
 err: truncated jump table operand
 err: truncated jump table operand
-err: relative offset out-of-bounds: 12341
+err: RJUMPI: destination out-of-bounds: 12341
 err: computed max stack height for code section 1 does not match expected (want: 48, got: 49)
 err: truncated operand
 err: computed max stack height for code section 1 does not match expected (want: 48, got: 49)
 err: computed max stack height for code section 1 does not match expected (want: 48, got: 50)
 err: truncated operand
 err: use of undefined opcode opcode 0x21 not defined
-err: code section ends with non-terminal instruction
+err: code section ends with non-terminal instruction (ADDRESS)
 err: truncated rjump* operand
 err: truncated jump table operand
 err: wrong number of outputs (want: 0, got: 2)
 err: use of undefined opcode opcode 0xb2 not defined
 err: use of undefined opcode PC
-err: relative offset out-of-bounds: 12339
-err: truncated operand
-err: code section ends with non-terminal instruction
+err: RJUMPI: destination out-of-bounds: 12339
+err: RJUMPV: truncated operand
+err: code section ends with non-terminal instruction (CALLF)
 err: use of undefined opcode opcode 0xb2 not defined
 err: use of undefined opcode opcode 0xb2 not defined
 err: use of undefined opcode opcode 0xb2 not defined
 err: stack underflow
-err: relative offset out-of-bounds: 12347
+err: RJUMP: destination out-of-bounds: 12347
 err: computed max stack height for code section 1 does not match expected (want: 48, got: 53)
-err: relative offset out-of-bounds: 12347
+err: RJUMP: destination out-of-bounds: 12347
 err: computed max stack height for code section 1 does not match expected (want: 48, got: 58)
-err: relative offset out-of-bounds: 12345
-err: relative offset out-of-bounds: 12344
-err: relative offset out-of-bounds: 24170
-err: relative offset out-of-bounds: 24892
-err: relative offset out-of-bounds: 25148
-err: relative offset out-of-bounds: 25148
+err: RJUMP: destination out-of-bounds: 12345
+err: RJUMPV: destination out-of-bounds: 12344
+err: RJUMPV: destination out-of-bounds: 24170
+err: RJUMPV: destination out-of-bounds: 24892
+err: RJUMPV: destination out-of-bounds: 25148
+err: RJUMPV: destination out-of-bounds: 25148
 err: computed max stack height for code section 1 does not match expected (want: 48, got: 54)
-err: code section ends with non-terminal instruction
+err: code section ends with non-terminal instruction (ADDRESS)
 err: computed max stack height for code section 1 does not match expected (want: 48, got: 58)
 err: computed max stack height for code section 1 does not match expected (want: 48, got: 49)
-err: relative offset out-of-bounds: 12345
-err: relative offset out-of-bounds: 12348
-err: code section ends with non-terminal instruction
-err: relative offset out-of-bounds: 12345
-err: relative offset out-of-bounds: 12339
-err: relative offset out-of-bounds: 12339
-err: relative offset out-of-bounds: 12339
-err: relative offset out-of-bounds: 12339
-err: relative offset out-of-bounds: 12339
+err: RJUMPV: destination out-of-bounds: 12345
+err: RJUMPV: destination out-of-bounds: 12348
+err: code section ends with non-terminal instruction (ADDRESS)
+err: RJUMPI: destination out-of-bounds: 12345
+err: RJUMP: destination out-of-bounds: 12339
+err: RJUMP: destination out-of-bounds: 12339
+err: RJUMP: destination out-of-bounds: 12339
+err: RJUMP: destination out-of-bounds: 12339
+err: RJUMPI: destination out-of-bounds: 12339
 err: computed max stack height for code section 1 does not match expected (want: 48, got: 49)
-err: relative offset out-of-bounds: 12342
+err: RJUMPV: destination out-of-bounds: 12342
 err: computed max stack height for code section 1 does not match expected (want: 48, got: 49)
 err: truncated jump table operand
-err: relative offset out-of-bounds: 12347
-err: code section ends with non-terminal instruction
-err: relative offset into immediate operand: 10
-err: truncated operand
+err: RJUMP: destination out-of-bounds: 12347
+err: code section ends with non-terminal instruction (ADDRESS)
+err: RJUMP: destination into immediate operand: 10
+err: RJUMPV: truncated operand
 err: truncated jump table operand
-err: relative offset out-of-bounds: 12344
-err: relative offset out-of-bounds: 12344
-err: relative offset out-of-bounds: 12344
-err: relative offset out-of-bounds: 12344
-err: relative offset out-of-bounds: 12344
-err: relative offset out-of-bounds: 12344
-err: relative offset out-of-bounds: 12344
-err: relative offset out-of-bounds: 12344
-err: code section ends with non-terminal instruction
-err: relative offset out-of-bounds: 12358
-err: relative offset out-of-bounds: 12358
-err: relative offset out-of-bounds: 12409
-err: relative offset out-of-bounds: 24180
+err: RJUMPV: destination out-of-bounds: 12344
+err: RJUMPV: destination out-of-bounds: 12344
+err: RJUMPV: destination out-of-bounds: 12344
+err: RJUMPV: destination out-of-bounds: 12344
+err: RJUMPV: destination out-of-bounds: 12344
+err: RJUMPV: destination out-of-bounds: 12344
+err: RJUMPV: destination out-of-bounds: 12344
+err: RJUMPV: destination out-of-bounds: 12344
+err: code section ends with non-terminal instruction (ADDRESS)
+err: RJUMPV: destination out-of-bounds: 12358
+err: RJUMPV: destination out-of-bounds: 12358
+err: RJUMPV: destination out-of-bounds: 12409
+err: RJUMPV: destination out-of-bounds: 24180
 err: truncated operand
 err: computed max stack height for code section 0 does not match expected (want: 48, got: 0)
 err: computed max stack height for code section 1 does not match expected (want: 48, got: 54)
-err: code section ends with non-terminal instruction
-err: relative offset out-of-bounds: 12358
+err: code section ends with non-terminal instruction (ADDRESS)
+err: RJUMPV: destination out-of-bounds: 12358
 err: computed max stack height for code section 1 does not match expected (want: 48, got: 63)
 err: computed max stack height for code section 1 does not match expected (want: 48, got: 49)
 err: computed max stack height for code section 1 does not match expected (want: 48, got: 67)
-err: code section ends with non-terminal instruction
+err: code section ends with non-terminal instruction (ADDRESS)
 err: computed max stack height for code section 1 does not match expected (want: 48, got: 88)
-err: code section ends with non-terminal instruction
+err: code section ends with non-terminal instruction (ADDRESS)
 err: computed max stack height for code section 1 does not match expected (want: 48, got: 80)
-err: relative offset out-of-bounds: 12353
-err: relative offset out-of-bounds: 12353
+err: RJUMP: destination out-of-bounds: 12353
+err: RJUMP: destination out-of-bounds: 12353
 err: computed max stack height for code section 1 does not match expected (want: 48, got: 72)
-err: code section ends with non-terminal instruction
-err: relative offset out-of-bounds: 12350
+err: code section ends with non-terminal instruction (ADDRESS)
+err: RJUMPI: destination out-of-bounds: 12350
 err: computed max stack height for code section 1 does not match expected (want: 48, got: 58)
-err: relative offset out-of-bounds: 12343
-err: relative offset out-of-bounds: 12377
+err: RJUMP: destination out-of-bounds: 12343
+err: RJUMP: destination out-of-bounds: 12377
 err: computed max stack height for code section 1 does not match expected (want: 48, got: 72)
 err: computed max stack height for code section 1 does not match expected (want: 48, got: 86)
-err: relative offset out-of-bounds: 12340
-err: relative offset out-of-bounds: 12340
-err: relative offset out-of-bounds: 12339
-err: relative offset out-of-bounds: 12339
-err: relative offset out-of-bounds: 12339
-err: relative offset out-of-bounds: 12339
-err: relative offset out-of-bounds: 12339
-err: relative offset out-of-bounds: 12339
-err: relative offset out-of-bounds: 12339
-err: relative offset out-of-bounds: 12339
-err: relative offset out-of-bounds: 12339
-err: relative offset out-of-bounds: 12339
-err: relative offset out-of-bounds: 12340
-err: relative offset out-of-bounds: 12340
-err: relative offset out-of-bounds: 12340
-err: relative offset out-of-bounds: 12340
-err: relative offset out-of-bounds: 12340
-err: relative offset out-of-bounds: 12340
-err: relative offset out-of-bounds: 12340
-err: relative offset out-of-bounds: 12340
-err: relative offset out-of-bounds: 12344
-err: relative offset out-of-bounds: 12346
-err: relative offset out-of-bounds: 12346
-err: relative offset out-of-bounds: 12348
-err: relative offset out-of-bounds: 12350
-err: relative offset out-of-bounds: 12350
-err: relative offset out-of-bounds: 12350
-err: relative offset out-of-bounds: 12356
-err: relative offset out-of-bounds: 12402
-err: relative offset out-of-bounds: 12402
-err: relative offset out-of-bounds: 12402
-err: relative offset out-of-bounds: 12402
-err: relative offset out-of-bounds: 12402
-err: relative offset out-of-bounds: 12402
-err: relative offset out-of-bounds: 12402
-err: relative offset out-of-bounds: 12402
-err: relative offset out-of-bounds: 12402
-err: relative offset out-of-bounds: 12402
-err: relative offset out-of-bounds: 12402
-err: relative offset out-of-bounds: 12402
-err: relative offset out-of-bounds: 12402
-err: relative offset out-of-bounds: 12402
-err: relative offset out-of-bounds: 12402
-err: relative offset out-of-bounds: 12402
-err: relative offset out-of-bounds: 12402
-err: relative offset out-of-bounds: 12402
-err: relative offset out-of-bounds: 12402
-err: relative offset out-of-bounds: 12402
-err: relative offset out-of-bounds: 12402
-err: relative offset out-of-bounds: 12402
-err: relative offset out-of-bounds: 12402
-err: relative offset out-of-bounds: 12402
-err: relative offset out-of-bounds: 12402
-err: relative offset out-of-bounds: 12402
-err: relative offset out-of-bounds: 12402
-err: relative offset out-of-bounds: 12402
-err: relative offset out-of-bounds: 12402
-err: relative offset out-of-bounds: 12402
-err: relative offset out-of-bounds: 12457
-err: relative offset out-of-bounds: 12457
-err: relative offset out-of-bounds: 25458
-err: relative offset out-of-bounds: 12339
-err: relative offset out-of-bounds: 12384
-err: relative offset out-of-bounds: 25490
+err: RJUMP: destination out-of-bounds: 12340
+err: RJUMP: destination out-of-bounds: 12340
+err: RJUMP: destination out-of-bounds: 12339
+err: RJUMP: destination out-of-bounds: 12339
+err: RJUMP: destination out-of-bounds: 12339
+err: RJUMP: destination out-of-bounds: 12339
+err: RJUMP: destination out-of-bounds: 12339
+err: RJUMPI: destination out-of-bounds: 12339
+err: RJUMPI: destination out-of-bounds: 12339
+err: RJUMPI: destination out-of-bounds: 12339
+err: RJUMPI: destination out-of-bounds: 12339
+err: RJUMPI: destination out-of-bounds: 12339
+err: RJUMPV: destination out-of-bounds: 12340
+err: RJUMPV: destination out-of-bounds: 12340
+err: RJUMPV: destination out-of-bounds: 12340
+err: RJUMPV: destination out-of-bounds: 12340
+err: RJUMPV: destination out-of-bounds: 12340
+err: RJUMPV: destination out-of-bounds: 12340
+err: RJUMPV: destination out-of-bounds: 12340
+err: RJUMPV: destination out-of-bounds: 12340
+err: RJUMPV: destination out-of-bounds: 12344
+err: RJUMPV: destination out-of-bounds: 12346
+err: RJUMPV: destination out-of-bounds: 12346
+err: RJUMPV: destination out-of-bounds: 12348
+err: RJUMPV: destination out-of-bounds: 12350
+err: RJUMPV: destination out-of-bounds: 12350
+err: RJUMPV: destination out-of-bounds: 12350
+err: RJUMPV: destination out-of-bounds: 12356
+err: RJUMPV: destination out-of-bounds: 12402
+err: RJUMPV: destination out-of-bounds: 12402
+err: RJUMPV: destination out-of-bounds: 12402
+err: RJUMPV: destination out-of-bounds: 12402
+err: RJUMPV: destination out-of-bounds: 12402
+err: RJUMPV: destination out-of-bounds: 12402
+err: RJUMPV: destination out-of-bounds: 12402
+err: RJUMPV: destination out-of-bounds: 12402
+err: RJUMPV: destination out-of-bounds: 12402
+err: RJUMPV: destination out-of-bounds: 12402
+err: RJUMPV: destination out-of-bounds: 12402
+err: RJUMPV: destination out-of-bounds: 12402
+err: RJUMPV: destination out-of-bounds: 12402
+err: RJUMPV: destination out-of-bounds: 12402
+err: RJUMPV: destination out-of-bounds: 12402
+err: RJUMPV: destination out-of-bounds: 12402
+err: RJUMPV: destination out-of-bounds: 12402
+err: RJUMPV: destination out-of-bounds: 12402
+err: RJUMPV: destination out-of-bounds: 12402
+err: RJUMPV: destination out-of-bounds: 12402
+err: RJUMPV: destination out-of-bounds: 12402
+err: RJUMPV: destination out-of-bounds: 12402
+err: RJUMPV: destination out-of-bounds: 12402
+err: RJUMPV: destination out-of-bounds: 12402
+err: RJUMPV: destination out-of-bounds: 12402
+err: RJUMPV: destination out-of-bounds: 12402
+err: RJUMPV: destination out-of-bounds: 12402
+err: RJUMPV: destination out-of-bounds: 12402
+err: RJUMPV: destination out-of-bounds: 12402
+err: RJUMPV: destination out-of-bounds: 12402
+err: RJUMPV: destination out-of-bounds: 12457
+err: RJUMPV: destination out-of-bounds: 12457
+err: RJUMPV: destination out-of-bounds: 25458
+err: RJUMPI: destination out-of-bounds: 12339
+err: RJUMPV: destination out-of-bounds: 12384
+err: RJUMPV: destination out-of-bounds: 25490
 err: computed max stack height for code section 1 does not match expected (want: 48, got: 119)
-err: code section ends with non-terminal instruction
-err: relative offset out-of-bounds: 12369
-err: relative offset out-of-bounds: 12352
+err: code section ends with non-terminal instruction (ADDRESS)
+err: RJUMP: destination out-of-bounds: 12369
+err: RJUMP: destination out-of-bounds: 12352
 err: computed max stack height for code section 1 does not match expected (want: 48, got: 57)
 err: computed max stack height for code section 1 does not match expected (want: 48, got: 56)
-err: relative offset out-of-bounds: 12441
-err: code section ends with non-terminal instruction
+err: RJUMPV: destination out-of-bounds: 12441
+err: code section ends with non-terminal instruction (ADDRESS)
 err: computed max stack height for code section 1 does not match expected (want: 48, got: 55)
 err: use of undefined opcode opcode 0xb2 not defined
 err: expected terminator
@@ -443,7 +443,7 @@ err: invalid code section 15: size must not be 0
 err: invalid code section 268: size must not be 0
 err: invalid code section 271: size must not be 0
 OK 00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00
-err: code section ends with non-terminal instruction
+err: code section ends with non-terminal instruction (SWAP2)
 OK 00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,b1,b1,b1,b1,b1,b1,b1,b1,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00
 OK 00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,b1,b1,b1,b1,b1,b1,b1,b1,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,b1,b1,b1,b1,b1,b1,b1,b1,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00
 err: computed max stack height for code section 283 does not match expected (want: 0, got: 1)
@@ -763,120 +763,120 @@ err: stack underflow
 err: unreachable code
 err: type section size must be divisible by 4: have 2093
 err: computed max stack height for code section 0 does not match expected (want: 54, got: 17)
-err: code section ends with non-terminal instruction
+err: code section ends with non-terminal instruction (DUP1)
 err: truncated operand
 err: invalid type annotation at index 0: max stack height must not exceed 1023: have 24831
-err: code section ends with non-terminal instruction
+err: code section ends with non-terminal instruction (ADD)
 err: code section out-of-bounds (want: 33410, have: 1)
 err: computed max stack height for code section 0 does not match expected (want: 120, got: 237)
-err: code section ends with non-terminal instruction
+err: code section ends with non-terminal instruction (KECCAK256)
 err: mismatch of code sections count and type signatures: types 1, code 9)
 err: unexpected EOF
 err: mismatch of code sections count and type signatures: types 33, code 1)
 err: unexpected EOF
 err: computed max stack height for code section 0 does not match expected (want: 120, got: 175)
-err: relative offset out-of-bounds: 3
+err: RJUMPI: destination out-of-bounds: 3
 err: computed max stack height for code section 0 does not match expected (want: 257, got: 16)
 err: type section size must be divisible by 4: have 33002
 err: failed to parse section list: unexpected EOF
-err: code section ends with non-terminal instruction
+err: code section ends with non-terminal instruction (MSIZE)
 err: invalid type annotation at index 1: max stack height must not exceed 1023: have 1024
 OK b1
 err: type section size must be divisible by 4: have 189
 err: unexpected EOF
-err: code section ends with non-terminal instruction
+err: code section ends with non-terminal instruction (LOG3)
 err: computed max stack height for code section 0 does not match expected (want: 3, got: 1)
 err: stack height mismatch for different paths
 err: failed to parse section list: unexpected EOF
 err: type section size must be divisible by 4: have 2093
 err: computed max stack height for code section 0 does not match expected (want: 351, got: 1)
 OK 00,5c000000,5d000000
-err: code section ends with non-terminal instruction
-err: relative offset into immediate operand: 230
-err: relative offset out-of-bounds: -2808
+err: code section ends with non-terminal instruction (SUB)
+err: RJUMPV: destination into immediate operand: 230
+err: RJUMPI: destination out-of-bounds: -2808
 err: computed max stack height for code section 0 does not match expected (want: 120, got: 48)
 OK 5b5b00,600000,488000
 err: type section size must be divisible by 4: have 2093
 err: computed max stack height for code section 1 does not match expected (want: 0, got: 30)
 err: code section out-of-bounds (want: 65534, have: 1)
-err: code section ends with non-terminal instruction
+err: code section ends with non-terminal instruction (SWAP13)
 err: type section size must be divisible by 4: have 2093
 err: type section size must be divisible by 4: have 44325
 err: computed max stack height for code section 0 does not match expected (want: 42, got: 3)
 err: computed max stack height for code section 0 does not match expected (want: 215, got: 3)
-err: code section ends with non-terminal instruction
+err: code section ends with non-terminal instruction (MULMOD)
 err: stack underflow
 err: type section size must be divisible by 4: have 2093
-err: code section ends with non-terminal instruction
-err: relative offset out-of-bounds: 595
+err: code section ends with non-terminal instruction (MUL)
+err: RJUMPI: destination out-of-bounds: 595
 err: type section size must be divisible by 4: have 2093
-err: code section ends with non-terminal instruction
+err: code section ends with non-terminal instruction (EXP)
 err: computed max stack height for code section 0 does not match expected (want: 257, got: 13)
-err: relative offset into immediate operand: 230
-err: code section ends with non-terminal instruction
-err: code section ends with non-terminal instruction
+err: RJUMPV: destination into immediate operand: 230
+err: code section ends with non-terminal instruction (GASPRICE)
+err: code section ends with non-terminal instruction (ADD)
 err: computed max stack height for code section 0 does not match expected (want: 51, got: 5)
 err: type section size must be divisible by 4: have 2093
 err: invalid magic: have 2d, want ef00
-err: code section ends with non-terminal instruction
+err: code section ends with non-terminal instruction (PUSH1)
 err: computed max stack height for code section 0 does not match expected (want: 49, got: 1)
 err: type section size must be divisible by 4: have 2093
 err: type section size must be divisible by 4: have 2093
-err: code section ends with non-terminal instruction
+err: code section ends with non-terminal instruction (PUSH1)
 err: type section size must be divisible by 4: have 7
-err: relative offset out-of-bounds: 272
-err: code section ends with non-terminal instruction
+err: RJUMPV: destination out-of-bounds: 272
+err: code section ends with non-terminal instruction (EXP)
 err: computed max stack height for code section 0 does not match expected (want: 9, got: 1)
-err: relative offset out-of-bounds: -1980
+err: RJUMPV: destination out-of-bounds: -1980
 err: failed to parse section list: unexpected EOF
 err: computed max stack height for code section 0 does not match expected (want: 120, got: 13)
 err: type section size must be divisible by 4: have 2265
 err: failed to parse section list: unexpected EOF
-err: code section ends with non-terminal instruction
+err: code section ends with non-terminal instruction (ADD)
 err: number of code sections must not exceed 1024: got 2818
-err: code section ends with non-terminal instruction
+err: code section ends with non-terminal instruction (CALLF)
 err: type section size must be divisible by 4: have 2093
 err: computed max stack height for code section 0 does not match expected (want: 28, got: 2)
-err: code section ends with non-terminal instruction
-err: code section ends with non-terminal instruction
+err: code section ends with non-terminal instruction (SWAP13)
+err: code section ends with non-terminal instruction (KECCAK256)
 err: type section size must be divisible by 4: have 32999
 err: type section size must be divisible by 4: have 2093
 err: computed max stack height for code section 0 does not match expected (want: 3, got: 8)
 err: invalid type annotation at index 0: input and output must be 0: have (0, 4)
 err: invalid magic: have ef27, want ef00
-err: code section ends with non-terminal instruction
-err: code section ends with non-terminal instruction
-err: code section ends with non-terminal instruction
+err: code section ends with non-terminal instruction (PUSH25)
+err: code section ends with non-terminal instruction (EXTCODEHASH)
+err: code section ends with non-terminal instruction (MULMOD)
 err: computed max stack height for code section 0 does not match expected (want: 817, got: 0)
 err: invalid type annotation at index 1: inputs and outputs must not exceed 127: have 255
 err: unexpected EOF
-err: code section ends with non-terminal instruction
+err: code section ends with non-terminal instruction (ADDRESS)
 err: type section size must be divisible by 4: have 13
 err: computed max stack height for code section 0 does not match expected (want: 53, got: 1)
-err: code section ends with non-terminal instruction
+err: code section ends with non-terminal instruction (ADD)
 err: failed to parse section list: unexpected EOF
 err: computed max stack height for code section 0 does not match expected (want: 3, got: 1)
 OK 5b00,600000,5b00
 err: number of code sections must not exceed 1024: got 15296
-err: relative offset into immediate operand: 231
-err: code section ends with non-terminal instruction
+err: RJUMPV: destination into immediate operand: 231
+err: code section ends with non-terminal instruction (CALLVALUE)
 err: use of undefined opcode opcode 0xe6 not defined
 err: stack underflow
-err: relative offset out-of-bounds: -978
+err: RJUMPV: destination out-of-bounds: -978
 err: code section out-of-bounds (want: 11443, have: 1)
 err: type section size must be divisible by 4: have 2093
 err: computed max stack height for code section 0 does not match expected (want: 0, got: 1)
-err: code section ends with non-terminal instruction
-err: code section ends with non-terminal instruction
+err: code section ends with non-terminal instruction (ADD)
+err: code section ends with non-terminal instruction (LOG3)
 err: computed max stack height for code section 0 does not match expected (want: 281, got: 0)
-err: code section ends with non-terminal instruction
+err: code section ends with non-terminal instruction (PUSH1)
 err: stack underflow
 err: computed max stack height for code section 2 does not match expected (want: 2, got: 1)
 err: computed max stack height for code section 0 does not match expected (want: 306, got: 2)
 err: wrong number of outputs (want: 0, got: 1)
-err: code section ends with non-terminal instruction
+err: code section ends with non-terminal instruction (EXP)
 err: computed max stack height for code section 0 does not match expected (want: 33, got: 2)
-err: code section ends with non-terminal instruction
+err: code section ends with non-terminal instruction (MUL)
 err: computed max stack height for code section 0 does not match expected (want: 120, got: 82)
 err: failed to parse section list: unexpected EOF
 err: code section out-of-bounds (want: 45060, have: 1)
@@ -884,98 +884,98 @@ err: type section size must be divisible by 4: have 2261
 err: computed max stack height for code section 1 does not match expected (want: 53, got: 100)
 OK 64300277000000,10815d000000
 OK 00
-err: relative offset into immediate operand: 5
+err: RJUMPI: destination into immediate operand: 5
 err: computed max stack height for code section 0 does not match expected (want: 95, got: 3)
 err: type section size must be divisible by 4: have 189
-err: code section ends with non-terminal instruction
-err: code section ends with non-terminal instruction
-err: code section ends with non-terminal instruction
-err: code section ends with non-terminal instruction
+err: code section ends with non-terminal instruction (ADD)
+err: code section ends with non-terminal instruction (MSIZE)
+err: code section ends with non-terminal instruction (SIGNEXTEND)
+err: code section ends with non-terminal instruction (ADD)
 err: computed max stack height for code section 0 does not match expected (want: 120, got: 148)
-err: code section ends with non-terminal instruction
+err: code section ends with non-terminal instruction (NUMBER)
 OK 61db885e0100003400
-err: code section ends with non-terminal instruction
+err: code section ends with non-terminal instruction (SUB)
 OK b1,b1
-err: code section ends with non-terminal instruction
+err: code section ends with non-terminal instruction (SWAP13)
 err: computed max stack height for code section 0 does not match expected (want: 49, got: 1)
-err: code section ends with non-terminal instruction
+err: code section ends with non-terminal instruction (PUSH1)
 err: type section size must be divisible by 4: have 2093
 err: stack underflow
-err: relative offset into immediate operand: 366
+err: RJUMPV: destination into immediate operand: 366
 err: computed max stack height for code section 0 does not match expected (want: 120, got: 70)
 err: failed to parse section list: unexpected EOF
-err: code section ends with non-terminal instruction
-err: code section ends with non-terminal instruction
-err: code section ends with non-terminal instruction
+err: code section ends with non-terminal instruction (SUB)
+err: code section ends with non-terminal instruction (GT)
+err: code section ends with non-terminal instruction (ADD)
 err: stack underflow
 err: type section size must be divisible by 4: have 58
-err: code section ends with non-terminal instruction
-err: relative offset out-of-bounds: 18183
-err: relative offset into immediate operand: 230
+err: code section ends with non-terminal instruction (SUB)
+err: RJUMPI: destination out-of-bounds: 18183
+err: RJUMPV: destination into immediate operand: 230
 err: computed max stack height for code section 0 does not match expected (want: 13, got: 2)
 OK 00,5c000000,5c000000
-err: code section ends with non-terminal instruction
+err: code section ends with non-terminal instruction (ORIGIN)
 err: computed max stack height for code section 1 does not match expected (want: 512, got: 36)
 err: code section out-of-bounds (want: 3077, have: 1)
 err: failed to parse section list: unexpected EOF
-err: code section ends with non-terminal instruction
+err: code section ends with non-terminal instruction (RETURNDATASIZE)
 err: mismatch of code sections count and type signatures: types 68, code 33)
 err: invalid type annotation at index 1: inputs must not exceed 127: have 255
 err: type section size must be divisible by 4: have 1
 err: failed to parse section list: unexpected EOF
 err: failed to parse section list: unexpected EOF
-err: code section ends with non-terminal instruction
+err: code section ends with non-terminal instruction (EXP)
 err: computed max stack height for code section 0 does not match expected (want: 13, got: 4)
-err: relative offset out-of-bounds: 9203
+err: RJUMPI: destination out-of-bounds: 9203
 err: type section size must be divisible by 4: have 7
 err: unexpected EOF
 err: rjumpv branch count must not be 0
 err: mismatch of code sections count and type signatures: types 2, code 8)
-err: code section ends with non-terminal instruction
+err: code section ends with non-terminal instruction (SWAP14)
 err: mismatch of code sections count and type signatures: types 1, code 3)
 err: computed max stack height for code section 0 does not match expected (want: 49, got: 2)
-err: relative offset into immediate operand: 816
-err: code section ends with non-terminal instruction
-err: code section ends with non-terminal instruction
+err: RJUMPI: destination into immediate operand: 816
+err: code section ends with non-terminal instruction (CALLVALUE)
+err: code section ends with non-terminal instruction (PUSH28)
 err: unexpected EOF
-err: code section ends with non-terminal instruction
+err: code section ends with non-terminal instruction (LT)
 err: type section size must be divisible by 4: have 2093
-err: code section ends with non-terminal instruction
-err: code section ends with non-terminal instruction
+err: code section ends with non-terminal instruction (ADD)
+err: code section ends with non-terminal instruction (SUB)
 err: computed max stack height for code section 0 does not match expected (want: 120, got: 21)
 err: code section out-of-bounds (want: 284, have: 1)
-err: relative offset into immediate operand: 3
-err: relative offset into immediate operand: 5
+err: RJUMP: destination into immediate operand: 3
+err: RJUMPI: destination into immediate operand: 5
 err: stack height mismatch for different paths
 err: invalid eof version: have <nil>, want 1
 err: computed max stack height for code section 0 does not match expected (want: 120, got: 13)
-err: code section ends with non-terminal instruction
+err: code section ends with non-terminal instruction (BASEFEE)
 err: number of code sections must not exceed 1024: got 2882
 err: code section out-of-bounds (want: 33410, have: 1)
-err: code section ends with non-terminal instruction
+err: code section ends with non-terminal instruction (EXP)
 err: computed max stack height for code section 0 does not match expected (want: 306, got: 1)
-err: relative offset out-of-bounds: 46
-err: code section ends with non-terminal instruction
-err: code section ends with non-terminal instruction
+err: RJUMPV: destination out-of-bounds: 46
+err: code section ends with non-terminal instruction (ADD)
+err: code section ends with non-terminal instruction (CALLDATALOAD)
 err: number of code sections must not exceed 1024: got 2884
-err: code section ends with non-terminal instruction
-err: code section ends with non-terminal instruction
+err: code section ends with non-terminal instruction (SMOD)
+err: code section ends with non-terminal instruction (CALLF)
 err: computed max stack height for code section 0 does not match expected (want: 0, got: 63)
 err: type section size must be divisible by 4: have 2093
 OK b00000b00000b00000b00000b00000b00000b00000b000005bb00000b00000b00000b00000b00000b00000b00000b00000b00000b00000b00000b00000b0000000
 err: computed max stack height for code section 0 does not match expected (want: 120, got: 692)
-err: code section ends with non-terminal instruction
-err: code section ends with non-terminal instruction
-err: code section ends with non-terminal instruction
+err: code section ends with non-terminal instruction (CALLF)
+err: code section ends with non-terminal instruction (KECCAK256)
+err: code section ends with non-terminal instruction (ADD)
 err: computed max stack height for code section 0 does not match expected (want: 0, got: 1)
 err: type section size must be divisible by 4: have 2089
-err: relative offset out-of-bounds: 24579
-err: code section ends with non-terminal instruction
+err: RJUMP: destination out-of-bounds: 24579
+err: code section ends with non-terminal instruction (ADD)
 err: failed to parse section list: unexpected EOF
-err: code section ends with non-terminal instruction
-err: relative offset into immediate operand: 5
+err: code section ends with non-terminal instruction (RJUMPV)
+err: RJUMPV: destination into immediate operand: 5
 err: computed max stack height for code section 0 does not match expected (want: 48, got: 1)
-err: code section ends with non-terminal instruction
+err: code section ends with non-terminal instruction (JUMPDEST)
 err: use of undefined opcode opcode 0xef not defined
 err: invalid type annotation at index 0: inputs and outputs must not exceed 127: have 184
 err: stack height mismatch for different paths
@@ -987,15 +987,15 @@ err: mismatch of code sections count and type signatures: types 1, code 17)
 err: invalid magic: have ff00, want ef00
 err: unexpected EOF
 err: code section out-of-bounds (want: 33410, have: 1)
-err: code section ends with non-terminal instruction
+err: code section ends with non-terminal instruction (BASEFEE)
 err: stack height mismatch for different paths
 err: computed max stack height for code section 0 does not match expected (want: 1, got: 4)
-err: code section ends with non-terminal instruction
-err: code section ends with non-terminal instruction
-err: code section ends with non-terminal instruction
+err: code section ends with non-terminal instruction (KECCAK256)
+err: code section ends with non-terminal instruction (ADDMOD)
+err: code section ends with non-terminal instruction (MULMOD)
 err: computed max stack height for code section 0 does not match expected (want: 0, got: 3)
 err: failed to parse section list: unexpected EOF
-err: code section ends with non-terminal instruction
+err: code section ends with non-terminal instruction (CALLF)
 err: computed max stack height for code section 0 does not match expected (want: 8, got: 1)
 err: computed max stack height for code section 0 does not match expected (want: 50, got: 1)
 err: computed max stack height for code section 0 does not match expected (want: 3, got: 2)
@@ -1003,7 +1003,7 @@ err: type section size must be divisible by 4: have 2093
 err: failed to parse section list: unexpected EOF
 err: failed to parse section list: unexpected EOF
 err: truncated jump table operand
-err: relative offset into immediate operand: 5
+err: RJUMPV: destination into immediate operand: 5
 err: computed max stack height for code section 0 does not match expected (want: 120, got: 53)
 err: invalid eof version: have <nil>, want 1
 err: invalid type annotation at index 0: max stack height must not exceed 1023: have 27392
@@ -1011,103 +1011,104 @@ err: code section out-of-bounds (want: 45060, have: 1)
 OK 00,00,00,00
 err: code section out-of-bounds (want: 8960, have: 1)
 err: code section out-of-bounds (want: 33410, have: 1)
-err: code section ends with non-terminal instruction
+err: code section ends with non-terminal instruction (GASLIMIT)
 err: stack underflow
 err: unexpected EOF
 err: mismatch of code sections count and type signatures: types 3, code 5)
 err: use of undefined opcode opcode 0x29 not defined
-err: relative offset out-of-bounds: 12364
-err: code section ends with non-terminal instruction
+err: RJUMPV: destination out-of-bounds: 12364
+err: code section ends with non-terminal instruction (SUB)
 err: expected terminator
 err: computed max stack height for code section 0 does not match expected (want: 38, got: 6)
 err: type section size must be divisible by 4: have 2093
-err: relative offset into immediate operand: 230
-err: code section ends with non-terminal instruction
+err: RJUMPV: destination into immediate operand: 230
+err: code section ends with non-terminal instruction (EXP)
 err: use of undefined opcode opcode 0x2f not defined
 err: computed max stack height for code section 0 does not match expected (want: 61, got: 2)
 err: code section out-of-bounds (want: 8, have: 1)
 err: computed max stack height for code section 0 does not match expected (want: 176, got: 25)
 err: code section out-of-bounds (want: 11443, have: 1)
-err: code section ends with non-terminal instruction
-err: code section ends with non-terminal instruction
+err: code section ends with non-terminal instruction (ADD)
+err: code section ends with non-terminal instruction (ORIGIN)
 err: stack height mismatch for different paths
-err: code section ends with non-terminal instruction
-err: code section ends with non-terminal instruction
+err: code section ends with non-terminal instruction (MUL)
+err: code section ends with non-terminal instruction (SWAP16)
 err: stack underflow
-err: relative offset into immediate operand: 295
+err: RJUMPV: destination into immediate operand: 295
 err: unreachable code
 err: code section out-of-bounds (want: 11443, have: 1)
 err: type section size must be divisible by 4: have 2093
 err: mismatch of code sections count and type signatures: types 2, code 1)
-err: relative offset into immediate operand: 225
-err: relative offset out-of-bounds: 24893
-err: relative offset into immediate operand: 230
+err: RJUMPV: destination into immediate operand: 225
+err: RJUMPV: destination out-of-bounds: 24893
+err: RJUMPV: destination into immediate operand: 230
 err: invalid eof version: have 242, want 1
-err: relative offset out-of-bounds: 15249
+err: RJUMPV: destination out-of-bounds: 15249
 err: stack underflow
 err: invalid magic: have 6332, want ef00
 err: computed max stack height for code section 0 does not match expected (want: 48, got: 104)
-err: relative offset into immediate operand: 230
+err: RJUMPV: destination into immediate operand: 230
 err: stack underflow
-err: relative offset out-of-bounds: 27653
+err: RJUMPV: destination out-of-bounds: 27653
 err: computed max stack height for code section 0 does not match expected (want: 120, got: 15)
-err: relative offset into immediate operand: 230
-err: relative offset out-of-bounds: 24893
+err: RJUMPV: destination into immediate operand: 230
+err: RJUMPV: destination out-of-bounds: 24893
 err: invalid type annotation at index 1: max stack height must not exceed 1023: have 8192
 OK 00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,b1,b1,b1,b1,b1,b1,b1,b1,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,b1,b1,b1,b1,b1,b1,b1,b1,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00
-err: relative offset into immediate operand: 230
-err: relative offset out-of-bounds: 12356
+err: RJUMPV: destination into immediate operand: 230
+err: RJUMP: destination out-of-bounds: 12356
 OK 00,00,00,00,00,00,00,00,b1,b1,b1,b1,b1,b1,b1,b1,b1,b1,b1,b1,b1,b1,b1,b1,b1,b1,b1,b1,b1,b1,b1,b1,b1,b1,b1,b1,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,b1,b1,b1,b1,b1,b1,b1,b1,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00
 err: computed max stack height for code section 0 does not match expected (want: 120, got: 26)
 err: computed max stack height for code section 0 does not match expected (want: 120, got: 316)
 err: stack underflow
 err: computed max stack height for code section 0 does not match expected (want: 120, got: 98)
-err: relative offset out-of-bounds: 12356
+err: RJUMP: destination out-of-bounds: 12356
 err: stack height mismatch for different paths
-err: relative offset into immediate operand: 230
-err: relative offset into immediate operand: 230
-err: relative offset out-of-bounds: 628
+err: RJUMPV: destination into immediate operand: 230
+err: RJUMPV: destination into immediate operand: 230
+err: RJUMPV: destination out-of-bounds: 628
 OK 00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00
 OK 00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00
-err: relative offset into immediate operand: 199
+err: RJUMPV: destination into immediate operand: 199
 err: failed to parse section list: unexpected EOF
-err: relative offset out-of-bounds: 27653
-err: relative offset out-of-bounds: 26267
-err: relative offset out-of-bounds: 1260
-err: relative offset out-of-bounds: 24893
-err: code section ends with non-terminal instruction
-err: relative offset into immediate operand: 230
-err: relative offset into immediate operand: 295
-err: relative offset into immediate operand: 230
+err: RJUMPV: destination out-of-bounds: 27653
+err: RJUMPV: destination out-of-bounds: 26267
+err: RJUMPV: destination out-of-bounds: 1260
+err: RJUMPV: destination out-of-bounds: 24893
+err: code section ends with non-terminal instruction (ADDRESS)
+err: RJUMPV: destination into immediate operand: 230
+err: RJUMPV: destination into immediate operand: 295
+err: RJUMPV: destination into immediate operand: 230
 OK 00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00
 err: invalid magic: have 3230, want ef00
-err: relative offset out-of-bounds: 27653
+err: RJUMPV: destination out-of-bounds: 27653
 err: invalid magic: have 3931, want ef00
 err: stack height mismatch for different paths
 err: unreachable code
-err: relative offset into immediate operand: 829
-err: relative offset out-of-bounds: 12401
-err: relative offset into immediate operand: 230
+err: RJUMPV: destination into immediate operand: 829
+err: RJUMP: destination out-of-bounds: 12401
+err: RJUMPV: destination into immediate operand: 230
 err: invalid eof version: have 0, want 1
 err: computed max stack height for code section 0 does not match expected (want: 120, got: 14)
-err: relative offset out-of-bounds: 25609
-err: relative offset into immediate operand: 230
-err: relative offset into immediate operand: 230
+err: RJUMP: destination out-of-bounds: 25609
+err: RJUMPV: destination into immediate operand: 230
+err: RJUMPV: destination into immediate operand: 230
 err: invalid magic: have 6332, want ef00
-err: relative offset into immediate operand: 199
-err: relative offset into immediate operand: 231
-err: relative offset into immediate operand: 829
-err: relative offset out-of-bounds: 12373
-err: relative offset out-of-bounds: 12408
-err: relative offset into immediate operand: 150
-err: relative offset into immediate operand: 150
-err: relative offset out-of-bounds: 27653
+err: RJUMPV: destination into immediate operand: 199
+err: RJUMPV: destination into immediate operand: 231
+err: RJUMPV: destination into immediate operand: 829
+err: RJUMP: destination out-of-bounds: 12373
+err: RJUMP: destination out-of-bounds: 12408
+err: RJUMPI: destination into immediate operand: 150
+err: RJUMPI: destination into immediate operand: 150
+err: RJUMPV: destination out-of-bounds: 27653
 err: computed max stack height for code section 0 does not match expected (want: 120, got: 46)
-err: relative offset into immediate operand: 199
+err: RJUMPV: destination into immediate operand: 199
 OK 00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00
-err: relative offset out-of-bounds: 12350
+err: RJUMPV: destination out-of-bounds: 12350
 err: invalid type annotation at index 196: inputs and outputs must not exceed 127: have 255
 err: stack height mismatch for different paths
-err: relative offset into immediate operand: 230
+err: RJUMPV: destination into immediate operand: 230
 OK 00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00
-err: relative offset out-of-bounds: 27653
+err: RJUMPV: destination out-of-bounds: 27653
+OK 60005edb00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,5cfffd
