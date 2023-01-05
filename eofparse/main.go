@@ -20,6 +20,7 @@ func work() {
 	jt := vm.NewShanghaiEOFInstructionSetForTesting()
 	var c vm.Container
 	scanner := bufio.NewScanner(os.Stdin)
+	scanner.Buffer(make([]byte, 200_000), 200_000)
 	toRemove := regexp.MustCompile(`[^0-9A-Za-z]`)
 	for scanner.Scan() {
 		l := scanner.Text()

@@ -41,6 +41,10 @@ func work() {
 			}
 			c.Types = append(c.Types, metadata)
 		}
-		fmt.Printf("%x\n", c.MarshalBinary())
+		data := c.MarshalBinary()
+		if len(data) > 0xc0f0 {
+			data = data[:0xc000]
+		}
+		fmt.Printf("%x\n", data)
 	}
 }
