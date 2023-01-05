@@ -15,16 +15,20 @@ func work() {
 	for {
 		var c vm.Container
 		numCodes := 1024
-		switch rand.Intn(3) {
+		switch rand.Intn(5) {
 		case 0:
-			numCodes = 512
+			numCodes = 1
 		case 1:
+			numCodes = 2
+		case 2:
+			numCodes = 16
+		case 3:
 			numCodes = 1023
 		default:
 			numCodes = 1024
 		}
 		for i := 0; i < numCodes; i++ {
-			code, maxStack := fuzzing.GenerateCallFProgram()
+			code, maxStack := fuzzing.GenerateCallFProgram(numCodes)
 			c.Code = append(c.Code, code)
 			var metadata = &vm.FunctionMetadata{
 				Input:          uint8(0),
