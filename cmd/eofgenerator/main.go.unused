@@ -2,9 +2,10 @@ package main
 
 import (
 	"fmt"
+	"math/rand"
+
 	"github.com/ethereum/go-ethereum/core/vm"
 	"github.com/holiman/goevmlab/fuzzing"
-	"math/rand"
 )
 
 func main() {

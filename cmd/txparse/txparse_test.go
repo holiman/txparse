@@ -1,15 +1,17 @@
 package main
 
 import (
-	"fmt"
+	_ "embed"
 	"math/big"
+	"strings"
 	"testing"
 
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/core/types"
 )
 
-/**
+/*
+*
 Corpus winds up e.g. here:
 
 	[user@work txparse]$ cat ~/.cache/go-build/fuzz/github.com/holiman/txparse/Fuzz/6293d045c6cf3a446e7463c0ef71eab95457c914513223000e097a0823c82dd4
@@ -18,45 +20,55 @@ Corpus winds up e.g. here:
 
 It can also be overridden:
 
-	$ GOCACHE=`pwd`/gen_corpus  go test . -fuzz Fuzz
-
+	$ GOCACHE=`pwd`/corpus  go test . -fuzz Fuzz
 */
-func Fuzz(f *testing.F) {
+//go:embed random_corpus.txt
+var corpusfile string
 
+func Fuzz(f *testing.F) {
 	var (
 		signer = types.NewLondonSigner(new(big.Int).SetInt64(1))
 	)
 	for _, tc := range tests {
-		f.Add(common.FromHex(tc)) // Use f.Add to provide a seed corpus
+		f.Add(common.FromHex(tc))
+	}
+	for _, tc := range others {
+		f.Add(common.FromHex(tc))
+	}
+	fileCorpus := strings.Split(corpusfile, "\n")
+	f.Logf("Added %d from file", len(fileCorpus))
+	for _, tc := range fileCorpus {
+		f.Add(common.FromHex(strings.TrimSpace(tc)))
 	}
 
 	f.Fuzz(func(t *testing.T, data []byte) {
-		//defer func() {
-		//	f, err := os.OpenFile("./corpus", os.O_WRONLY|os.O_CREATE|os.O_APPEND, 0666)
-		//	if err != nil {
-		//		panic(err)
-		//	}
-		//	_, err = f.Write([]byte(fmt.Sprintf("0x%x\n", data)))
-		//	if err1 := f.Close(); err1 != nil && err == nil {
-		//		err = err1
-		//	}
-		//	if err != nil {
-		//		panic(err)
-		//	}
-		//}()
-
-		tx := new(types.Transaction)
-		if err := tx.UnmarshalBinary(data); err != nil {
-			fmt.Printf("err: %v\n", err)
-			return
-		}
-		if sender, err := signer.Sender(tx); err != nil {
-			fmt.Printf("err: %v\n", err)
-		} else {
-			fmt.Printf("%#x\n", sender)
-		}
+		_, _ = parseSender(signer, data)
 	})
 
+}
+
+var others = []string{
+	// Transaction envelope with transaction type 0
+	"00f8a9058503b9aca00082b41d94dac17f958d2ee523a2206206994597c13d831ec780b844a9059cbb00000000000000000000000012eaeb963bf185d22531111953b3f73e0e1665dd00000000000000000000000000000000000000000000000000000045d36ed70025a0f4f7a7fa38f8798a95981959aa34d06a7f4cce2ef95b59db575c253e71f9a9f9a011bf69e2d5741cd02bb4d1ed46429b5a6f050457463430dc9875f3199e01abd7",
+	// Transaction with V value of 0x010000000000000025
+	"f8b2058503b9aca00082b41d94dac17f958d2ee523a2206206994597c13d831ec780b844a9059cbb00000000000000000000000012eaeb963bf185d22531111953b3f73e0e1665dd00000000000000000000000000000000000000000000000000000045d36ed70089010000000000000025a0f4f7a7fa38f8798a95981959aa34d06a7f4cce2ef95b59db575c253e71f9a9f9a011bf69e2d5741cd02bb4d1ed46429b5a6f050457463430dc9875f3199e01abd7",
+	// Transaction with V value of 0x0025
+	"f8ab058503b9aca00082b41d94dac17f958d2ee523a2206206994597c13d831ec780b844a9059cbb00000000000000000000000012eaeb963bf185d22531111953b3f73e0e1665dd00000000000000000000000000000000000000000000000000000045d36ed700820025a0f4f7a7fa38f8798a95981959aa34d06a7f4cce2ef95b59db575c253e71f9a9f9a011bf69e2d5741cd02bb4d1ed46429b5a6f050457463430dc9875f3199e01abd7",
+	//RLP POC: DynamicFee transaction type with V of 27
+	"02f87501830923b8847744d64085032bc8bf31825208947697666e85053cf587fd07aec8fec308164910bc873c6568f12e800080c01ba05cada95e7ac9b4591249e2f02ef01df5a8c390be6aaea0fb1a1eeadde52a50a6a05dfaa2c2a360d2070edb033ff0b0a3fdaa27a2134784adfa4c3efdc557aeab5c",
+	//RLP POC: Bad byte marked with []
+	"01f89a0130308263309430303030303030303030303030303030303030303030f838f7943030303030303030303030303030303030303030[e0]a0303030303030303030303030303030303030303030303030303030303030303001a03130303130303031313031313031303130303030323030323030323030313030a03030303030303030303030303030303030303030303030303030303030303030",
+	//Transactions verify that the maxGasFee * gasUsage fits within a U256 in the Transaction constructor.
+	// This means that transactions that will really only pay the base price will be invalid just
+	// because they could potentially overflow. This will also affect transactions that are present
+	// in blocks where the actual max transaction cost is actually known. This is not done by go-ethereum
+	// afaik nor does it seem to be present in the python spec for EIP-1559.
+	"02f88601808477359400a0ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff82520894095e7baea6a6c7c4c2dfeb977efac326af552d878080c080a05cbd172231fc0735e0fb994dd5b1a4939170a260b36f0427a8a80866b063b948a07c230f7f578dd61785c93361b9871c0706ebfa6d06e3f4491dc9558c5202ed36",
+	//RLP POC: Sets Y to 0x30303001, which gets truncated to 01
+	"02d4013030308430303030803080c084303030013030",
+	// Transactions types that may carry EIP2930 access lists allows access outside of enclosing list. If the list has no elements we will not fail
+	// bounds checking of the elements within the list either.
+	"01f8410130308330303080308430303030d6d5943030303030303030303030303030303030303030c0808230309630303030303030303030303030303030303030303030",
 }
 
 // taken from ethereum tests / transactiontests

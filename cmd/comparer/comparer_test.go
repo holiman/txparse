@@ -4,17 +4,17 @@ import (
 	"bufio"
 	"fmt"
 	"os"
+	"regexp"
 	"strings"
 	"testing"
+	"time"
 
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/core/vm"
-	"regexp"
-	"time"
+	"github.com/ethereum/go-ethereum/params"
 )
 
 func Fuzz(f *testing.F) {
-
 	//	binaries := "/home/user/go/src/github.com/holiman/txparse/eofparse/eofparse,/home/user/go/src/github.com/holiman/txparse/eofparse/eofparse"
 	var bins []string
 	if binaries, err := os.ReadFile("binaries.txt"); err != nil {
@@ -75,7 +75,24 @@ func Fuzz(f *testing.F) {
 
 }
 
-var jt = vm.NewShanghaiEOFInstructionSetForTesting()
+var jt = vm.LookupInstructionSet(params.Rules{
+	ChainID:          nil,
+	IsHomestead:      true,
+	IsEIP150:         true,
+	IsEIP155:         true,
+	IsEIP158:         true,
+	IsByzantium:      true,
+	IsConstantinople: true,
+	IsPetersburg:     true,
+	IsIstanbul:       true,
+	IsBerlin:         true,
+	IsLondon:         true,
+	IsMerge:          true,
+	IsShanghai:       true,
+	IsCancun:         false,
+	IsPrague:         false,
+	IsVerkle:         false,
+})
 
 func testUnmarshal(blob []byte) string {
 	var c vm.Container
