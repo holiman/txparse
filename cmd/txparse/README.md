@@ -2,7 +2,7 @@
 
 This is a very simple utility, which reads line by line from standard input.
 
-1.Read a line of input
+1. Read a line of input
 2. If the line starts with `#`, it is ignored, and no output is emitted. Go to 1.
 3. Otherwise, remove any `non-alnum` characters from the input line (`[^0-9A-Za-z]`)
 4. Try to interpret it as hexadecimal data
