@@ -2,14 +2,15 @@ package main
 
 import (
 	"bufio"
+	"errors"
 	"fmt"
 	"math/big"
 	"os"
 	"regexp"
+	"strings"
 
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/core/types"
-	"strings"
 )
 
 func main() {
@@ -42,5 +43,25 @@ func parseSender(signer types.Signer, data []byte) (common.Address, error) {
 	if err := tx.UnmarshalBinary(data); err != nil {
 		return common.Address{}, err
 	}
+	if err := extendedValidation(tx); err != nil {
+		return common.Address{}, err
+	}
 	return signer.Sender(tx)
+}
+
+// extendedValidation is validation that is normally not performed during RLP-decoding,
+// but instead happens at a later stage.
+func extendedValidation(tx *types.Transaction) error {
+
+	// state_transition.go:318
+	//if hashes := tx.BlobHashes(); len(hashes) == 0 {
+	//	return fmt.Errorf("blobless blob transaction")
+	//}
+	//if len(hashes) > params.MaxBlobGasPerBlock/params.BlobTxBlobGasPerBlob {
+	//	return fmt.Errorf("too many blobs in transaction: have %d, permitted %d", len(hashes), params.MaxBlobGasPerBlock/params.BlobTxBlobGasPerBlob)
+	//}
+	if tx.BlobTxSidecar() != nil {
+		return errors.New("blob-tx with sidecar (not consensus-encoding)")
+	}
+	return nil
 }

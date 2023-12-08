@@ -1,9 +1,9 @@
+err: blob-tx with sidecar (not consensus-encoding)
 0x730aa72228b55236de378f5267dfc77723b1380c
-0x730aa72228b55236de378f5267dfc77723b1380c
-0x730aa72228b55236de378f5267dfc77723b1380c
-0x730aa72228b55236de378f5267dfc77723b1380c
-0x730aa72228b55236de378f5267dfc77723b1380c
-0x730aa72228b55236de378f5267dfc77723b1380c
+err: blob-tx with sidecar (not consensus-encoding)
+err: blob-tx with sidecar (not consensus-encoding)
+err: blob-tx with sidecar (not consensus-encoding)
+err: blob-tx with sidecar (not consensus-encoding)
 err: typed transaction too short
 err: rlp: expected input list for types.AccessListTx
 err: rlp: expected input list for types.AccessListTx
