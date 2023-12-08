@@ -7,7 +7,7 @@ This is a very simple utility, which reads line by line from standard input.
 3. Otherwise, remove any `non-alnum` characters from the input line (`[^0-9A-Za-z]`)
 4. Try to interpret it as hexadecimal data
    4a. If error: yield error and goto 1.
-5. Parse a transaction (cancun-enabled, chainid `1`) from the data.
+5. Parse a transaction (cancun-enabled, chainid `1`, consensus-encoding (== no blob sidecars)) from the data.
    5b. If error: yield error and goto 1.
 6. Emit the transaction `sender`
 7. Go to 1
