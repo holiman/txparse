@@ -64,5 +64,5 @@ THe file `random_corpus.output` is regenerated along with the input: it can be u
 a txparse-implementation. It's generated like this: 
 
 ```
-cat random_corpus.txt | ./txparse | tee random_corpus.output
+cat random_corpus.txt | go run . | tee random_corpus.output
 ```

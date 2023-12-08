@@ -1,3 +1,10 @@
+err: blob-tx with sidecar (not consensus-encoding)
+0x730aa72228b55236de378f5267dfc77723b1380c
+err: blob-tx with sidecar (not consensus-encoding)
+err: blob-tx with sidecar (not consensus-encoding)
+err: blob-tx with sidecar (not consensus-encoding)
+err: blob-tx with sidecar (not consensus-encoding)
+err: typed transaction too short
 err: rlp: expected input list for types.AccessListTx
 err: rlp: expected input list for types.AccessListTx
 err: rlp: too few elements for types.AccessListTx
@@ -47,6 +54,7 @@ err: invalid transaction v, r, s values
 err: invalid chain id for signer: have 48 want 1
 err: rlp: expected input list for types.AccessTuple, decoding into (types.AccessListTx).AccessList[1]
 err: rlp: input string too short for common.Address, decoding into (types.AccessListTx).To
+err: rlp: expected input list for types.DynamicFeeTx
 err: rlp: expected input list for types.DynamicFeeTx
 err: rlp: expected input list for types.DynamicFeeTx
 err: rlp: expected input list for types.DynamicFeeTx
@@ -236,6 +244,9 @@ err: rlp: input string too short for common.Address, decoding into (types.BlobTx
 err: rlp: non-canonical integer (leading zero bytes) for *uint256.Int, decoding into (types.BlobTx).GasTipCap
 err: invalid chain id for signer: have 48 want 1
 err: invalid chain id for signer: have 48 want 1
+err: invalid chain id for signer: have 48 want 1
+err: invalid chain id for signer: have 48 want 1
+err: invalid chain id for signer: have 48 want 1
 err: rlp: expected input list for []common.Hash, decoding into (types.BlobTx).BlobHashes
 err: rlp: input list has too many elements for types.BlobTx
 err: rlp: input list has too many elements for types.BlobTx
@@ -411,6 +422,7 @@ err: invalid chain id for signer: have 46806892827670075568759157903364692243931
 err: recovery failed
 err: invalid chain id for signer: have 256338006885822553100034590935366268994091525310858469735461743271467438369621940540425741555678711946735426800654933369973477243321472792303248193564019943070370371590 want 1
 err: invalid chain id for signer: have 256338072787880090353887854761613940175466411097437351111193673458316646550836501157923841932251262296699154582699522728189714399692557589583028794274691537774919030790 want 1
+err: invalid chain id for signer: have 256338072787880090353887854761613940175466411097437351111193673458316646550836501157923841932251262296699154582920202086074402395296159561492673316715789971369357744134 want 1
 err: invalid chain id for signer: have 41128940599831918089985615713572552008354939606559273912133183072212955342441408633069670380147164778381391798886351352605158894645982806330213211267906882400335016608784621202397912227127834521123699930122985457286477577805819385511801431529478 want 1
 err: invalid chain id for signer: have 256338072787880090353887854761613940175466411097437351111193673458316646550836501157923841932251262296699154582699522728189714399692557589583028794274691537774919030790 want 1
 err: invalid chain id for signer: have 355196463512615656681558078210660601498063173686253216788348828258411685872202244902223691781426707533314670591130714814096055023992921659535193811899547862931707795457 want 1
@@ -484,3 +496,6 @@ err: rlp: value size exceeds available input length
 err: rlp: non-canonical size information for types.LegacyTx
 err: rlp: value size exceeds available input length
 err: rlp: value size exceeds available input length
+err: typed transaction too short
+err: typed transaction too short
+err: typed transaction too short
