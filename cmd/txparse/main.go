@@ -19,6 +19,7 @@ func main() {
 		scanner  = bufio.NewScanner(os.Stdin)
 		toRemove = regexp.MustCompile(`[^0-9A-Za-z]`)
 	)
+	scanner.Buffer(make([]byte, 1024*1024), 5*1024*1024)
 	for scanner.Scan() {
 		line := scanner.Text()
 		if strings.HasPrefix(line, "#") {
