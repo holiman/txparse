@@ -496,6 +496,3 @@ err: rlp: value size exceeds available input length
 err: rlp: non-canonical size information for types.LegacyTx
 err: rlp: value size exceeds available input length
 err: rlp: value size exceeds available input length
-err: typed transaction too short
-err: typed transaction too short
-err: typed transaction too short
