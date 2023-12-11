@@ -18,5 +18,11 @@ Where
 
 - `../txparse/random_corpus.txt` contains `498` lines of input
 - `./binaries.txt` contains info on how to start each process. OBS: This may be a
-  composite command, such as `docker run ...`. 
+  composite command, such as `docker run ...`. See example below
 
+```
+# geth
+/home/user/go/src/github.com/holiman/txparse/txparse
+# besu
+/home/user/workspace/besu/build/install/besu/bin/besu txparse
+```
