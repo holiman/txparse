@@ -1,4 +1,11 @@
-/home/user/go/src/github.com/holiman/txparse/eofparse/eofparse
-/home/user/go/src/github.com/ethereum/go-ethereum/cmd/evm/evm
-#foo
-# bar 
+# geth
+/home/user/go/src/github.com/holiman/txparse/txparse
+# besu
+/home/user/workspace/besu/build/install/besu/bin/besu txparse
+
+#ethereum-js
+#/usr/local/bin/ts-node /home/user/workspace/txparse-js/eofparse.ts --stdin
+#nethermind
+#/home/user/workspace/EOF-Header-Parser/bin/release/net6.0/linux-x64/EofParser
+#evmone
+#docker run -i evmone /build/bin/evmone-eofparse

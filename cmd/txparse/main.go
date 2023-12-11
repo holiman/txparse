@@ -46,6 +46,10 @@ func parseSender(signer types.Signer, data []byte) (common.Address, error) {
 	if err := extendedValidation(tx); err != nil {
 		return common.Address{}, err
 	}
+
+	//a, _ := json.MarshalIndent(tx, "", "  ")
+	//fmt.Printf("%v\n", string(a))
+
 	return signer.Sender(tx)
 }
 
@@ -62,6 +66,12 @@ func extendedValidation(tx *types.Transaction) error {
 	//}
 	if tx.BlobTxSidecar() != nil {
 		return errors.New("blob-tx with sidecar (not consensus-encoding)")
+	}
+	// The geth state transition does not explicitly check whether the value is below
+	// 256 bits in size. This is implicitly validated by checking that the sender
+	// has sufficient balance to cover the tx cost.
+	if tx.Value().BitLen() > 256 {
+		return errors.New("value larger than 256 bits")
 	}
 	return nil
 }
