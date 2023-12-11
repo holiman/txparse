@@ -11,25 +11,55 @@ import (
 	"time"
 )
 
-func main() {
-	binaries := os.Args[1]
-	bins := strings.Split(binaries, ",")
+func setup() ([]string, error) {
+	var binaries []string
+	if len(os.Args) < 2 {
+		fmt.Printf("Usage: comparer <file with binaries> \n")
+		fmt.Printf("Pipe input to process\n")
+		return nil, errors.New("insufficient arguments")
+	}
+	binFile, err := os.Open(os.Args[1])
+	if err != nil {
+		return nil, err
+	}
+	defer binFile.Close()
+	scanner := bufio.NewScanner(binFile)
+	for scanner.Scan() {
+		if strings.HasPrefix(scanner.Text(), "#") {
+			continue
+		}
+		if len(strings.TrimSpace(scanner.Text())) == 0 {
+			continue
+		}
+		binaries = append(binaries, scanner.Text())
+	}
+	if err := scanner.Err(); err != nil {
+		return nil, err
+	}
 	if len(binaries) < 2 {
-		fmt.Printf("Usage: comparer parser1,parser2,... \n")
-		fmt.Printf("Pipe input to process")
-		return
+		fmt.Printf("You need to provide at least two binaries to use (have %d)\n", len(binaries))
+		return nil, errors.New("insufficient binaries")
+	}
+	return binaries, nil
+}
+
+func main() {
+	bins, err := setup()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error: %v\n", err)
+		os.Exit(1)
 	}
 	var input = make(chan string)
 	go func() {
 		defer close(input)
 		scanner := bufio.NewScanner(os.Stdin)
-		scanner.Buffer(make([]byte, 200_000), 200_000)
+		scanner.Buffer(make([]byte, 200_000), 1_000_000)
 		for scanner.Scan() {
 			input <- scanner.Text()
 		}
 	}()
 	if err := doit(bins, input, nil); err != nil {
-		fmt.Printf("err: %v", err)
+		fmt.Fprintf(os.Stderr, "err: %v\n", err)
 	}
 }
 
@@ -65,7 +95,7 @@ func startProcess(cmdArgs []string) (*proc, error) {
 		return nil, err
 	}
 	outbuf := bufio.NewScanner(stdout)
-	outbuf.Buffer(make([]byte, 200_000), 200_000)
+	outbuf.Buffer(make([]byte, 200_000), 1_000_000)
 	return &proc{
 		cmd:    cmd.String(),
 		outp:   stdout,
@@ -80,7 +110,7 @@ func doit(bins []string, inputs chan string, results chan string) error {
 	for _, bin := range bins {
 		p, err := startProcess(strings.Split(bin, " "))
 		if err != nil {
-			return err
+			return fmt.Errorf("could not start process %q: %v", bin, err)
 		}
 		procs = append(procs, p)
 	}
@@ -169,6 +199,6 @@ func doit(bins []string, inputs chan string, results chan string) error {
 			}
 		}
 	}
-	fmt.Fprintf(os.Stdout, "# %d cases OK", count)
+	fmt.Fprintf(os.Stdout, "# %d cases OK\n", count)
 	return nil
 }
