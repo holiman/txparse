@@ -123,8 +123,9 @@ func doit(bins []string, inputs chan string, results chan string) error {
 	}
 	fmt.Println("")
 	var (
-		count   = 0
-		lastLog = time.Now()
+		count      = 0
+		validCount = 0
+		lastLog    = time.Now()
 	)
 	for l := range inputs {
 		if len(l) == 0 || strings.HasPrefix(l, "#") {
@@ -134,7 +135,7 @@ func doit(bins []string, inputs chan string, results chan string) error {
 			continue
 		}
 		if time.Since(lastLog) > 8*time.Second {
-			fmt.Fprintf(os.Stdout, "# %d cases OK\n", count)
+			fmt.Fprintf(os.Stdout, "# %d cases OK, %d valid\n", count, validCount)
 			lastLog = time.Now()
 		}
 		count++
@@ -171,6 +172,7 @@ func doit(bins []string, inputs chan string, results chan string) error {
 				prev = cur
 				continue
 			}
+			validCount++
 			if prev != cur {
 				ok = false
 			}
