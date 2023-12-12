@@ -41,14 +41,10 @@ func fuzzit() []byte {
 	f := fuzz.New()
 	r := rand.New(rand.NewSource(int64(time.Now().UnixNano())))
 	var tx = &types.AccessListTx{}
-	f.Fuzz(tx) // myInt gets a random value.
-	//data, _ := rlp.EncodeToBytes(tx)
 	tx.ChainID = big.NewInt(1)
 	tx.V = big.NewInt(0).Rand(r, big.NewInt(255))
 	tx.R = big.NewInt(0).Rand(r, big.NewInt(255))
 	tx.S = big.NewInt(0).Rand(r, big.NewInt(255))
-	//tx.R = big.NewInt(0).Rand(r, math.MaxBig256)
-	//tx.S = big.NewInt(0).Rand(r, math.MaxBig256)
 
 	data, _ := types.NewTx(tx).MarshalBinary()
 
