@@ -6,13 +6,16 @@ import (
 	"math/rand"
 	"os"
 
+	"github.com/ethereum/go-ethereum/core/types"
 	"github.com/ethereum/go-ethereum/rlp"
+	fuzz "github.com/google/gofuzz"
 	"math/big"
+	"time"
 )
 
 func main() {
 	for {
-		fmt.Fprintf(os.Stdout, "%#x\n", fuzz())
+		fmt.Fprintf(os.Stdout, "%#x\n", fuzzit())
 		//break
 	}
 }
@@ -34,7 +37,24 @@ func rndBytes(min, max int) []byte {
 	return buf
 }
 
-func fuzz() []byte {
+func fuzzit() []byte {
+	f := fuzz.New()
+	r := rand.New(rand.NewSource(int64(time.Now().UnixNano())))
+	var tx = &types.AccessListTx{}
+	f.Fuzz(tx) // myInt gets a random value.
+	//data, _ := rlp.EncodeToBytes(tx)
+	tx.ChainID = big.NewInt(1)
+	tx.V = big.NewInt(0).Rand(r, big.NewInt(255))
+	tx.R = big.NewInt(0).Rand(r, big.NewInt(255))
+	tx.S = big.NewInt(0).Rand(r, big.NewInt(255))
+	//tx.R = big.NewInt(0).Rand(r, math.MaxBig256)
+	//tx.S = big.NewInt(0).Rand(r, math.MaxBig256)
+
+	data, _ := types.NewTx(tx).MarshalBinary()
+
+	return data
+}
+func xfuzzit() []byte {
 	var lists []int
 	b := rlp.NewEncoderBuffer(nil)
 	lists = append(lists, b.List())
