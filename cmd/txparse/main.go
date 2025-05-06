@@ -14,6 +14,19 @@ import (
 )
 
 func main() {
+	// TODO:
+	// If the command "--split.ok" is given, we
+	// - send addresses to stdout
+	// - send good inputs to stderr
+	// - ignore bad txs
+	//
+	// If the command "--split.nok" is given, we
+	// - send error message to to stdout
+	// - send bad inputs to stderr
+	// - ignore good txs
+	//
+	// This is useful to split up the corpus, making it easier to compare against
+	// a different implementation: expecting all inputs to pass (or fail).
 	var (
 		// The input is assumed to be Prague-enabled mainnet (chainid=1) transaction.
 		signer   = types.NewPragueSigner(new(big.Int).SetInt64(1))
