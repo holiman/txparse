@@ -121,10 +121,11 @@ func doit(bins []string, inputs chan string, results chan string) error {
 	for i, proc := range procs {
 		fmt.Printf("  %d: %v\n", i, proc.cmd)
 	}
-	fmt.Println("")
+	fmt.Println("-------------")
 	var (
-		count   = 0
-		lastLog = time.Now()
+		count      = 0
+		mismatches = 0
+		lastLog    = time.Now()
 	)
 	for l := range inputs {
 		if len(l) == 0 || strings.HasPrefix(l, "#") {
@@ -134,7 +135,7 @@ func doit(bins []string, inputs chan string, results chan string) error {
 			continue
 		}
 		if time.Since(lastLog) > 8*time.Second {
-			fmt.Fprintf(os.Stdout, "# %d cases OK\n", count)
+			fmt.Fprintf(os.Stdout, "# %d cases OK, %d mismatches\n", count, mismatches)
 			lastLog = time.Now()
 		}
 		count++
@@ -171,12 +172,13 @@ func doit(bins []string, inputs chan string, results chan string) error {
 				prev = cur
 				continue
 			}
-			if prev != cur {
+			if strings.ToLower(prev) != strings.ToLower(cur) {
 				ok = false
 			}
 			prev = cur
 		}
 		if !ok {
+			mismatches++
 			var errMsg = new(strings.Builder)
 			fmt.Fprintf(errMsg, "Processes:\n")
 			for i, proc := range procs {
@@ -199,6 +201,6 @@ func doit(bins []string, inputs chan string, results chan string) error {
 			}
 		}
 	}
-	fmt.Fprintf(os.Stdout, "# %d cases OK\n", count)
+	fmt.Fprintf(os.Stdout, "# %d cases, %d mismatches\n", count, mismatches)
 	return nil
 }

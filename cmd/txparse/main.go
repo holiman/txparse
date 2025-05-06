@@ -2,32 +2,45 @@ package main
 
 import (
 	"bufio"
+	"bytes"
 	"errors"
 	"fmt"
 	"math/big"
 	"os"
 	"regexp"
-	"strings"
 
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/core/types"
 )
 
 func main() {
+	// TODO:
+	// If the command "--split.ok" is given, we
+	// - send addresses to stdout
+	// - send good inputs to stderr
+	// - ignore bad txs
+	//
+	// If the command "--split.nok" is given, we
+	// - send error message to to stdout
+	// - send bad inputs to stderr
+	// - ignore good txs
+	//
+	// This is useful to split up the corpus, making it easier to compare against
+	// a different implementation: expecting all inputs to pass (or fail).
 	var (
-		// The input is assumed to be Cancun-enabled mainnet (chainid=1) transaction.
-		signer   = types.NewCancunSigner(new(big.Int).SetInt64(1))
+		// The input is assumed to be Prague-enabled mainnet (chainid=1) transaction.
+		signer   = types.NewPragueSigner(new(big.Int).SetInt64(1))
 		scanner  = bufio.NewScanner(os.Stdin)
 		toRemove = regexp.MustCompile(`[^0-9A-Za-z]`)
 	)
 	scanner.Buffer(make([]byte, 1024*1024), 5*1024*1024)
 	for scanner.Scan() {
-		line := scanner.Text()
-		if strings.HasPrefix(line, "#") {
+		line := scanner.Bytes()
+		if bytes.HasPrefix(line, []byte("#")) {
 			continue
 		}
-		sanitized := toRemove.ReplaceAllString(line, "")
-		data := common.FromHex(sanitized)
+		sanitized := toRemove.ReplaceAll(line, []byte{})
+		data := common.FromHex(string(sanitized))
 		sender, err := parseSender(signer, data)
 		if err != nil {
 			fmt.Printf("err: %v\n", err)
@@ -46,9 +59,6 @@ func parseSender(signer types.Signer, data []byte) (common.Address, error) {
 	if err := extendedValidation(tx); err != nil {
 		return common.Address{}, err
 	}
-
-	//a, _ := json.MarshalIndent(tx, "", "  ")
-	//fmt.Printf("%v\n", string(a))
 
 	return signer.Sender(tx)
 }
