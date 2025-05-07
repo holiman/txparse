@@ -180,11 +180,11 @@ func doit(bins []string, inputs chan string, results chan string) error {
 		if !ok {
 			mismatches++
 			var errMsg = new(strings.Builder)
-			fmt.Fprintf(errMsg, "Processes:\n")
-			for i, proc := range procs {
-				fmt.Fprintf(errMsg, "  %d: %v\n", i, proc.cmd)
-			}
-			fmt.Fprintf(errMsg, "\n")
+			//fmt.Fprintf(errMsg, "Processes:\n")
+			//for i, proc := range procs {
+			//	fmt.Fprintf(errMsg, "  %d: %v\n", i, proc.cmd)
+			//}
+			//fmt.Fprintf(errMsg, "\n")
 			fmt.Fprintf(errMsg, "%d input %v\n", count, l)
 			for j, outp := range outputs {
 				fmt.Fprintf(errMsg, "%d: proc %d: %v\n", count, j, outp)

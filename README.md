@@ -36,6 +36,15 @@ err: rlp: input string too long for uint64, decoding into (types.LegacyTx).Nonce
 0xd02d72e067e77158444ef2020ff2d325f929b363
 err: transaction type not supported
 ```
+- `./cmd/txparse/random_corpus.txt` contains a large batch of tests, combinations of fuzzing-corpi from various runs
+- `./cmd/txparse/reth_corpus.txt` contains corpus from fuzzing on reth
+
+## `corpusconvert`
+
+`corpusconvert` is a small converter between hexadecimal text and fuzzing-corpus, the format
+used by libfuzzer (golang native fuzzing uses a similar but different format! Also individual files, but the content are not just raw bytes, but the golang instantiation of the input). Each vector is an individual file containing
+the raw bytes.
+
 
 ### EOF parser (`eofparse`)
 

@@ -3,7 +3,9 @@ package main
 import (
 	"bufio"
 	"bytes"
+	"encoding/json"
 	"errors"
+	"flag"
 	"fmt"
 	"math/big"
 	"os"
@@ -13,20 +15,14 @@ import (
 	"github.com/ethereum/go-ethereum/core/types"
 )
 
+var (
+	onlyGood = flag.Bool("onlygood", false, "used to filter 'only good' inputs")
+	onlyBad  = flag.Bool("onlybad", false, "used to filter 'only bad' inputs")
+	dump     = flag.Bool("txdump", false, "show detailed transaction dump")
+)
+
 func main() {
-	// TODO:
-	// If the command "--split.ok" is given, we
-	// - send addresses to stdout
-	// - send good inputs to stderr
-	// - ignore bad txs
-	//
-	// If the command "--split.nok" is given, we
-	// - send error message to to stdout
-	// - send bad inputs to stderr
-	// - ignore good txs
-	//
-	// This is useful to split up the corpus, making it easier to compare against
-	// a different implementation: expecting all inputs to pass (or fail).
+	flag.Parse()
 	var (
 		// The input is assumed to be Prague-enabled mainnet (chainid=1) transaction.
 		signer   = types.NewPragueSigner(new(big.Int).SetInt64(1))
@@ -41,25 +37,40 @@ func main() {
 		}
 		sanitized := toRemove.ReplaceAll(line, []byte{})
 		data := common.FromHex(string(sanitized))
-		sender, err := parseSender(signer, data)
+		sender, err := parseSender(signer, data, *dump)
 		if err != nil {
+			if *onlyGood {
+				continue // ignore the input
+			}
+			if *onlyBad {
+				fmt.Fprintln(os.Stderr, string(line))
+			}
 			fmt.Printf("err: %v\n", err)
 			continue
 		}
+		if *onlyBad {
+			continue
+		}
 		fmt.Printf("%#x\n", sender)
+		if *onlyGood {
+			fmt.Fprintln(os.Stderr, string(line))
+		}
 	}
 }
 
-func parseSender(signer types.Signer, data []byte) (common.Address, error) {
+func parseSender(signer types.Signer, data []byte, dump bool) (common.Address, error) {
 	tx := new(types.Transaction)
 
 	if err := tx.UnmarshalBinary(data); err != nil {
 		return common.Address{}, err
 	}
+	if dump {
+		d, _ := json.MarshalIndent(tx, "  ", "  ")
+		fmt.Fprintln(os.Stderr, string(d))
+	}
 	if err := extendedValidation(tx); err != nil {
 		return common.Address{}, err
 	}
-
 	return signer.Sender(tx)
 }
 
