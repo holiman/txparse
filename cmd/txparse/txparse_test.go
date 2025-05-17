@@ -42,7 +42,7 @@ func Fuzz(f *testing.F) {
 	}
 
 	f.Fuzz(func(t *testing.T, data []byte) {
-		_, _ = parseSender(signer, data)
+		_, _ = parseSender(signer, data, false)
 	})
 
 }

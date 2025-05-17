@@ -46,11 +46,12 @@ $ GOCACHE=`pwd`/corpus  go test . -fuzz Fuzz
 ```
 
 This will create corpus into the folder `./corpus`. When you are finished, it's time to extract the 
-corpus again, from the golang native format into hex. For this, we use `cmd/corpustoinput`
+corpus again, from the golang native format into hex. For this, we use `cmd/corpusconvert`
 
 ```
-go run ../corpustoinput ./corpus/fuzz/github.com/holiman/txparse/cmd/txparse/Fuzz/ > new_corpus.txt
-```
+ go run ../corpusconvert/ -in.type=golang -in.path=./corpus/fuzz/github.com/holiman/txparse/cmd/txparse/Fuzz -out.type=hex > new_corpus.txt
+
+ ```
 And finally, merge with the old
 ```
 cat new_corpus.txt random_corpus.txt | sort | uniq > tmpfile
