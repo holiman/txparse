@@ -152,16 +152,24 @@ func doit(bins []string, inputs chan string, results chan string) error {
 		// Compare outputs
 		for i, proc := range procs {
 			var cur = ""
-			if proc.outbuf.Scan() {
-				cur = proc.outbuf.Text()
-			} else {
-				err := proc.outbuf.Err()
-				a := fmt.Sprintf("%d: process read failure: %v %v\ninput: %v\n", count, proc.cmd, err, l)
-				fmt.Printf(a)
-				if results != nil {
-					results <- a
+			for {
+				if proc.outbuf.Scan() {
+					cur = proc.outbuf.Text()
+				} else {
+					err := proc.outbuf.Err()
+					a := fmt.Sprintf("%d: process read failure: %v %v\ninput: %v\n", count, proc.cmd, err, l)
+					fmt.Printf(a)
+					if results != nil {
+						results <- a
+					}
+					return fmt.Errorf("process read fail line %d: %v", count, proc.cmd)
 				}
-				return fmt.Errorf("process read fail line %d: %v", count, proc.cmd)
+				// If not err, we expect it to start with "0x".
+				if !strings.HasPrefix(cur, "0x") && !strings.HasPrefix(cur, "err") {
+					fmt.Fprintf(os.Stderr, "Bad output, ignoring: %q", cur)
+					continue
+				}
+				break
 			}
 			outputs = append(outputs, cur)
 			if i == 0 {
@@ -172,7 +180,12 @@ func doit(bins []string, inputs chan string, results chan string) error {
 				prev = cur
 				continue
 			}
-			if strings.ToLower(prev) != strings.ToLower(cur) {
+			if strings.HasPrefix(cur, "0x") && strings.HasPrefix(prev, "0x") {
+				// When both are addresses, compare only the address part (nethermind emits more info after)
+				if strings.ToLower(prev)[:40] != strings.ToLower(cur)[:40] {
+					ok = false
+				}
+			} else { // When both are not addresses
 				ok = false
 			}
 			prev = cur
